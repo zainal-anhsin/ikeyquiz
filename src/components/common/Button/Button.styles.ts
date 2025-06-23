@@ -25,6 +25,11 @@ export const StyledButtonPrimary = styled(AntButton)`
   }
 `;
 
+// Rectangle button, less rounded than primary
+export const StyledButtonRectangle = styled(StyledButtonPrimary)`
+  border-radius: 8px;
+`;
+
 export const StyledButtonJoin = styled(AntButton)`
   height: 32px;
   border-radius: 999px;

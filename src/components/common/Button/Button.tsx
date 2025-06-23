@@ -1,6 +1,6 @@
 import React from 'react';
 import { ButtonProps } from 'antd/lib/button';
-import { StyledButtonPrimary, StyledButtonJoin, StyledButtonGrey } from './Button.styles';
+import { StyledButtonPrimary, StyledButtonRectangle, StyledButtonJoin, StyledButtonGrey } from './Button.styles';
 
 interface CustomButtonProps extends ButtonProps {
   children: React.ReactNode;
@@ -12,6 +12,15 @@ export const ButtonPrimary: React.FC<CustomButtonProps> = ({ children, ...props 
     <StyledButtonPrimary type="primary" {...props}>
       {children}
     </StyledButtonPrimary>
+  );
+};
+
+// ButtonRectangle for rectangular primary actions
+export const ButtonRectangle: React.FC<CustomButtonProps> = ({ children, ...props }) => {
+  return (
+    <StyledButtonRectangle type="primary" {...props}>
+      {children}
+    </StyledButtonRectangle>
   );
 };
 

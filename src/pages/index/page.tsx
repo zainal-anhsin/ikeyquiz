@@ -9,7 +9,7 @@ import {
   CardActionRow,
   RoundedCard,
 } from "./style";
-import JoinSchoolModal from '../../components/JoinSchoolModal';
+import JoinSchoolModal from './JoinSchoolModal';
 
 const cardData = [
   {

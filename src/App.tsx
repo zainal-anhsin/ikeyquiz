@@ -9,6 +9,8 @@ import Quiz from './pages/quiz/page';
 import Homework from './pages/homework/page';
 import Exam from './pages/exam/page';
 import LiveQuiz from './pages/live-quiz/page';
+import Headmaster from './headmaster/page';
+import ThemePage from './pages/themepage/page';
 
 const App = () => {
   return (
@@ -20,6 +22,8 @@ const App = () => {
           <Route path="homework" element={<Homework />} />
           <Route path="exam" element={<Exam />} />
           <Route path="live-quiz" element={<LiveQuiz />} />
+          <Route path="headmaster" element={<Headmaster />} />
+          <Route path="themepage" element={<ThemePage />} />
         </Route>
       </Routes>
     </BrowserRouter>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Modal, Input, Button } from 'antd';
-import { HeadingLg, MetaText } from '../components/common/Text/Text';
-import { ButtonGrey, ButtonJoin } from '../components/common/Button/Button';
+import { HeadingLg, MetaText } from '../../components/common/Text/Text';
+import { ButtonGrey, ButtonJoin } from '../../components/common/Button/Button';
 import styled from 'styled-components';
 
 const UserCard = styled.div`
