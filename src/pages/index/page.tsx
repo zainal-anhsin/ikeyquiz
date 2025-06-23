@@ -13,7 +13,7 @@ import JoinSchoolModal from '../../components/JoinSchoolModal';
 
 const cardData = [
   {
-    name: "Convent Ave Maria. J",
+    name: "Convent Ave Maria. J.",
     type: "School",
     avatar: "/sidebar-image/school.png",
     headerColor: "#f7c7d3",
