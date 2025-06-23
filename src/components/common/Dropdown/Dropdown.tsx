@@ -6,8 +6,6 @@ import {
   StyledDownArrow, 
   StyledDownArrowGrey 
 } from './Dropdown.styles';
-import { DefaultOptionType } from 'antd/es/select';
-
 const { Option } = Select;
 
 // It needs onPointerEnterCapture and onPointerLeaveCapture to satisfy the styled-components typing

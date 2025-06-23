@@ -17,7 +17,7 @@ const commonSelectStyles = css`
   }
 
   .ant-select-selection-placeholder {
-    color: #9ca3af;
+    color: black;
   }
 `;
 
