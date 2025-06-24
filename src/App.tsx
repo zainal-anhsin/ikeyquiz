@@ -34,8 +34,8 @@ const App = () => {
           <Route path="student" element={<Student />} />
           <Route path="questionset" element={<QuestionSet />} />
           <Route path="student/add-student" element={<AddStudent />} />
-          <Route path="edit-student" element={<EditStudent />} />
-          <Route path="upload-student" element={<UploadStudent />} />
+          <Route path="student/edit-student" element={<EditStudent />} />
+          <Route path="student/upload-student" element={<UploadStudent />} />
           <Route path="setting-question" element={<SettingQuestion />} />
           <Route path="upload-question" element={<UploadQuestion />} />
           <Route path="edit-question" element={<EditQuestion />} />

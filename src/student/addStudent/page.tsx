@@ -3,6 +3,7 @@ import { Row, Col, Space, Breadcrumb } from "antd";
 import { SaveOutlined, UndoOutlined, CloseOutlined } from "@ant-design/icons";
 import { Form, FormItem, FormInput } from "../../components/common/Form/Form";
 import { HeadingLg, SectionTitle } from "../../components/common/Text/Text";
+import Divider from "../../components/common/Divider/Divider";
 import {
   DropdownGrey,
   DropdownOption,
@@ -44,6 +45,7 @@ const addStudent = () => {
           </Breadcrumb.Item>
         </Breadcrumb>
       </div>
+      {/* Buttons Section */}
       <div style={{ background: "#f2f6fe", minHeight: "2vh", padding: 32 }}>
         <div
           style={{
@@ -53,29 +55,25 @@ const addStudent = () => {
             justifyContent: "flex-end",
           }}
         >
-          {/* Buttons Section */}
           <Space>
-            <ButtonMediumWhitePurple>
-              <UndoOutlined
-                style={{ marginRight: 8 }}
-                onPointerEnterCapture={undefined}
-                onPointerLeaveCapture={undefined}
-              />
-              Reset
-            </ButtonMediumWhitePurple>
             <ButtonMediumGrey>
               <CloseOutlined
-                style={{ marginRight: 8 }}
                 onPointerEnterCapture={undefined}
                 onPointerLeaveCapture={undefined}
               />
               Cancel
             </ButtonMediumGrey>
+            <ButtonMediumWhitePurple>
+              <UndoOutlined
+                onPointerEnterCapture={undefined}
+                onPointerLeaveCapture={undefined}
+              />
+              Reset
+            </ButtonMediumWhitePurple>
             <ButtonMediumWhitePurple
               style={{ background: "#7c3aed", color: "white" }}
             >
               <SaveOutlined
-                style={{ marginRight: 8 }}
                 onPointerEnterCapture={undefined}
                 onPointerLeaveCapture={undefined}
               />
@@ -129,17 +127,7 @@ const addStudent = () => {
         </Form>
 
         {/* Divider section */}
-        <div
-          style={{
-            width: "100%",
-            maxWidth: "1200px",
-            height: 4,
-            background: "#f2f6fe",
-            margin: "40px auto 0 auto",
-            border: "none",
-            borderRadius: 2,
-          }}
-        />
+        <Divider />
       </div>
     </div>
   );
