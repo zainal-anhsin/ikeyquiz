@@ -1,5 +1,6 @@
-import React from "react";
-import { Space, Breadcrumb } from "antd";
+import React, { useState } from "react";
+import { Space, Breadcrumb, Table, Button } from "antd";
+import type { TableColumnsType, TableProps } from 'antd';
 import {
   EditOutlined,
   SearchOutlined,
@@ -11,7 +12,65 @@ import {
   ButtonMediumWhitePurple,
 } from "../components/common/Button/Button";
 
+type TableRowSelection<T extends object = object> = TableProps<T>['rowSelection'];
+
+interface DataType {
+  key: React.Key;
+  name: string;
+  customGroup: string;
+  category: string;
+  classroom: string;
+  group: string;
+  email: string;
+  action: string;
+}
+
+const columns: TableColumnsType<DataType> = [
+  { title: 'Name', dataIndex: 'name' },
+  { title: 'Custom Group', dataIndex: 'customGroup' },
+  { title: 'Category', dataIndex: 'category' },
+  { title: 'Classroom', dataIndex: 'classroom' },
+  { title: 'Group', dataIndex: 'group' },
+  { title: 'Email', dataIndex: 'email' },
+  { title: 'Action', dataIndex: 'action' },
+];
+
+const dataSource = Array.from<DataType>({ length: 46 }).map<DataType>((_, i) => ({
+  key: i,
+  name: 'alibaba',
+  customGroup: 'class A',
+  category: 'live quiz',
+  classroom: 'ssr',
+  group: 'standard 1',
+  email: 'ali@gmail.com',
+  action: 'edit',
+}));
+
 const Student = () => {
+  const [selectedRowKeys, setSelectedRowKeys] = useState<React.Key[]>([]);
+  const [loading, setLoading] = useState(false);
+
+  const start = () => {
+    setLoading(true);
+    // ajax request after empty completing
+    setTimeout(() => {
+      setSelectedRowKeys([]);
+      setLoading(false);
+    }, 1000);
+  };
+
+  const onSelectChange = (newSelectedRowKeys: React.Key[]) => {
+    console.log('selectedRowKeys changed: ', newSelectedRowKeys);
+    setSelectedRowKeys(newSelectedRowKeys);
+  };
+
+  const rowSelection: TableRowSelection<DataType> = {
+    selectedRowKeys,
+    onChange: onSelectChange,
+  };
+
+  const hasSelected = selectedRowKeys.length > 0;
+
   return (
     <div>
       {/* Breadcrumb section */}
@@ -91,6 +150,19 @@ const Student = () => {
               Add Student
             </ButtonMediumWhitePurple>
           </Space>
+        </div>
+      </div>
+      
+      {/* Table Section */}
+      <div style={{ padding: 24 }}>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
+            <Button type="primary" onClick={start} disabled={!hasSelected} loading={loading}>
+              Reload
+            </Button>
+            {hasSelected ? `Selected ${selectedRowKeys.length} items` : null}
+          </div>
+          <Table<DataType> rowSelection={rowSelection} columns={columns} dataSource={dataSource} />
         </div>
       </div>
     </div>
