@@ -61,6 +61,22 @@ const ThemePage = () => {
           </Col>
         </Row>
       </Card>
+
+      {/* Custom Form Example Section */}
+      <Card title="Custom Form Example" style={{ marginBottom: "24px" }}>
+        <Form>
+          <FormItem label="First Name" name="firstName">
+            <FormInput placeholder="Enter first name" />
+          </FormItem>
+          <FormItem label="Last Name" name="lastName">
+            <FormInput placeholder="Enter last name" />
+          </FormItem>
+          <FormItem label="Nickname" name="nickname">
+            <FormInput placeholder="Enter nickname" />
+          </FormItem>
+        </Form>
+      </Card>
+
       {/* Checkbox & Switch Components Section */}
       <Card
         title="Checkbox & Switch Components"

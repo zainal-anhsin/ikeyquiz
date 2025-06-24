@@ -42,7 +42,7 @@ const subjectOptions = [
 const page = () => {
   return (
     <div>
-      <div style={{ background: "#f5f6fa", minHeight: "2vh", padding: 32 }}>
+      <div style={{ background: "#f2f6fe", minHeight: "2vh", padding: 32 }}>
         <div style={{ display: "flex", alignItems: "center", gap: 20 }}>
           <DropdownPurple placeholder="Year" style={{ width: 140 }}>
             {yearOptions.map((opt) => (
