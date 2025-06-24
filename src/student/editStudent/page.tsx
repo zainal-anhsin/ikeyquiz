@@ -6,9 +6,11 @@ import {
   CloseOutlined,
   DeleteOutlined,
   UserOutlined,
+  MailOutlined,
 } from "@ant-design/icons";
 import { Form, FormItem, FormInput } from "../../components/common/Form/Form";
 import { HeadingLg, SectionTitle } from "../../components/common/Text/Text";
+import { PasswordRevealInput } from "../../components/common/Form/Form";
 import {
   DropdownGrey,
   DropdownOption,
@@ -141,18 +143,26 @@ const EditStudent = () => {
           </Row>
           <Row gutter={32}>
             <Col span={12}>
-              <FormItem label="Group" name="group">
-                <DropdownGrey placeholder="Select">
-                  <DropdownOption value="A">Group A</DropdownOption>
-                  <DropdownOption value="B">Group B</DropdownOption>
-                  <DropdownOption value="C">Group C</DropdownOption>
-                </DropdownGrey>
+              <FormItem label="Password" name="password">
+                <PasswordRevealInput placeholder="Password" />
               </FormItem>
             </Col>
             <Col span={12}>
-              <FormItem label="Classroom" name="classroom">
-                <FormInput placeholder="Classroom Name" />
-              </FormItem>
+              <ButtonMediumWhitePurple
+                style={{
+                  width: "50%",
+                  marginTop: 50,
+                  background: "#7c3aed",
+                  color: "white",
+                }}
+              >
+                <MailOutlined
+                  onPointerEnterCapture={undefined}
+                  onPointerLeaveCapture={undefined}
+                  style={{ marginRight: 6, marginLeft: 6 }}
+                />
+                Email Password
+              </ButtonMediumWhitePurple>
             </Col>
           </Row>
         </Form>
@@ -223,7 +233,7 @@ const EditStudent = () => {
 
         <Divider />
 
-      {/* Group and Classroom section */}
+        {/* Group and Classroom section */}
         <Form style={{ maxWidth: "800px", marginTop: 32 }}>
           <Row gutter={32}>
             <Col span={12}>
@@ -244,7 +254,6 @@ const EditStudent = () => {
         </Form>
 
         <Divider />
-
       </div>
     </div>
   );

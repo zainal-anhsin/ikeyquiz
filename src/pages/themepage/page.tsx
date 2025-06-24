@@ -17,7 +17,7 @@ import {
   SidebarLabel,
   MetaText,
 } from "../../components/common/Text/Text";
-import { Form, FormItem, FormInput } from "../../components/common/Form/Form";
+import { Form, FormItem, FormInput, PasswordRevealInput } from "../../components/common/Form/Form";
 import {
   DropdownPurple,
   DropdownGrey,
@@ -73,6 +73,15 @@ const ThemePage = () => {
           </FormItem>
           <FormItem label="Nickname" name="nickname">
             <FormInput placeholder="Enter nickname" />
+          </FormItem>
+        </Form>
+      </Card>
+
+      {/* Password Reveal Example Section */}
+      <Card title="Password Reveal Example" style={{ marginBottom: "24px" }}>
+        <Form layout="vertical" style={{ maxWidth: 500 }}>
+          <FormItem label="Password" name="password">
+            <PasswordRevealInput placeholder="Password" />
           </FormItem>
         </Form>
       </Card>
