@@ -9,9 +9,16 @@ import Quiz from './pages/quiz/page';
 import Homework from './pages/homework/page';
 import Exam from './pages/exam/page';
 import LiveQuiz from './pages/live-quiz/page';
-import Headmaster from './headmaster/page';
+import Dashboard from './dashboard/page';
 import ThemePage from './pages/themepage/page';
-
+import Student from './student/page';
+import QuestionSet from './questionset/page';
+import AddStudent from './student/addStudent/page';
+import EditStudent from './student/editStudent/page';
+import UploadStudent from './student/uploadStudent/page';
+import SettingQuestion from './questionset/components/settingQuestion';
+import UploadQuestion from './questionset/uploadQuestion/page';
+import EditQuestion from './questionset/editQuestion/page';
 const App = () => {
   return (
     <BrowserRouter>
@@ -22,8 +29,16 @@ const App = () => {
           <Route path="homework" element={<Homework />} />
           <Route path="exam" element={<Exam />} />
           <Route path="live-quiz" element={<LiveQuiz />} />
-          <Route path="headmaster" element={<Headmaster />} />
+          <Route path="dashboard" element={<Dashboard />} />
           <Route path="themepage" element={<ThemePage />} />
+          <Route path="student" element={<Student />} />
+          <Route path="questionset" element={<QuestionSet />} />
+          <Route path="student/add-student" element={<AddStudent />} />
+          <Route path="edit-student" element={<EditStudent />} />
+          <Route path="upload-student" element={<UploadStudent />} />
+          <Route path="setting-question" element={<SettingQuestion />} />
+          <Route path="upload-question" element={<UploadQuestion />} />
+          <Route path="edit-question" element={<EditQuestion />} />
         </Route>
       </Routes>
     </BrowserRouter>
