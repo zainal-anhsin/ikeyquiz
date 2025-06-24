@@ -37,7 +37,7 @@ const App = () => {
           <Route path="student/edit-student" element={<EditStudent />} />
           <Route path="student/upload-student" element={<UploadStudent />} />
           <Route path="setting-question" element={<SettingQuestion />} />
-          <Route path="upload-question" element={<UploadQuestion />} />
+          <Route path="questionset/upload-question" element={<UploadQuestion />} />
           <Route path="edit-question" element={<EditQuestion />} />
         </Route>
       </Routes>
