@@ -80,4 +80,28 @@ export const ButtonText = styled.span`
   font-size: 1rem;
   font-weight: bold;
   color: #fff;
+`;
+
+// Medium grey button with black border and white text
+export const StyledButtonMediumGrey = styled(StyledButtonRectangle)`
+  background: #9ba7cc;
+  color: #fff;
+  border: 1px solid #222;
+  &:hover, &:focus {
+    background: #8993b3;
+    color: #fff;
+    border-color: #111;
+  }
+`;
+
+// Medium white button with purple border and purple text
+export const StyledButtonMediumWhitePurple = styled(StyledButtonRectangle)`
+  background: #fff;
+  color: #7c3aed;
+  border: 1px solid #7c3aed;
+  &:hover, &:focus {
+    background: #f8f8fa;
+    color: #6c47d8;
+    border-color: #6c47d8;
+  }
 `; 

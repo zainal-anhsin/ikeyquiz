@@ -5,6 +5,8 @@ import {
   ButtonRectangle,
   ButtonJoin,
   ButtonGrey,
+  ButtonMediumGrey,
+  ButtonMediumWhitePurple,
 } from "../../components/common/Button/Button";
 import {
   HeadingLg,
@@ -40,6 +42,8 @@ const ThemePage = () => {
             <Space wrap>
               <ButtonPrimary>Primary Button</ButtonPrimary>
               <ButtonRectangle>Rectangle Button</ButtonRectangle>
+              <ButtonMediumGrey>Medium Grey</ButtonMediumGrey>
+              <ButtonMediumWhitePurple>Medium White Purple</ButtonMediumWhitePurple>
               <ButtonJoin>Join Button</ButtonJoin>
               <ButtonGrey>Grey Button</ButtonGrey>
             </Space>
