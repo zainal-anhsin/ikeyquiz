@@ -19,6 +19,9 @@ import UploadStudent from './student/uploadStudent/page';
 import SettingQuestion from './questionset/components/settingQuestion';
 import UploadQuestion from './questionset/uploadQuestion/page';
 import EditQuestion from './questionset/editQuestion/page';
+import ManageGroup from './setting/manageGroup/page';
+import BulkEdit from './setting/manageGroup/bulkEdit/page';
+import RoomResult from './report/roomResult/page';
 const App = () => {
   return (
     <BrowserRouter>
@@ -36,9 +39,12 @@ const App = () => {
           <Route path="student/add-student" element={<AddStudent />} />
           <Route path="student/edit-student" element={<EditStudent />} />
           <Route path="student/upload-student" element={<UploadStudent />} />
-          <Route path="setting-question" element={<SettingQuestion />} />
+          <Route path="questionset/setting-question" element={<SettingQuestion />} />
           <Route path="questionset/upload-question" element={<UploadQuestion />} />
-          <Route path="edit-question" element={<EditQuestion />} />
+          <Route path="questionset/edit-question" element={<EditQuestion />} />
+          <Route path="setting/manage-group" element={<ManageGroup />} />
+          <Route path="setting/manage-group/bulk-edit" element={<BulkEdit />} />
+          <Route path="report/room-result" element={<RoomResult />} />
         </Route>
       </Routes>
     </BrowserRouter>
