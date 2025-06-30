@@ -124,8 +124,8 @@ export const StyledBtnSmWhite = styled(AntButton)`
   white-space: nowrap;
   text-align: center;
   &:hover, &:focus {
-    background: #f8f8fa;
-    color: #6c47d8;
-    border-color: #6c47d8;
+    background: #7c3aed;
+    color: #fff;
+    border-color: #7c3aed;
   }
 `; 

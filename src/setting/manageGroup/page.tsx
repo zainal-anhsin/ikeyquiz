@@ -144,10 +144,16 @@ const ManageGroup = () => {
             </a>
           </Breadcrumb.Item>
           <Breadcrumb.Item>
+            <a href="/" style={{ color: "#8c98a4" }}>
+              Setting
+            </a>
+          </Breadcrumb.Item>
+          <Breadcrumb.Item>
             <a href="/setting/manageGroup" style={{ color: "#222", fontWeight: 600 }}>
               Manage Group
             </a>
           </Breadcrumb.Item>
+
         </Breadcrumb>
       </div>
       {/* Buttons Section */}
