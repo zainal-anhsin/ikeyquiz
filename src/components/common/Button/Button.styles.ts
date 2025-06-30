@@ -104,4 +104,28 @@ export const StyledButtonMediumWhitePurple = styled(StyledButtonRectangle)`
     color: #6c47d8;
     border-color: #6c47d8;
   }
+`;
+
+// Small white button with purple border and purple text (same size as ButtonJoin)
+export const StyledBtnSmWhite = styled(AntButton)`
+  height: 32px;
+  border-radius: 8px;
+  font-weight: 600;
+  min-width: 80px;
+  padding: 0 18px;
+  font-size: 15px;
+  background: #fff;
+  color: #7c3aed;
+  border: 1px solid #7c3aed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: none;
+  white-space: nowrap;
+  text-align: center;
+  &:hover, &:focus {
+    background: #f8f8fa;
+    color: #6c47d8;
+    border-color: #6c47d8;
+  }
 `; 

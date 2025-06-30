@@ -8,13 +8,22 @@ import {
   FileAddOutlined,
   DeleteOutlined,
 } from "@ant-design/icons";
-import { SectionTitle } from "../components/common/Text/Text";
-import { ButtonMediumWhitePurple } from "../components/common/Button/Button";
-import Checkbox from "../components/common/Checkbox/Checkbox";
+import { SectionTitle, MetaText } from "../components/common/Text/Text";
+import { ButtonMediumWhitePurple, BtnSmWhite } from "../components/common/Button/Button";
 import { useNavigate } from "react-router-dom";
 import Table from "../components/common/Table/Table";
-import { tableData, DataType } from "../student/tableData";
 import { DropdownGrey, DropdownOption } from "../components/common/Dropdown/Dropdown";
+
+interface DataType {
+  key: React.Key;
+  name: string;
+  group: string;
+  subject: string;
+  question: number;
+  remark: string;
+  createdBy: string;
+  action: string;
+}
 
 const QuestionSet = () => {
   const [selectedRowKeys, setSelectedRowKeys] = useState<React.Key[]>([]);
@@ -42,89 +51,73 @@ const QuestionSet = () => {
       width: 60,
     },
     { title: "Name", dataIndex: "name" },
-    {
-      title: "Custom Group",
-      dataIndex: "customGroup",
-      render: (_: any, record: DataType) => (
-        <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
-          <label style={{ display: "flex", alignItems: "center", gap: 8 }}>
-            <Checkbox checked={record.customGroup.cg1} />
-            <span
-              style={{
-                fontFamily: "'Inter', 'Roboto', 'Arial', sans-serif",
-                fontSize: 16,
-                fontWeight: 400,
-                color: "#222",
-              }}
-            >
-              CG 1
-            </span>
-          </label>
-          <label style={{ display: "flex", alignItems: "center", gap: 8 }}>
-            <Checkbox checked={record.customGroup.cg2} />
-            <span
-              style={{
-                fontFamily: "'Inter', 'Roboto', 'Arial', sans-serif",
-                fontSize: 16,
-                fontWeight: 400,
-                color: "#222",
-              }}
-            >
-              CG 2
-            </span>
-          </label>
-        </div>
-      ),
-    },
-    {
-      title: "Category",
-      dataIndex: "category",
-      render: (_: any, record: DataType) => (
-        <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
-          <label style={{ display: "flex", alignItems: "center", gap: 8 }}>
-            <Checkbox checked={record.category.liveQuiz} />
-            <span
-              style={{
-                fontFamily: "'Inter', 'Roboto', 'Arial', sans-serif",
-                fontSize: 16,
-                fontWeight: 400,
-                color: "#222",
-              }}
-            >
-              Live Quiz
-            </span>
-          </label>
-          <label style={{ display: "flex", alignItems: "center", gap: 8 }}>
-            <Checkbox checked={record.category.kosaKata} />
-            <span
-              style={{
-                fontFamily: "'Inter', 'Roboto', 'Arial', sans-serif",
-                fontSize: 16,
-                fontWeight: 400,
-                color: "#222",
-              }}
-            >
-              Kosa Kata Spot+ (full)
-            </span>
-          </label>
-        </div>
-      ),
-    },
-    { title: "Classroom", dataIndex: "classroom" },
     { title: "Group", dataIndex: "group" },
-    { title: "Email", dataIndex: "email" },
+    { title: "Subject", dataIndex: "subject" },
+    { title: "Question", dataIndex: "question" },
+    { 
+      title: (
+        <div style={{ textAlign: 'center' }}>
+          <div >Remark</div>
+          <div>(Public/Hidden)</div>
+        </div>
+      ), 
+      dataIndex: "remark",
+      render: (value: string) => (
+        <div style={{ display: 'flex', justifyContent: 'center' }}>
+          <BtnSmWhite
+            onClick={() => navigate("")}
+          >
+            Edit
+          </BtnSmWhite>
+        </div>
+      )
+    },
+    { 
+      title: (
+        <div style={{ textAlign: 'center' }}>Created By</div>
+      ),
+      dataIndex: "createdBy",
+      render: (value: string) => (
+        <div style={{ textAlign: 'center' }}>
+          <div>{value}</div>
+          <MetaText style={{ fontSize: 12, marginTop: '2px' }}>
+            (May 29, 2025 4:29 PM)
+          </MetaText>
+        </div>
+      )
+    },
     {
-      title: "Action",
+      title: (
+        <div style={{ textAlign: 'center' }}>Action</div>
+      ),
       dataIndex: "action",
       render: () => (
-        <ButtonMediumWhitePurple
-          onClick={() => navigate("/questionset/edit-question")}
-        >
-          Edit
-        </ButtonMediumWhitePurple>
+        <div style={{ display: 'flex', gap: 8, justifyContent: 'center' }}>
+          <BtnSmWhite style={{width: 40 }}
+            onClick={() => navigate("/questionset/edit-question")}
+          >
+            Preview
+          </BtnSmWhite>
+          <BtnSmWhite style={{width: 40 }}
+            onClick={() => navigate("/questionset/preview-question")}
+          >
+            Edit
+          </BtnSmWhite>
+        </div>
       ),
     },
   ];
+
+  const tableData: DataType[] = Array.from({ length: 15 }).map((_, i) => ({
+    key: `questionset-${i}`,
+    name: "2025 English Year 6 (Test 1)",
+    group: "Standard 1",
+    subject: "English",
+    question: 40,
+    remark: "N/A",
+    createdBy: "iKEY Support",
+    action: "edit",
+  }));
 
   return (
     <div>

@@ -12,7 +12,7 @@ import { ButtonMediumWhitePurple } from "../components/common/Button/Button";
 import Checkbox from "../components/common/Checkbox/Checkbox";
 import { useNavigate } from "react-router-dom";
 import Table from "../components/common/Table/Table";
-import { tableData, DataType } from "./tableData";
+import { tableData, DataType } from "./dataStudent";
 import { DropdownGrey, DropdownOption } from "../components/common/Dropdown/Dropdown";
 
 const Student = () => {

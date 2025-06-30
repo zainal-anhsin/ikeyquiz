@@ -1,6 +1,6 @@
 import React from 'react';
 import { ButtonProps } from 'antd/lib/button';
-import { StyledButtonPrimary, StyledButtonRectangle, StyledButtonJoin, StyledButtonGrey, StyledButtonMediumGrey, StyledButtonMediumWhitePurple } from './Button.styles';
+import { StyledButtonPrimary, StyledButtonRectangle, StyledButtonJoin, StyledButtonGrey, StyledButtonMediumGrey, StyledButtonMediumWhitePurple, StyledBtnSmWhite } from './Button.styles';
 
 interface CustomButtonProps extends ButtonProps {
   children: React.ReactNode;
@@ -57,5 +57,14 @@ export const ButtonMediumWhitePurple: React.FC<CustomButtonProps> = ({ children,
     <StyledButtonMediumWhitePurple {...props}>
       {children}
     </StyledButtonMediumWhitePurple>
+  );
+};
+
+// BtnSmWhite for small white button with purple border and purple text (same size as ButtonJoin)
+export const BtnSmWhite: React.FC<CustomButtonProps> = ({ children, ...props }) => {
+  return (
+    <StyledBtnSmWhite {...props}>
+      {children}
+    </StyledBtnSmWhite>
   );
 }; 
