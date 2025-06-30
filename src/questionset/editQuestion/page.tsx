@@ -1,47 +1,25 @@
 import React from "react";
-import { Space, Breadcrumb, message, Upload, Row, Col } from "antd";
+import { Space, Breadcrumb } from "antd";
 import {
   SaveOutlined,
   UndoOutlined,
   CloseOutlined,
-  InboxOutlined,
   DeleteOutlined,
 } from "@ant-design/icons";
 import {
-  HeadingLg,
-  MetaText,
   SectionTitle,
 } from "../../components/common/Text/Text";
 import {
   ButtonMediumWhitePurple,
   ButtonMediumGrey,
 } from "../../components/common/Button/Button";
-import { Form, FormItem, FormInput } from "../../components/common/Form/Form";
-import {
-  DropdownGrey,
-  DropdownOption,
-} from "../../components/common/Dropdown/Dropdown";
-const { Dragger } = Upload;
+import { CustomTabs, TabPane } from "../../components/common/Tabs/tabs";
+import SettingQuestion from "./components/settingQuestion";
+import ListQuestion from "./components/listQuestion";
 
-const editQuestion = () => {
-  const uploadProps = {
-    name: "file",
-    multiple: true,
-    action: "https://660d2bd96ddfa2943b33731c.mockapi.io/api/upload",
-    onChange(info: any) {
-      const { status } = info.file;
-      if (status !== "uploading") {
-        console.log(info.file, info.fileList);
-      }
-      if (status === "done") {
-        message.success(`${info.file.name} file uploaded successfully.`);
-      } else if (status === "error") {
-        message.error(`${info.file.name} file upload failed.`);
-      }
-    },
-    onDrop(e: React.DragEvent<HTMLDivElement>) {
-      console.log("Dropped files", e.dataTransfer.files);
-    },
+const EditQuestion = () => {
+  const onChange = (key: string) => {
+    console.log(key);
   };
 
   return (
@@ -123,86 +101,19 @@ const editQuestion = () => {
           </Space>
         </div>
       </div>
-      <div style={{ display: "grid", placeItems: "center", marginTop: 24 }}>
-        <div
-          style={{
-            justifyContent: "flex-start",
-            width: "100%",
-            maxWidth: "800px",
-          }}
-        >
-          <HeadingLg style={{ marginBottom: 22, marginTop: 22 }}>
-            Edit Question Set
-          </HeadingLg>
-          <Form style={{ maxWidth: "800px" }}>
-            <Row gutter={32}>
-              <Col span={12}>
-                <FormItem label="Name" name="name">
-                  <FormInput placeholder="Enter Name" />
-                </FormItem>
-              </Col>
-              <Col span={12}>
-                <FormItem label="Display Order" name="displayOrder">
-                  <FormInput placeholder="0" />
-                </FormItem>
-              </Col>
-            </Row>
-            <Row gutter={32}>
-              <Col span={12}>
-                <FormItem label="Remarks (Public)" name="remarks">
-                  <FormInput.TextArea
-                    placeholder=""
-                    style={{ height: "100px", resize: "vertical" }}
-                  />
-                </FormItem>
-              </Col>
-              <Col span={12}>
-                <FormItem label="Total Question" name="totalQuestion">
-                  <FormInput
-                    type="number"
-                    defaultValue={30}
-                    placeholder="Enter number"
-                  />
-                </FormItem>
-              </Col>
-            </Row>
-            <Row gutter={32}>
-              <Col span={12}>
-              <FormItem label="Group" name="group">
-                <DropdownGrey placeholder="Select">
-                  <DropdownOption value="A">Group A</DropdownOption>
-                  <DropdownOption value="B">Group B</DropdownOption>
-                  <DropdownOption value="C">Group C</DropdownOption>
-                </DropdownGrey>
-              </FormItem>
-              </Col>
-            </Row>
-            <Row gutter={32}>
-              <Col span={12}>
-              <FormItem label="Subject" name="subject">
-                <DropdownGrey placeholder="Select">
-                  <DropdownOption value="A">Subject A</DropdownOption>
-                  <DropdownOption value="B">Subject B</DropdownOption>
-                  <DropdownOption value="C">Subject C</DropdownOption>
-                </DropdownGrey>
-              </FormItem>
-              </Col>
-            </Row>
-            <Row gutter={32}>
-              <Col span={12}>
-                <FormItem label="Remarks (Hidden)" name="remarksHidden">
-                  <FormInput.TextArea
-                    placeholder=""
-                    style={{ height: "100px", resize: "vertical" }}
-                  />
-                </FormItem>
-              </Col>
-            </Row>
-          </Form>
-        </div>
+      {/* Tabs Section */}
+      <div style={{ padding: "0 32px", marginTop: 24 }}>
+        <CustomTabs defaultActiveKey="1" onChange={onChange}>
+          <TabPane tab="Question Setting" key="1">
+            <SettingQuestion />
+          </TabPane>
+          <TabPane tab="Question List" key="2">
+            <ListQuestion />
+          </TabPane>
+        </CustomTabs>
       </div>
     </div>
   );
 };
 
-export default editQuestion;
+export default EditQuestion;

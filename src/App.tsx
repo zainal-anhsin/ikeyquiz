@@ -16,7 +16,7 @@ import QuestionSet from './questionset/page';
 import AddStudent from './student/addStudent/page';
 import EditStudent from './student/editStudent/page';
 import UploadStudent from './student/uploadStudent/page';
-import SettingQuestion from './questionset/components/settingQuestion';
+import SettingQuestion from './questionset/editQuestion/components/settingQuestion';
 import UploadQuestion from './questionset/uploadQuestion/page';
 import EditQuestion from './questionset/editQuestion/page';
 import ManageGroup from './setting/manageGroup/page';
