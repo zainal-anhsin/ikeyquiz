@@ -8,7 +8,7 @@ import {
   FileAddOutlined,
 } from "@ant-design/icons";
 import { SectionTitle } from "../components/common/Text/Text";
-import { ButtonMediumWhitePurple } from "../components/common/Button/Button";
+import { ButtonMediumWhitePurple, BtnSmWhite } from "../components/common/Button/Button";
 import Checkbox from "../components/common/Checkbox/Checkbox";
 import { useNavigate } from "react-router-dom";
 import Table from "../components/common/Table/Table";
@@ -116,11 +116,11 @@ const Student = () => {
       title: "Action",
       dataIndex: "action",
       render: () => (
-        <ButtonMediumWhitePurple
+        <BtnSmWhite
           onClick={() => navigate("/student/edit-student")}
         >
           Edit
-        </ButtonMediumWhitePurple>
+        </BtnSmWhite>
       ),
     },
   ];

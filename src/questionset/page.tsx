@@ -13,15 +13,15 @@ import { ButtonMediumWhitePurple, BtnSmWhite } from "../components/common/Button
 import { useNavigate } from "react-router-dom";
 import Table from "../components/common/Table/Table";
 import { DropdownGrey, DropdownOption } from "../components/common/Dropdown/Dropdown";
+import CustomSwitch from "../components/common/Switch/Switch";
 
 interface DataType {
   key: React.Key;
   name: string;
-  group: string;
-  subject: string;
-  question: number;
+  displayOrder: number;
+  active: boolean;
   remark: string;
-  createdBy: string;
+  display: boolean;
   action: string;
 }
 
@@ -51,40 +51,23 @@ const QuestionSet = () => {
       width: 60,
     },
     { title: "Name", dataIndex: "name" },
-    { title: "Group", dataIndex: "group" },
-    { title: "Subject", dataIndex: "subject" },
-    { title: "Question", dataIndex: "question" },
-    { 
-      title: (
-        <div style={{ textAlign: 'center' }}>
-          <div >Remark</div>
-          <div>(Public/Hidden)</div>
-        </div>
-      ), 
-      dataIndex: "remark",
-      render: (value: string) => (
-        <div style={{ display: 'flex', justifyContent: 'center' }}>
-          <BtnSmWhite
-            onClick={() => navigate("")}
-          >
-            Edit
-          </BtnSmWhite>
-        </div>
-      )
+    { title: "Display Order", dataIndex: "displayOrder" },
+    {
+      title: "Active",
+      dataIndex: "active",
+      render: (value: boolean) => <CustomSwitch checked={value} />,
     },
-    { 
-      title: (
-        <div style={{ textAlign: 'center' }}>Created By</div>
+    {
+      title: "Remark",
+      dataIndex: "remark",
+      render: () => (
+        <BtnSmWhite style={{ minWidth: 60 }}>Edit</BtnSmWhite>
       ),
-      dataIndex: "createdBy",
-      render: (value: string) => (
-        <div style={{ textAlign: 'center' }}>
-          <div>{value}</div>
-          <MetaText style={{ fontSize: 12, marginTop: '2px' }}>
-            (May 29, 2025 4:29 PM)
-          </MetaText>
-        </div>
-      )
+    },
+    {
+      title: "Display",
+      dataIndex: "display",
+      render: (value: boolean) => <CustomSwitch checked={value} />,
     },
     {
       title: (
@@ -92,17 +75,8 @@ const QuestionSet = () => {
       ),
       dataIndex: "action",
       render: () => (
-        <div style={{ display: 'flex', gap: 8, justifyContent: 'center' }}>
-          <BtnSmWhite style={{width: 40 }}
-            onClick={() => navigate("/questionset/edit-question")}
-          >
-            Preview
-          </BtnSmWhite>
-          <BtnSmWhite style={{width: 40 }}
-            onClick={() => navigate("/questionset/preview-question")}
-          >
-            Edit
-          </BtnSmWhite>
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 12 }}>
+          <BtnSmWhite style={{ minWidth: 60 }}>Edit</BtnSmWhite>
         </div>
       ),
     },
@@ -110,12 +84,11 @@ const QuestionSet = () => {
 
   const tableData: DataType[] = Array.from({ length: 15 }).map((_, i) => ({
     key: `questionset-${i}`,
-    name: "2025 English Year 6 (Test 1)",
-    group: "Standard 1",
-    subject: "English",
-    question: 40,
-    remark: "N/A",
-    createdBy: "iKEY Support",
+    name: "Form 5 (Batch 2025)",
+    displayOrder: Math.floor(Math.random() * 5) + 1,
+    active: i % 2 === 0,
+    remark: "Edit",
+    display: i % 3 === 0,
     action: "edit",
   }));
 
