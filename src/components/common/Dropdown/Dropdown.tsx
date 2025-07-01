@@ -9,8 +9,8 @@ import {
 const { Option } = Select;
 
 // It needs onPointerEnterCapture and onPointerLeaveCapture to satisfy the styled-components typing
-const PurpleArrow = () => <StyledDownArrow onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined} />;
-const GreyArrow = () => <StyledDownArrowGrey onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined} />;
+const PurpleArrow = () => <StyledDownArrow onPointerOverCapture={undefined} onPointerLeave={undefined} />;
+const GreyArrow = () => <StyledDownArrowGrey onPointerOverCapture={undefined} onPointerLeave={undefined} />;
 
 // Casting the styled components to the correct AntD Select type with generics
 const SelectPurpleStyled = StyledSelectPurple as typeof Select;

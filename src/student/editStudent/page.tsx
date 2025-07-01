@@ -68,15 +68,15 @@ const EditStudent = () => {
           <Space>
             <ButtonMediumWhitePurple>
               <DeleteOutlined
-                onPointerEnterCapture={undefined}
-                onPointerLeaveCapture={undefined}
+                onPointerOverCapture={undefined}
+                onPointerLeave={undefined}
               />
               Delete
             </ButtonMediumWhitePurple>
             <UserOutlined
               style={{ fontSize: 28, color: "#1a327f" }}
-              onPointerEnterCapture={undefined}
-              onPointerLeaveCapture={undefined}
+              onPointerOverCapture={undefined}
+              onPointerLeave={undefined}
             />
             <span style={{ marginLeft: 8, marginRight: 8, fontWeight: "bold" }}>
               {isActive ? "Active" : "Deactivated"}
@@ -91,15 +91,15 @@ const EditStudent = () => {
           <Space>
             <ButtonMediumGrey>
               <CloseOutlined
-                onPointerEnterCapture={undefined}
-                onPointerLeaveCapture={undefined}
+                onPointerOverCapture={undefined}
+                onPointerLeave={undefined}
               />
               Cancel
             </ButtonMediumGrey>
             <ButtonMediumWhitePurple>
               <UndoOutlined
-                onPointerEnterCapture={undefined}
-                onPointerLeaveCapture={undefined}
+                onPointerOverCapture={undefined}
+                onPointerLeave={undefined}
               />
               Reset
             </ButtonMediumWhitePurple>
@@ -107,8 +107,8 @@ const EditStudent = () => {
               style={{ background: "#7c3aed", color: "white" }}
             >
               <SaveOutlined
-                onPointerEnterCapture={undefined}
-                onPointerLeaveCapture={undefined}
+                onPointerOverCapture={undefined}
+                onPointerLeave={undefined}
               />
               Save
             </ButtonMediumWhitePurple>
@@ -157,8 +157,8 @@ const EditStudent = () => {
                 }}
               >
                 <MailOutlined
-                  onPointerEnterCapture={undefined}
-                  onPointerLeaveCapture={undefined}
+                  onPointerOverCapture={undefined}
+                  onPointerLeave={undefined}
                   style={{ marginRight: 6, marginLeft: 6 }}
                 />
                 Email Password

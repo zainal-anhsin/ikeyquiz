@@ -67,8 +67,8 @@ const EditQuestion = () => {
           <Space>
             <ButtonMediumWhitePurple>
               <DeleteOutlined
-                onPointerEnterCapture={undefined}
-                onPointerLeaveCapture={undefined}
+                onPointerOverCapture={undefined}
+                onPointerLeave={undefined}
               />
               Delete
             </ButtonMediumWhitePurple>
@@ -77,15 +77,15 @@ const EditQuestion = () => {
           <Space>
             <ButtonMediumGrey>
               <CloseOutlined
-                onPointerEnterCapture={undefined}
-                onPointerLeaveCapture={undefined}
+                onPointerOverCapture={undefined}
+                onPointerLeave={undefined}
               />
               Cancel
             </ButtonMediumGrey>
             <ButtonMediumWhitePurple>
               <UndoOutlined
-                onPointerEnterCapture={undefined}
-                onPointerLeaveCapture={undefined}
+                onPointerOverCapture={undefined}
+                onPointerLeave={undefined}
               />
               Reset
             </ButtonMediumWhitePurple>
@@ -93,8 +93,8 @@ const EditQuestion = () => {
               style={{ background: "#7c3aed", color: "white" }}
             >
               <SaveOutlined
-                onPointerEnterCapture={undefined}
-                onPointerLeaveCapture={undefined}
+                onPointerOverCapture={undefined}
+                onPointerLeave={undefined}
               />
               Save
             </ButtonMediumWhitePurple>

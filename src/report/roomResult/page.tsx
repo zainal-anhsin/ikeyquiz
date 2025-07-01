@@ -68,8 +68,8 @@ const RoomResult = () => {
       dataIndex: "action",
       render: () => (
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 22 }}>
-          <DownloadOutlined style={{ color: '#7c3aed', fontSize: 22, cursor: 'pointer' }} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined} />
-          <DeleteOutlined style={{ color: '#7c3aed', fontSize: 22, cursor: 'pointer' }} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined} />
+          <DownloadOutlined style={{ color: '#7c3aed', fontSize: 22, cursor: 'pointer' }} onPointerOverCapture={undefined} onPointerLeave={undefined} />
+          <DeleteOutlined style={{ color: '#7c3aed', fontSize: 22, cursor: 'pointer' }} onPointerOverCapture={undefined} onPointerLeave={undefined} />
           <BtnSmWhite>View</BtnSmWhite>
         </div>
       ),
@@ -130,8 +130,8 @@ const RoomResult = () => {
               onClick={() => navigate("")}
             >
               <FileAddOutlined
-                onPointerEnterCapture={undefined}
-                onPointerLeaveCapture={undefined}
+                onPointerOverCapture={undefined}
+                onPointerLeave={undefined}
               />
               Generate Report
             </ButtonMediumWhitePurple>

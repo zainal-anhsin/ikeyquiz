@@ -99,8 +99,8 @@ const LiveQuizPage = () => {
               >
                 <LeftOutlined
                   style={{ color: "#9ca3af", fontSize: 22 }}
-                  onPointerEnterCapture={() => {}}
-                  onPointerLeaveCapture={() => {}}
+                  onPointerOverCapture={() => {}}
+                  onPointerLeave={() => {}}
                 />
               </CircleButton>
               <span
@@ -142,8 +142,8 @@ const LiveQuizPage = () => {
             <CircleButton type="button">
               <RightOutlined
                 style={{ color: "#fff", fontSize: 22 }}
-                onPointerEnterCapture={() => {}}
-                onPointerLeaveCapture={() => {}}
+                onPointerOverCapture={() => {}}
+                onPointerLeave={() => {}}
               />
             </CircleButton>
           </NavButton>
@@ -155,8 +155,8 @@ const LiveQuizPage = () => {
           <TimerRow>
             <ClockCircleOutlined
               style={{ fontSize: 32, color: "#7c3aed" }}
-              onPointerEnterCapture={() => {}}
-              onPointerLeaveCapture={() => {}}
+              onPointerOverCapture={() => {}}
+              onPointerLeave={() => {}}
             />
             <HeadingLg style={{ fontSize: "2rem" }}>45:29 Mins</HeadingLg>
           </TimerRow>

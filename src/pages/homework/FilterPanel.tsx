@@ -235,7 +235,7 @@ const FilterPanel = ({ onReset }: FilterPanelProps) => {
           }}
         >
           <span>Reset</span>
-          <ReloadOutlined onPointerEnterCapture={() => {}} onPointerLeaveCapture={() => {}} style={{ fontSize: 18 }} />
+          <ReloadOutlined onPointerOverCapture={() => {}} onPointerLeave={() => {}} style={{ fontSize: 18 }} />
         </span>
       </div>
     </div>

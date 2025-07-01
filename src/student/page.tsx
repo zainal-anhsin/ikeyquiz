@@ -167,15 +167,15 @@ const Student = () => {
               style={{ background: "#7c3aed", color: "white", width: 120 }}
             >
               <EditOutlined
-                onPointerEnterCapture={undefined}
-                onPointerLeaveCapture={undefined}
+                onPointerOverCapture={undefined}
+                onPointerLeave={undefined}
               />
               Bulk Edit
             </ButtonMediumWhitePurple>
             <ButtonMediumWhitePurple style={{ width: 170 }}>
               <EditOutlined
-                onPointerEnterCapture={undefined}
-                onPointerLeaveCapture={undefined}
+                onPointerOverCapture={undefined}
+                onPointerLeave={undefined}
               />
               Custom Group
             </ButtonMediumWhitePurple>
@@ -184,8 +184,8 @@ const Student = () => {
           <Space>
             <ButtonMediumWhitePurple style={{ width: 180 }}>
               <SearchOutlined
-                onPointerEnterCapture={undefined}
-                onPointerLeaveCapture={undefined}
+                onPointerOverCapture={undefined}
+                onPointerLeave={undefined}
               />
               Search Student
             </ButtonMediumWhitePurple>
@@ -193,8 +193,8 @@ const Student = () => {
               onClick={() => navigate("/student/upload-student")}
             >
               <UploadOutlined
-                onPointerEnterCapture={undefined}
-                onPointerLeaveCapture={undefined}
+                onPointerOverCapture={undefined}
+                onPointerLeave={undefined}
               />
               Upload Student
             </ButtonMediumWhitePurple>
@@ -202,8 +202,8 @@ const Student = () => {
               onClick={() => navigate("/student/add-student")}
             >
               <FileAddOutlined
-                onPointerEnterCapture={undefined}
-                onPointerLeaveCapture={undefined}
+                onPointerOverCapture={undefined}
+                onPointerLeave={undefined}
               />
               Add Student
             </ButtonMediumWhitePurple>

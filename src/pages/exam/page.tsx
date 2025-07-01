@@ -69,8 +69,8 @@ const ExamPage = () => {
           >
             <MenuUnfoldOutlined
               style={{ fontSize: 25, color: '#7c3aed', cursor: 'pointer' }}
-              onPointerEnterCapture={() => {}}
-              onPointerLeaveCapture={() => {}}
+              onPointerOverCapture={() => {}}
+              onPointerLeave={() => {}}
             />
           </Popover>
         </FilterBar>

@@ -79,16 +79,16 @@ const page = () => {
             >
               <UndoOutlined
                 style={{ marginRight: 8 }}
-                onPointerEnterCapture={undefined}
-                onPointerLeaveCapture={undefined}
+                onPointerOverCapture={undefined}
+                onPointerLeave={undefined}
               />
               Reset
             </ButtonRectangle>
             <ButtonRectangle>
               <DownloadOutlined
                 style={{ marginRight: 8 }}
-                onPointerEnterCapture={undefined}
-                onPointerLeaveCapture={undefined}
+                onPointerOverCapture={undefined}
+                onPointerLeave={undefined}
               />
               Download Report
             </ButtonRectangle>

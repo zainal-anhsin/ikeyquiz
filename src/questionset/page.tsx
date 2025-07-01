@@ -99,7 +99,7 @@ const QuestionSet = () => {
             Preview
           </BtnSmWhite>
           <BtnSmWhite style={{width: 40 }}
-            onClick={() => navigate("/questionset/preview-question")}
+            onClick={() => navigate("/questionset/edit-question")}
           >
             Edit
           </BtnSmWhite>
@@ -161,15 +161,15 @@ const QuestionSet = () => {
               style={{ background: "#7c3aed", color: "white", width: 120 }}
             >
               <EditOutlined
-                onPointerEnterCapture={undefined}
-                onPointerLeaveCapture={undefined}
+                onPointerOverCapture={undefined}
+                onPointerLeave={undefined}
               />
               Bulk Edit
             </ButtonMediumWhitePurple>
             <ButtonMediumWhitePurple style={{ width: 170 }}>
               <DeleteOutlined
-                onPointerEnterCapture={undefined}
-                onPointerLeaveCapture={undefined}
+                onPointerOverCapture={undefined}
+                onPointerLeave={undefined}
               />
               Bulk Remove
             </ButtonMediumWhitePurple>
@@ -178,8 +178,8 @@ const QuestionSet = () => {
           <Space>
             <ButtonMediumWhitePurple style={{ width: 220 }}>
               <SearchOutlined
-                onPointerEnterCapture={undefined}
-                onPointerLeaveCapture={undefined}
+                onPointerOverCapture={undefined}
+                onPointerLeave={undefined}
               />
               Search Question Set
             </ButtonMediumWhitePurple>
@@ -187,8 +187,8 @@ const QuestionSet = () => {
               onClick={() => navigate("/questionset/upload-question")}
             >
               <UploadOutlined
-                onPointerEnterCapture={undefined}
-                onPointerLeaveCapture={undefined}
+                onPointerOverCapture={undefined}
+                onPointerLeave={undefined}
               />
               Upload Question Set
             </ButtonMediumWhitePurple>
@@ -196,8 +196,8 @@ const QuestionSet = () => {
               onClick={() => navigate("")}
             >
               <FileAddOutlined
-                onPointerEnterCapture={undefined}
-                onPointerLeaveCapture={undefined}
+                onPointerOverCapture={undefined}
+                onPointerLeave={undefined}
               />
               Create
             </ButtonMediumWhitePurple>

@@ -106,7 +106,7 @@ const ManageGroup = () => {
       render: () => (
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 12 }}>
           <BtnSmWhite style={{ minWidth: 60 }}>
-            <DeleteOutlined onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined} />
+            <DeleteOutlined onPointerOverCapture={undefined} onPointerLeave={undefined} />
           </BtnSmWhite>
           <BtnSmWhite style={{ minWidth: 60 }}>Edit</BtnSmWhite>
         </div>
@@ -172,15 +172,15 @@ const ManageGroup = () => {
               style={{ background: "#7c3aed", color: "white", width: 120 }}
             >
               <EditOutlined
-                onPointerEnterCapture={undefined}
-                onPointerLeaveCapture={undefined}
+                onPointerOverCapture={undefined}
+                onPointerLeave={undefined}
               />
               Bulk Edit
             </ButtonMediumWhitePurple>
             <ButtonMediumWhitePurple style={{ width: 170 }}>
               <DeleteOutlined
-                onPointerEnterCapture={undefined}
-                onPointerLeaveCapture={undefined}
+                onPointerOverCapture={undefined}
+                onPointerLeave={undefined}
               />
               Bulk Remove
             </ButtonMediumWhitePurple>
@@ -191,8 +191,8 @@ const ManageGroup = () => {
               onClick={() => navigate("")}
             >
               <FileAddOutlined
-                onPointerEnterCapture={undefined}
-                onPointerLeaveCapture={undefined}
+                onPointerOverCapture={undefined}
+                onPointerLeave={undefined}
               />
               Add New
             </ButtonMediumWhitePurple>

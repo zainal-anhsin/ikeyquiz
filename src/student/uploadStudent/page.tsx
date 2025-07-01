@@ -79,15 +79,15 @@ const uploadStudent = () => {
           <Space>
             <ButtonMediumGrey>
               <CloseOutlined
-                onPointerEnterCapture={undefined}
-                onPointerLeaveCapture={undefined}
+                onPointerOverCapture={undefined}
+                onPointerLeave={undefined}
               />
               Cancel
             </ButtonMediumGrey>
             <ButtonMediumWhitePurple>
               <UndoOutlined
-                onPointerEnterCapture={undefined}
-                onPointerLeaveCapture={undefined}
+                onPointerOverCapture={undefined}
+                onPointerLeave={undefined}
               />
               Reset
             </ButtonMediumWhitePurple>
@@ -95,8 +95,8 @@ const uploadStudent = () => {
               style={{ background: "#7c3aed", color: "white" }}
             >
               <SaveOutlined
-                onPointerEnterCapture={undefined}
-                onPointerLeaveCapture={undefined}
+                onPointerOverCapture={undefined}
+                onPointerLeave={undefined}
               />
               Save
             </ButtonMediumWhitePurple>
@@ -134,8 +134,8 @@ const uploadStudent = () => {
             <p className="ant-upload-drag-icon">
               <InboxOutlined
                 style={{ color: "#7c3aed" }}
-                onPointerEnterCapture={undefined}
-                onPointerLeaveCapture={undefined}
+                onPointerOverCapture={undefined}
+                onPointerLeave={undefined}
               />
             </p>
             <p
