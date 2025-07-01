@@ -13,15 +13,9 @@ import {
   ButtonMediumWhitePurple,
   ButtonMediumGrey,
 } from "../../components/common/Button/Button";
-import { CustomTabs, TabPane } from "../../components/common/Tabs/tabs";
-import SettingQuestion from "./components/settingQuestion";
 import ListQuestion from "./components/listQuestion";
 
 const EditQuestion = () => {
-  const onChange = (key: string) => {
-    console.log(key);
-  };
-
   return (
     <div>
       {/* Breadcrumb section */}
@@ -101,17 +95,8 @@ const EditQuestion = () => {
           </Space>
         </div>
       </div>
-      {/* Tabs Section */}
-      <div style={{ padding: "0 32px", marginTop: 24 }}>
-        <CustomTabs defaultActiveKey="1" onChange={onChange}>
-          <TabPane tab="Question Setting" key="1">
-            <SettingQuestion />
-          </TabPane>
-          <TabPane tab="Question List" key="2">
-            <ListQuestion />
-          </TabPane>
-        </CustomTabs>
-      </div>
+      {/* Main Content Section */}
+      <ListQuestion />
     </div>
   );
 };

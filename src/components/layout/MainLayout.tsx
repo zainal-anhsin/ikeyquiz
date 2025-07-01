@@ -1,7 +1,11 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
-import Navbar from './navbar/navbar';
-import Sidebar from './sidebar/sidebar';
+//import Navbar from './navbar/navbar';
+//import Sidebar from './sidebar/sidebar';
+
+import NewNavbar from './newNavbar/newNavbar';
+import NewSidebar from './newSidebar/newSideBar';
+
 import styled from 'styled-components';
 
 const LayoutContainer = styled.div`
@@ -29,9 +33,9 @@ const ContentWrapper = styled.div`
 const MainLayout = () => {
   return (
     <LayoutContainer>
-      <Sidebar />
+      <NewSidebar />
       <MainContent>
-        <Navbar />
+        <NewNavbar />
         <ContentWrapper>
           <Outlet />
         </ContentWrapper>

@@ -26,7 +26,6 @@ import {
 } from "../../components/common/Dropdown/Dropdown";
 import Checkbox from "../../components/common/Checkbox/Checkbox";
 import CustomSwitch from "../../components/common/Switch/Switch";
-import CustomDatePicker from "../../components/common/DatePicker/datePicker";
 
 const ThemePage = () => {
   return (
@@ -209,33 +208,6 @@ const ThemePage = () => {
               <DropdownOption value="option2">Option 2</DropdownOption>
               <DropdownOption value="option3">Option 3</DropdownOption>
             </DropdownGrey>
-          </Col>
-        </Row>
-      </Card>
-
-      {/* Date Picker Components Section */}
-      <Card title="Date Picker Components" style={{ marginBottom: "24px" }}>
-        <Row gutter={[16, 40]}>
-          <Col span={12}>
-            <SectionTitle>Date Only Picker</SectionTitle>
-            <Divider />
-            <CustomDatePicker 
-              placeholder="Select date"
-              onChange={(date, dateStr) => {
-                console.log('Date selected:', dateStr);
-              }}
-            />
-          </Col>
-          <Col span={12}>
-            <SectionTitle>Date & Time Picker</SectionTitle>
-            <Divider />
-            <CustomDatePicker 
-              showTime
-              placeholder="Select date and time"
-              onChange={(date, dateStr) => {
-                console.log('Date and time selected:', dateStr);
-              }}
-            />
           </Col>
         </Row>
       </Card>
