@@ -7,7 +7,7 @@ export const StyledForm = styled(AntForm)`
 `;
 
 export const StyledInput = styled(AntInput)`
-  height: 40px;
+  height: 45px;
   border-radius: 8px;
 
   &:hover, &:focus, &.ant-input-focused {

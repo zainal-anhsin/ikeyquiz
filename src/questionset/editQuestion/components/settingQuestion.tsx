@@ -5,7 +5,7 @@ import {
 } from "../../../components/common/Text/Text";
 import { Form, FormItem, FormInput } from "../../../components/common/Form/Form";
 import {
-  DropdownGrey,
+  DropdownWhiteGrey,
   DropdownOption,
 } from "../../../components/common/Dropdown/Dropdown";
 
@@ -57,22 +57,22 @@ const SettingQuestion = () => {
           <Row gutter={32}>
             <Col span={12}>
             <FormItem label="Group" name="group">
-              <DropdownGrey placeholder="Select">
+              <DropdownWhiteGrey placeholder="Select">
                 <DropdownOption value="A">Group A</DropdownOption>
                 <DropdownOption value="B">Group B</DropdownOption>
                 <DropdownOption value="C">Group C</DropdownOption>
-              </DropdownGrey>
+              </DropdownWhiteGrey>
             </FormItem>
             </Col>
           </Row>
           <Row gutter={32}>
             <Col span={12}>
             <FormItem label="Subject" name="subject">
-              <DropdownGrey placeholder="Select">
+              <DropdownWhiteGrey placeholder="Select">
                 <DropdownOption value="A">Subject A</DropdownOption>
                 <DropdownOption value="B">Subject B</DropdownOption>
                 <DropdownOption value="C">Subject C</DropdownOption>
-              </DropdownGrey>
+              </DropdownWhiteGrey>
             </FormItem>
             </Col>
           </Row>

@@ -18,8 +18,8 @@ import {
 } from "../../components/common/Button/Button";
 import { Form, FormItem, FormInput } from "../../components/common/Form/Form";
 import {
-  DropdownGrey,
   DropdownOption,
+  DropdownWhiteGrey,
 } from "../../components/common/Dropdown/Dropdown";
 const { Dragger } = Upload;
 
@@ -130,11 +130,11 @@ const uploadQuestion = () => {
               </Col>
               <Col span={12}>
                 <FormItem label="Group" name="group">
-                  <DropdownGrey placeholder="Select">
+                  <DropdownWhiteGrey placeholder="Select">
                     <DropdownOption value="A">Group A</DropdownOption>
                     <DropdownOption value="B">Group B</DropdownOption>
                     <DropdownOption value="C">Group C</DropdownOption>
-                  </DropdownGrey>
+                  </DropdownWhiteGrey>
                 </FormItem>
               </Col>
             </Row>
@@ -146,11 +146,11 @@ const uploadQuestion = () => {
               </Col>
               <Col span={12}>
                 <FormItem label="Subject" name="subject">
-                  <DropdownGrey placeholder="Select">
+                  <DropdownWhiteGrey placeholder="Select">
                     <DropdownOption value="A">Subject A</DropdownOption>
                     <DropdownOption value="B">Subject B</DropdownOption>
                     <DropdownOption value="C">Subject C</DropdownOption>
-                  </DropdownGrey>
+                  </DropdownWhiteGrey>
                 </FormItem>
               </Col>
             </Row>
@@ -158,7 +158,7 @@ const uploadQuestion = () => {
 
           <div style={{ marginTop: 32 }}>
           <MetaText>
-            <span style={{ color: "#7c3aed", cursor: "pointer" }}>
+            <span style={{ color: "#6666FF", cursor: "pointer" }}>
               Download & use the provided spreadsheet template file
             </span>{" "}
             for upload purpose.

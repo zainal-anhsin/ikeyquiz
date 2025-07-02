@@ -10,7 +10,7 @@ import { SectionTitle } from "../../components/common/Text/Text";
 import { ButtonMediumWhitePurple, BtnSmWhite } from "../../components/common/Button/Button";
 import { useNavigate } from "react-router-dom";
 import Table from "../../components/common/Table/Table";
-import { DropdownGrey, DropdownOption } from "../../components/common/Dropdown/Dropdown";
+import { DropdownWhiteGrey, DropdownOption } from "../../components/common/Dropdown/Dropdown";
 import { MetaText } from "../../components/common/Text/Text";
 
 interface DataType {
@@ -166,22 +166,22 @@ const RoomResult = () => {
               ]}
               onChange={(value) => console.log('selected', value)}
             />
-            <DropdownGrey placeholder="Classroom" size="large" style={{ width: 140 }} onChange={value => console.log('classroom', value)}>
+            <DropdownWhiteGrey placeholder="Classroom" size="large" style={{ width: 140 }} onChange={value => console.log('classroom', value)}>
               <DropdownOption value="SSR">SSR</DropdownOption>
               <DropdownOption value="SER">SER</DropdownOption>
-            </DropdownGrey>
-            <DropdownGrey placeholder="Group" size="large" style={{ width: 130 }} onChange={value => console.log('group', value)}>
+            </DropdownWhiteGrey>
+            <DropdownWhiteGrey placeholder="Group" size="large" style={{ width: 130 }} onChange={value => console.log('group', value)}>
               <DropdownOption value="Standard 1">Standard 1</DropdownOption>
               <DropdownOption value="Standard 2">Standard 2</DropdownOption>
               <DropdownOption value="Standard 3">Standard 3</DropdownOption>
-            </DropdownGrey>
+            </DropdownWhiteGrey>
           </div>
           <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
             <SectionTitle style={{ marginRight: 8 }}>Sort By:</SectionTitle>
-            <DropdownGrey placeholder="Select" size="large" style={{ width: 115 }} onChange={value => console.log('sort', value)}>
+            <DropdownWhiteGrey placeholder="Select" size="large" style={{ width: 115 }} onChange={value => console.log('sort', value)}>
               <DropdownOption value="name-asc">A - Z</DropdownOption>
               <DropdownOption value="name-desc">Z - A</DropdownOption>
-            </DropdownGrey>
+            </DropdownWhiteGrey>
           </div>
         </div>
         <Table<DataType>

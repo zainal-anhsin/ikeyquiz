@@ -4,8 +4,10 @@ import {
   StyledSelectPurple, 
   StyledSelectGrey, 
   StyledDownArrow, 
-  StyledDownArrowGrey 
+  StyledDownArrowGrey,
+  StyledSelectWhiteGrey
 } from './Dropdown.styles';
+
 const { Option } = Select;
 
 // It needs onPointerEnterCapture and onPointerLeaveCapture to satisfy the styled-components typing
@@ -34,4 +36,6 @@ export const DropdownGrey: React.FC<SelectProps> = (props) => {
   );
 };
 
-export { Option as DropdownOption }; 
+export { Option as DropdownOption };
+
+export { StyledSelectWhiteGrey as DropdownWhiteGrey }; 

@@ -46,6 +46,19 @@ export const StyledSelectGrey = styled(Select)`
   }
 `;
 
+export const StyledSelectWhiteGrey = styled(Select)`
+  ${commonSelectStyles}
+  .ant-select-selector {
+    border: 1.5px solid #e5e7eb !important;
+    background-color: #fff !important;
+    box-shadow: none !important;
+  }
+
+  &:hover .ant-select-selector {
+    border-color: #b0b3b9 !important;
+  }
+`;
+
 export const StyledDownArrow = styled(DownOutlined)`
   color: #a78bfa;
   font-size: 12px;

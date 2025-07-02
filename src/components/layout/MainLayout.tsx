@@ -21,12 +21,11 @@ const MainContent = styled.main`
 
 // Add a wrapper for consistent content spacing
 const ContentWrapper = styled.div`
-  max-width: 1300px;
-  margin-left: 80px;
-  margin-right: 80px;
-  margin-top: 32px;
-  margin-bottom: 32px;
-  padding: 32px 0;
+  max-width: 1385px;
+  margin-left: 34px;
+  margin-right: 34px;
+  margin-top: 16px;
+  margin-bottom: 16px;
   width: 100%;
 `;
 

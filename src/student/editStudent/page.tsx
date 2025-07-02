@@ -12,7 +12,7 @@ import { Form, FormItem, FormInput } from "../../components/common/Form/Form";
 import { HeadingLg, SectionTitle } from "../../components/common/Text/Text";
 import { PasswordRevealInput } from "../../components/common/Form/Form";
 import {
-  DropdownGrey,
+  DropdownWhiteGrey,
   DropdownOption,
 } from "../../components/common/Dropdown/Dropdown";
 import {
@@ -235,11 +235,11 @@ const EditStudent = () => {
           <Row gutter={32}>
             <Col span={12}>
               <FormItem label="Group" name="group">
-                <DropdownGrey placeholder="Select">
+                <DropdownWhiteGrey placeholder="Select">
                   <DropdownOption value="A">Group A</DropdownOption>
                   <DropdownOption value="B">Group B</DropdownOption>
                   <DropdownOption value="C">Group C</DropdownOption>
-                </DropdownGrey>
+                </DropdownWhiteGrey>
               </FormItem>
             </Col>
             <Col span={12}>

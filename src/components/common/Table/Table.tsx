@@ -34,6 +34,10 @@ const StyledTableWrapper = styled.div`
   .ant-table-tbody > tr.ant-table-row-selected > td {
     background: #e6f4ff !important;
   }
+  .ant-table-thead > tr > th:first-child,
+  .ant-table-tbody > tr > td:first-child {
+    padding-left: 24px;
+  }
 `;
 
 function Table<T extends object = any>(props: TableProps<T>) {

@@ -17,8 +17,8 @@ import {
 import { useNavigate } from "react-router-dom";
 import Table from "../components/common/Table/Table";
 import {
-  DropdownGrey,
   DropdownOption,
+  DropdownWhiteGrey,
 } from "../components/common/Dropdown/Dropdown";
 
 interface DataType {
@@ -239,7 +239,7 @@ const QuestionSet = () => {
               ]}
               onChange={(value) => console.log("selected", value)}
             />
-            <DropdownGrey
+            <DropdownWhiteGrey
               placeholder="Classroom"
               size="large"
               style={{ width: 140 }}
@@ -247,8 +247,8 @@ const QuestionSet = () => {
             >
               <DropdownOption value="SSR">SSR</DropdownOption>
               <DropdownOption value="SER">SER</DropdownOption>
-            </DropdownGrey>
-            <DropdownGrey
+            </DropdownWhiteGrey>
+            <DropdownWhiteGrey
               placeholder="Group"
               size="large"
               style={{ width: 130 }}
@@ -257,11 +257,11 @@ const QuestionSet = () => {
               <DropdownOption value="Standard 1">Standard 1</DropdownOption>
               <DropdownOption value="Standard 2">Standard 2</DropdownOption>
               <DropdownOption value="Standard 3">Standard 3</DropdownOption>
-            </DropdownGrey>
+            </DropdownWhiteGrey>
           </div>
           <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
             <SectionTitle style={{ marginRight: 8 }}>Sort By:</SectionTitle>
-            <DropdownGrey
+            <DropdownWhiteGrey
               placeholder="Select"
               size="large"
               style={{ width: 115 }}
@@ -269,7 +269,7 @@ const QuestionSet = () => {
             >
               <DropdownOption value="name-asc">A - Z</DropdownOption>
               <DropdownOption value="name-desc">Z - A</DropdownOption>
-            </DropdownGrey>
+            </DropdownWhiteGrey>
           </div>
         </div>
         <Table<DataType>
