@@ -12,6 +12,7 @@ import {
 import {
   ButtonMediumWhitePurple,
   ButtonMediumGrey,
+  ButtonRectangle,
 } from "../../components/common/Button/Button";
 import ListQuestion from "./components/listQuestion";
 
@@ -83,15 +84,13 @@ const EditQuestion = () => {
               />
               Reset
             </ButtonMediumWhitePurple>
-            <ButtonMediumWhitePurple
-              style={{ background: "#7c3aed", color: "white" }}
-            >
+            <ButtonRectangle>
               <SaveOutlined
                 onPointerOverCapture={undefined}
                 onPointerLeave={undefined}
               />
               Save
-            </ButtonMediumWhitePurple>
+            </ButtonRectangle>
           </Space>
         </div>
       </div>

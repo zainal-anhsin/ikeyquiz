@@ -11,6 +11,7 @@ import Divider from "../../components/common/Divider/Divider";
 import {
   ButtonMediumWhitePurple,
   ButtonMediumGrey,
+  ButtonRectangle,
 } from "../../components/common/Button/Button";
 const { Dragger } = Upload;
 
@@ -91,15 +92,13 @@ const uploadStudent = () => {
               />
               Reset
             </ButtonMediumWhitePurple>
-            <ButtonMediumWhitePurple
-              style={{ background: "#7c3aed", color: "white" }}
-            >
+            <ButtonRectangle>
               <SaveOutlined
                 onPointerOverCapture={undefined}
                 onPointerLeave={undefined}
               />
               Save
-            </ButtonMediumWhitePurple>
+            </ButtonRectangle>
           </Space>
         </div>
       </div>
@@ -131,36 +130,21 @@ const uploadStudent = () => {
           style={{ width: "100%", maxWidth: 800, margin: "32px auto 0 auto" }}
         >
           <Dragger {...uploadProps} style={{ padding: 32 }}>
-            <p className="ant-upload-drag-icon">
-              <InboxOutlined
-                style={{ color: "#7c3aed" }}
-                onPointerOverCapture={undefined}
-                onPointerLeave={undefined}
-              />
-            </p>
-            <p
-              className="ant-upload-text"
-              style={{ color: "#7c3aed", fontWeight: 500, fontSize: 18 }}
-            >
-              Drop files to upload or
-            </p>
-            <p>
-              <button
-                type="button"
-                style={{
-                  background: "#7c3aed",
-                  color: "#fff",
-                  border: "none",
-                  borderRadius: 6,
-                  padding: "8px 32px",
-                  fontWeight: 500,
-                  fontSize: 18,
-                  cursor: "pointer",
-                }}
-              >
+            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+              <p className="ant-upload-drag-icon">
+                <InboxOutlined
+                  style={{ color: "#6666FF" }}
+                  onPointerOverCapture={undefined}
+                  onPointerLeave={undefined}
+                />
+              </p>
+              <div style={{ color: '#6666FF', fontSize: 18, marginBottom: 16 }}>
+                Drop files to upload or
+              </div>
+              <ButtonRectangle>
                 Browse
-              </button>
-            </p>
+              </ButtonRectangle>
+            </div>
           </Dragger>
         </div>
         {/* Checkbox section */}

@@ -44,8 +44,8 @@ const QuestionSet = () => {
         })}
       </div>
       <div style={{ display: "flex", justifyContent: "center", gap: 16 }}>
-        <ButtonRectangle style={{ width: 150 }}>+ Add Question</ButtonRectangle>
-        <ButtonMediumWhitePurple style={{ width: 150 }}>— Remove</ButtonMediumWhitePurple>
+        <ButtonRectangle>+ Add Question</ButtonRectangle>
+        <ButtonMediumWhitePurple>— Remove</ButtonMediumWhitePurple>
       </div>
     </div>
   );

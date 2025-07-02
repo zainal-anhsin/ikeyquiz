@@ -9,10 +9,17 @@ import {
   DeleteOutlined,
 } from "@ant-design/icons";
 import { SectionTitle, MetaText } from "../components/common/Text/Text";
-import { ButtonMediumWhitePurple, BtnSmWhite } from "../components/common/Button/Button";
+import {
+  ButtonMediumWhitePurple,
+  BtnSmWhite,
+  ButtonRectangle,
+} from "../components/common/Button/Button";
 import { useNavigate } from "react-router-dom";
 import Table from "../components/common/Table/Table";
-import { DropdownGrey, DropdownOption } from "../components/common/Dropdown/Dropdown";
+import {
+  DropdownGrey,
+  DropdownOption,
+} from "../components/common/Dropdown/Dropdown";
 
 interface DataType {
   key: React.Key;
@@ -54,51 +61,45 @@ const QuestionSet = () => {
     { title: "Group", dataIndex: "group" },
     { title: "Subject", dataIndex: "subject" },
     { title: "Question", dataIndex: "question" },
-    { 
+    {
       title: (
-        <div style={{ textAlign: 'center' }}>
-          <div >Remark</div>
+        <div style={{ textAlign: "center" }}>
+          <div>Remark</div>
           <div>(Public/Hidden)</div>
         </div>
-      ), 
+      ),
       dataIndex: "remark",
       render: (value: string) => (
-        <div style={{ display: 'flex', justifyContent: 'center' }}>
-          <BtnSmWhite
-            onClick={() => navigate("")}
-          >
-            Edit
-          </BtnSmWhite>
+        <div style={{ display: "flex", justifyContent: "center" }}>
+          <BtnSmWhite onClick={() => navigate("")}>Edit</BtnSmWhite>
         </div>
-      )
-    },
-    { 
-      title: (
-        <div style={{ textAlign: 'center' }}>Created By</div>
       ),
+    },
+    {
+      title: <div style={{ textAlign: "center" }}>Created By</div>,
       dataIndex: "createdBy",
       render: (value: string) => (
-        <div style={{ textAlign: 'center' }}>
+        <div style={{ textAlign: "center" }}>
           <div>{value}</div>
-          <MetaText style={{ fontSize: 12, marginTop: '2px' }}>
+          <MetaText style={{ fontSize: 12, marginTop: "2px" }}>
             (May 29, 2025 4:29 PM)
           </MetaText>
         </div>
-      )
+      ),
     },
     {
-      title: (
-        <div style={{ textAlign: 'center' }}>Action</div>
-      ),
+      title: <div style={{ textAlign: "center" }}>Action</div>,
       dataIndex: "action",
       render: () => (
-        <div style={{ display: 'flex', gap: 8, justifyContent: 'center' }}>
-          <BtnSmWhite style={{width: 40 }}
+        <div style={{ display: "flex", gap: 8, justifyContent: "center" }}>
+          <BtnSmWhite
+            style={{ width: 40 }}
             onClick={() => navigate("/questionset/edit-question")}
           >
             Preview
           </BtnSmWhite>
-          <BtnSmWhite style={{width: 40 }}
+          <BtnSmWhite
+            style={{ width: 40 }}
             onClick={() => navigate("/questionset/edit-question")}
           >
             Edit
@@ -157,16 +158,14 @@ const QuestionSet = () => {
         >
           {/* Left side: Remove, Profile, Switch */}
           <Space>
-            <ButtonMediumWhitePurple
-              style={{ background: "#7c3aed", color: "white", width: 120 }}
-            >
+            <ButtonRectangle>
               <EditOutlined
                 onPointerOverCapture={undefined}
                 onPointerLeave={undefined}
               />
               Bulk Edit
-            </ButtonMediumWhitePurple>
-            <ButtonMediumWhitePurple style={{ width: 170 }}>
+            </ButtonRectangle>
+            <ButtonMediumWhitePurple>
               <DeleteOutlined
                 onPointerOverCapture={undefined}
                 onPointerLeave={undefined}
@@ -176,14 +175,14 @@ const QuestionSet = () => {
           </Space>
           {/* Right side: Cancel, Reset, Save */}
           <Space>
-            <ButtonMediumWhitePurple style={{ width: 220 }}>
+            <ButtonMediumWhitePurple>
               <SearchOutlined
                 onPointerOverCapture={undefined}
                 onPointerLeave={undefined}
               />
               Search Question Set
             </ButtonMediumWhitePurple>
-            <ButtonMediumWhitePurple style={{ width: 220 }}
+            <ButtonMediumWhitePurple
               onClick={() => navigate("/questionset/upload-question")}
             >
               <UploadOutlined
@@ -192,7 +191,7 @@ const QuestionSet = () => {
               />
               Upload Question Set
             </ButtonMediumWhitePurple>
-            <ButtonMediumWhitePurple style={{ width: 120 }}
+            <ButtonMediumWhitePurple
               onClick={() => navigate("")}
             >
               <FileAddOutlined
@@ -207,8 +206,16 @@ const QuestionSet = () => {
 
       {/* Table Section */}
       <div style={{ marginTop: 34 }}>
-        <div style={{ marginBottom: 18, display: 'flex', alignItems: 'center', gap: 16, justifyContent: 'space-between' }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
+        <div
+          style={{
+            marginBottom: 18,
+            display: "flex",
+            alignItems: "center",
+            gap: 16,
+            justifyContent: "space-between",
+          }}
+        >
+          <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
             <SectionTitle style={{ marginRight: 8 }}>Filter</SectionTitle>
             <Select
               mode="tags"
@@ -216,10 +223,10 @@ const QuestionSet = () => {
               style={{ width: 160 }}
               placeholder="Custom Group"
               options={[
-                { value: 'CG 1', label: 'CG 1' },
-                { value: 'CG 2', label: 'CG 2' },
+                { value: "CG 1", label: "CG 1" },
+                { value: "CG 2", label: "CG 2" },
               ]}
-              onChange={(value) => console.log('selected', value)}
+              onChange={(value) => console.log("selected", value)}
             />
             <Select
               mode="tags"
@@ -227,24 +234,39 @@ const QuestionSet = () => {
               style={{ width: 220 }}
               placeholder="Category"
               options={[
-                { value: 'Live Quiz', label: 'Live Quiz' },
-                { value: 'Kosa Kata Spot+ (full)', label: 'Kosa Kata'},
+                { value: "Live Quiz", label: "Live Quiz" },
+                { value: "Kosa Kata Spot+ (full)", label: "Kosa Kata" },
               ]}
-              onChange={(value) => console.log('selected', value)}
+              onChange={(value) => console.log("selected", value)}
             />
-            <DropdownGrey placeholder="Classroom" size="large" style={{ width: 140 }} onChange={value => console.log('classroom', value)}>
+            <DropdownGrey
+              placeholder="Classroom"
+              size="large"
+              style={{ width: 140 }}
+              onChange={(value) => console.log("classroom", value)}
+            >
               <DropdownOption value="SSR">SSR</DropdownOption>
               <DropdownOption value="SER">SER</DropdownOption>
             </DropdownGrey>
-            <DropdownGrey placeholder="Group" size="large" style={{ width: 130 }} onChange={value => console.log('group', value)}>
+            <DropdownGrey
+              placeholder="Group"
+              size="large"
+              style={{ width: 130 }}
+              onChange={(value) => console.log("group", value)}
+            >
               <DropdownOption value="Standard 1">Standard 1</DropdownOption>
               <DropdownOption value="Standard 2">Standard 2</DropdownOption>
               <DropdownOption value="Standard 3">Standard 3</DropdownOption>
             </DropdownGrey>
           </div>
-          <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+          <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
             <SectionTitle style={{ marginRight: 8 }}>Sort By:</SectionTitle>
-            <DropdownGrey placeholder="Select" size="large" style={{ width: 115 }} onChange={value => console.log('sort', value)}>
+            <DropdownGrey
+              placeholder="Select"
+              size="large"
+              style={{ width: 115 }}
+              onChange={(value) => console.log("sort", value)}
+            >
               <DropdownOption value="name-asc">A - Z</DropdownOption>
               <DropdownOption value="name-desc">Z - A</DropdownOption>
             </DropdownGrey>

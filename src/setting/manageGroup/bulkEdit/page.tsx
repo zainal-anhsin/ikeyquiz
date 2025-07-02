@@ -11,6 +11,7 @@ import Divider from "../../../components/common/Divider/Divider";
 import {
   ButtonMediumWhitePurple,
   ButtonMediumGrey,
+  ButtonRectangle,
 } from "../../../components/common/Button/Button";
 import Checkbox from "../../../components/common/Checkbox/Checkbox";
 import CustomDatePicker from "../../../components/common/DatePicker/datePicker";
@@ -41,7 +42,7 @@ const bulkEdit = () => {
             </a>
           </Breadcrumb.Item>
           <Breadcrumb.Item>
-            <a href="/setting/manageGroup" style={{ color: "#8c98a4" }}>
+            <a href="/setting/manage-group" style={{ color: "#8c98a4" }}>
               Manage Group
             </a>
           </Breadcrumb.Item>
@@ -75,15 +76,13 @@ const bulkEdit = () => {
               />
               Reset
             </ButtonMediumWhitePurple>
-            <ButtonMediumWhitePurple
-              style={{ background: "#7c3aed", color: "white" }}
-            >
+            <ButtonRectangle>
               <SaveOutlined
                 onPointerOverCapture={undefined}
                 onPointerLeave={undefined}
               />
               Save
-            </ButtonMediumWhitePurple>
+            </ButtonRectangle>
           </Space>
         </div>
       </div>

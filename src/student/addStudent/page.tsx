@@ -11,6 +11,7 @@ import {
 import {
   ButtonMediumWhitePurple,
   ButtonMediumGrey,
+  ButtonRectangle,
 } from "../../components/common/Button/Button";
 
 const addStudent = () => {
@@ -70,15 +71,13 @@ const addStudent = () => {
               />
               Reset
             </ButtonMediumWhitePurple>
-            <ButtonMediumWhitePurple
-              style={{ background: "#7c3aed", color: "white" }}
-            >
+            <ButtonRectangle>
               <SaveOutlined
                 onPointerOverCapture={undefined}
                 onPointerLeave={undefined}
               />
               Save
-            </ButtonMediumWhitePurple>
+            </ButtonRectangle>
           </Space>
         </div>
       </div>

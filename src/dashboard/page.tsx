@@ -1,7 +1,7 @@
 import React from "react";
 import {Space} from "antd";
 import { DownloadOutlined, UndoOutlined } from "@ant-design/icons";
-import { ButtonRectangle } from "../components/common/Button/Button";
+import { ButtonRectangle, ButtonMediumGrey } from "../components/common/Button/Button";
 import {
   DropdownPurple,
   DropdownOption,
@@ -74,19 +74,17 @@ const page = () => {
           </DropdownPurple>
           <div style={{ flex: 1 }} />
           <Space>
-            <ButtonRectangle
-              style={{ background: "#d1d5db", color: "#555", border: "none" }}
-            >
+            <ButtonMediumGrey>
               <UndoOutlined
                 style={{ marginRight: 8 }}
                 onPointerOverCapture={undefined}
                 onPointerLeave={undefined}
               />
               Reset
-            </ButtonRectangle>
+            </ButtonMediumGrey>
             <ButtonRectangle>
               <DownloadOutlined
-                style={{ marginRight: 8 }}
+                style={{ marginRight: 8, fontSize: 16, fontWeight: 'bold' }}
                 onPointerOverCapture={undefined}
                 onPointerLeave={undefined}
               />

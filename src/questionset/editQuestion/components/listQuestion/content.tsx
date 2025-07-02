@@ -78,8 +78,8 @@ const Content: React.FC<ContentProps> = ({ value, onChange, options, setOptions 
               />
               <ButtonMediumWhitePurple
                 style={{
-                  background: opt.correct ? '#7c3aed' : '#fff',
-                  color: opt.correct ? '#fff' : '#7c3aed',
+                  background: opt.correct ? '#6666FF' : '#fff',
+                  color: opt.correct ? '#fff' : '#6666FF',
                   borderColor: '#7c3aed',
                   width: '600px'
                 }}
@@ -88,7 +88,7 @@ const Content: React.FC<ContentProps> = ({ value, onChange, options, setOptions 
                 {opt.correct ? <span style={{fontWeight:700}}>&#10003; Correct</span> : "Set as Correct"}
               </ButtonMediumWhitePurple>
               <DeleteOutlined
-                style={{ color: '#7c3aed', fontSize: 22, cursor: 'pointer' }}
+                style={{ color: '#6666FF', fontSize: 22, cursor: 'pointer' }}
                 onClick={() => handleRemove(idx)}
               />
             </div>

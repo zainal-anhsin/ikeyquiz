@@ -68,8 +68,8 @@ const RoomResult = () => {
       dataIndex: "action",
       render: () => (
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 22 }}>
-          <DownloadOutlined style={{ color: '#7c3aed', fontSize: 22, cursor: 'pointer' }} onPointerOverCapture={undefined} onPointerLeave={undefined} />
-          <DeleteOutlined style={{ color: '#7c3aed', fontSize: 22, cursor: 'pointer' }} onPointerOverCapture={undefined} onPointerLeave={undefined} />
+          <DownloadOutlined style={{ color: '#6666FF', fontSize: 18, cursor: 'pointer' }} onPointerOverCapture={undefined} onPointerLeave={undefined} />
+          <DeleteOutlined style={{ color: '#6666FF', fontSize: 18, cursor: 'pointer' }} onPointerOverCapture={undefined} onPointerLeave={undefined} />
           <BtnSmWhite>View</BtnSmWhite>
         </div>
       ),
@@ -126,7 +126,7 @@ const RoomResult = () => {
         >
           {/* Right side: Cancel, Reset, Save */}
           <Space>
-            <ButtonMediumWhitePurple style={{ width: 200 }}
+            <ButtonMediumWhitePurple
               onClick={() => navigate("")}
             >
               <FileAddOutlined

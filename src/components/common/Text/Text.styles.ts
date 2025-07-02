@@ -40,7 +40,7 @@ export const TimeText = styled.span`
 export const TabText = styled.span`
   font-size: 1rem;
   font-weight: 600;
-  color: #7c3aed;
+  color: #1E3477A;
 `;
 
 // Sidebar label, e.g. "Quiz", "Homework"

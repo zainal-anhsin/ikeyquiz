@@ -7,7 +7,7 @@ import {
   DeleteOutlined,
 } from "@ant-design/icons";
 import { SectionTitle } from "../../components/common/Text/Text";
-import { ButtonMediumWhitePurple, BtnSmWhite } from "../../components/common/Button/Button";
+import { ButtonMediumWhitePurple, BtnSmWhite, ButtonRectangle } from "../../components/common/Button/Button";
 import { useNavigate } from "react-router-dom";
 import Table from "../../components/common/Table/Table";
 import { DropdownGrey, DropdownOption } from "../../components/common/Dropdown/Dropdown";
@@ -105,10 +105,10 @@ const ManageGroup = () => {
       align: 'center',
       render: () => (
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 12 }}>
-          <BtnSmWhite style={{ minWidth: 60 }}>
-            <DeleteOutlined onPointerOverCapture={undefined} onPointerLeave={undefined} />
+          <BtnSmWhite>
+            <DeleteOutlined style={{ fontSize: '14px', fontWeight: 'bold' }} onPointerOverCapture={undefined} onPointerLeave={undefined} />
           </BtnSmWhite>
-          <BtnSmWhite style={{ minWidth: 60 }}>Edit</BtnSmWhite>
+          <BtnSmWhite onClick={() => navigate('/setting/manage-group/bulk-edit')}>Edit</BtnSmWhite>
         </div>
       ),
     },
@@ -168,16 +168,14 @@ const ManageGroup = () => {
         >
           {/* Left side: Remove, Profile, Switch */}
           <Space>
-            <ButtonMediumWhitePurple
-              style={{ background: "#7c3aed", color: "white", width: 120 }}
-            >
+            <ButtonRectangle>
               <EditOutlined
                 onPointerOverCapture={undefined}
                 onPointerLeave={undefined}
               />
               Bulk Edit
-            </ButtonMediumWhitePurple>
-            <ButtonMediumWhitePurple style={{ width: 170 }}>
+            </ButtonRectangle>
+            <ButtonMediumWhitePurple>
               <DeleteOutlined
                 onPointerOverCapture={undefined}
                 onPointerLeave={undefined}
@@ -187,7 +185,7 @@ const ManageGroup = () => {
           </Space>
           {/* Right side: Cancel, Reset, Save */}
           <Space>
-            <ButtonMediumWhitePurple style={{ width: 120 }}
+            <ButtonMediumWhitePurple
               onClick={() => navigate("")}
             >
               <FileAddOutlined

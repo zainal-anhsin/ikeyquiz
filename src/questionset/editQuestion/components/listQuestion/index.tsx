@@ -18,7 +18,7 @@ const ListQuestion = () => {
     <div style={{ display: 'flex', gap: 32 }}>
       {/* Left side: Question Set + Content Editor */}
       <div style={{ flex: 1, display: 'flex', flexDirection: 'column', gap: 32 }}>
-        <QuestionSet />
+    <QuestionSet />
         <Content
           value={value}
           onChange={setValue}
@@ -31,7 +31,7 @@ const ListQuestion = () => {
         <Preview value={value} options={options} />
       </div>
     </div>
-  );
+);
 };
 
 export default ListQuestion;

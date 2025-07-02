@@ -8,7 +8,7 @@ import {
   FileAddOutlined,
 } from "@ant-design/icons";
 import { SectionTitle } from "../components/common/Text/Text";
-import { ButtonMediumWhitePurple, BtnSmWhite } from "../components/common/Button/Button";
+import { ButtonMediumWhitePurple, BtnSmWhite, ButtonRectangle } from "../components/common/Button/Button";
 import Checkbox from "../components/common/Checkbox/Checkbox";
 import { useNavigate } from "react-router-dom";
 import Table from "../components/common/Table/Table";
@@ -163,16 +163,14 @@ const Student = () => {
         >
           {/* Left side: Remove, Profile, Switch */}
           <Space>
-            <ButtonMediumWhitePurple
-              style={{ background: "#7c3aed", color: "white", width: 120 }}
-            >
+            <ButtonRectangle>
               <EditOutlined
                 onPointerOverCapture={undefined}
                 onPointerLeave={undefined}
               />
               Bulk Edit
-            </ButtonMediumWhitePurple>
-            <ButtonMediumWhitePurple style={{ width: 170 }}>
+            </ButtonRectangle>
+            <ButtonMediumWhitePurple>
               <EditOutlined
                 onPointerOverCapture={undefined}
                 onPointerLeave={undefined}
@@ -182,14 +180,14 @@ const Student = () => {
           </Space>
           {/* Right side: Cancel, Reset, Save */}
           <Space>
-            <ButtonMediumWhitePurple style={{ width: 180 }}>
+            <ButtonMediumWhitePurple>
               <SearchOutlined
                 onPointerOverCapture={undefined}
                 onPointerLeave={undefined}
               />
               Search Student
             </ButtonMediumWhitePurple>
-            <ButtonMediumWhitePurple style={{ width: 180 }}
+            <ButtonMediumWhitePurple
               onClick={() => navigate("/student/upload-student")}
             >
               <UploadOutlined
@@ -198,7 +196,7 @@ const Student = () => {
               />
               Upload Student
             </ButtonMediumWhitePurple>
-            <ButtonMediumWhitePurple style={{ width: 150 }}
+            <ButtonMediumWhitePurple
               onClick={() => navigate("/student/add-student")}
             >
               <FileAddOutlined
