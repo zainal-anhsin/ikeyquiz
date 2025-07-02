@@ -6,13 +6,14 @@ import {
   CloseOutlined,
   InboxOutlined,
 } from "@ant-design/icons";
-import { HeadingLg, SectionTitle } from "../../components/common/Text/Text";
+import { HeadingLg, SectionTitle, MetaText } from "../../components/common/Text/Text";
 import Divider from "../../components/common/Divider/Divider";
 import {
   ButtonMediumWhitePurple,
   ButtonMediumGrey,
   ButtonRectangle,
 } from "../../components/common/Button/Button";
+import Checkbox from '../../components/common/Checkbox/Checkbox';
 const { Dragger } = Upload;
 
 const uploadStudent = () => {
@@ -113,8 +114,8 @@ const uploadStudent = () => {
           <HeadingLg style={{ marginBottom: 22, marginTop: 22 }}>
             Upload Student Profile
           </HeadingLg>
-          <SectionTitle>
-            <span style={{ color: "#7c3aed", cursor: "pointer" }}>
+          <MetaText>
+            <span style={{ color: "#6666FF", cursor: "pointer" }}>
               Download & use the provided spreadsheet template file
             </span>{" "}
             for upload purpose.
@@ -123,7 +124,7 @@ const uploadStudent = () => {
               Using other files with different column name or format will cause
               errors during data validation.
             </span>
-          </SectionTitle>
+          </MetaText>
         </div>
         {/* Dragger upload section */}
         <div
@@ -138,9 +139,9 @@ const uploadStudent = () => {
                   onPointerLeave={undefined}
                 />
               </p>
-              <div style={{ color: '#6666FF', fontSize: 18, marginBottom: 16 }}>
+              <SectionTitle style={{ color: '#6666FF', marginBottom: 16 }}>
                 Drop files to upload or
-              </div>
+              </SectionTitle>
               <ButtonRectangle>
                 Browse
               </ButtonRectangle>
@@ -160,20 +161,13 @@ const uploadStudent = () => {
           }}
         >
           <label style={{ display: "flex", alignItems: "center", gap: 8 }}>
-            <input
-              type="checkbox"
-              style={{ width: 20, height: 20, accentColor: "#7c3aed" }}
-            />
+            <Checkbox />
             <SectionTitle style={{ fontWeight: 400 }}>
               Send email after upload
             </SectionTitle>
           </label>
           <label style={{ display: "flex", alignItems: "center", gap: 8 }}>
-            <input
-              type="checkbox"
-              defaultChecked
-              style={{ width: 20, height: 20, accentColor: "#7c3aed" }}
-            />
+            <Checkbox defaultChecked />
             <SectionTitle style={{ fontWeight: 400 }}>
               Reset Password after upload
             </SectionTitle>

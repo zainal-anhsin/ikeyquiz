@@ -11,8 +11,8 @@ export const StyledInput = styled(AntInput)`
   border-radius: 8px;
 
   &:hover, &:focus, &.ant-input-focused {
-    border-color: #7c3aed;
-    box-shadow: 0 0 0 2px rgba(124, 58, 237, 0.1);
+    border-color: #6666FF;
+    box-shadow: #6666FF;
   }
 `;
 
@@ -21,7 +21,7 @@ export const StyledPasswordInput = styled(AntInput.Password)`
   border-radius: 8px;
 
   &:hover, &:focus, &.ant-input-focused {
-    border-color: #7c3aed;
-    box-shadow: 0 0 0 2px rgba(124, 58, 237, 0.1);
+    border-color: #6666FF;
+    box-shadow: #6666FF;
   }
 `; 

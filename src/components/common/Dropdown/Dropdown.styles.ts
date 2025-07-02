@@ -24,12 +24,12 @@ const commonSelectStyles = css`
 export const StyledSelectPurple = styled(Select)`
   ${commonSelectStyles}
   .ant-select-selector {
-    border: 1.5px solid #a78bfa !important;
+    border: 1.5px solid #6666FF !important;
     box-shadow: none !important;
   }
 
   &:hover .ant-select-selector {
-    border-color: #7c3aed !important;
+    border-color: #6666FF !important;
   }
 `;
 

@@ -184,14 +184,14 @@ const uploadQuestion = () => {
             <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
             <p className="ant-upload-drag-icon">
               <InboxOutlined
-                style={{ color: "#7c3aed" }}
+                style={{ color: "#6666FF" }}
                 onPointerOverCapture={undefined}
                 onPointerLeave={undefined}
               />
             </p>
-              <div style={{ color: '#6666FF', fontSize: 18, marginBottom: 16 }}>
-                Drop files to upload or
-              </div>
+            <SectionTitle style={{ color: '#6666FF', marginBottom: 16 }}>
+              Drop files to upload or
+            </SectionTitle>
               <ButtonRectangle>
                 Browse
               </ButtonRectangle>

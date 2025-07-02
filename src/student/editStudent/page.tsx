@@ -18,6 +18,7 @@ import {
 import {
   ButtonMediumWhitePurple,
   ButtonMediumGrey,
+  ButtonRectangle,
 } from "../../components/common/Button/Button";
 import Switch from "../../components/common/Switch/Switch";
 import Checkbox from "../../components/common/Checkbox/Checkbox";
@@ -103,15 +104,13 @@ const EditStudent = () => {
               />
               Reset
             </ButtonMediumWhitePurple>
-            <ButtonMediumWhitePurple
-              style={{ background: "#7c3aed", color: "white" }}
-            >
+            <ButtonRectangle>
               <SaveOutlined
                 onPointerOverCapture={undefined}
                 onPointerLeave={undefined}
               />
               Save
-            </ButtonMediumWhitePurple>
+            </ButtonRectangle>
           </Space>
         </div>
       </div>
@@ -148,12 +147,10 @@ const EditStudent = () => {
               </FormItem>
             </Col>
             <Col span={12}>
-              <ButtonMediumWhitePurple
+              <ButtonRectangle
                 style={{
                   width: "50%",
                   marginTop: 50,
-                  background: "#7c3aed",
-                  color: "white",
                 }}
               >
                 <MailOutlined
@@ -162,7 +159,7 @@ const EditStudent = () => {
                   style={{ marginRight: 6, marginLeft: 6 }}
                 />
                 Email Password
-              </ButtonMediumWhitePurple>
+              </ButtonRectangle>
             </Col>
           </Row>
         </Form>
