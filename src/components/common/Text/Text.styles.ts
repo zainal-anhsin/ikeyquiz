@@ -50,3 +50,11 @@ export const SidebarLabel = styled.span`
   font-weight: 600;
 `;
 
+// Reusable style for centered table text
+export const textTable = {
+  fontFamily: "'Inter', 'Roboto', 'Arial', sans-serif",
+  fontSize: 14,
+  fontWeight: 400,
+  color: '#222',
+};
+

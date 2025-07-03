@@ -5,5 +5,6 @@ export {
   TimeText,
   TabText,
   SidebarLabel,
-  MetaText
+  MetaText,
+  textTable,
 } from './Text.styles'; 

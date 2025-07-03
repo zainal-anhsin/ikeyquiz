@@ -60,9 +60,9 @@ const QuestionSet = () => {
       width: 60,
     },
     { title: "Name", dataIndex: "name" },
-    { title: "Group", dataIndex: "group" },
-    { title: "Subject", dataIndex: "subject" },
-    { title: "Question", dataIndex: "question" },
+    { title: "Group", dataIndex: "group", align: 'center', render: (text: string) => <div style={{ textAlign: 'center' }}>{text}</div> },
+    { title: "Subject", dataIndex: "subject", align: 'center', render: (text: string) => <div style={{ textAlign: 'center' }}>{text}</div> },
+    { title: "Question", dataIndex: "question", align: 'center', render: (text: number) => <div style={{ textAlign: 'center' }}>{text}</div> },
     {
       title: (
         <div style={{ textAlign: "center" }}>

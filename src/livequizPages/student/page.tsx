@@ -7,7 +7,7 @@ import {
   UploadOutlined,
   FileAddOutlined,
 } from "@ant-design/icons";
-import { SectionTitle } from "../../components/common/Text/Text";
+import { SectionTitle, textTable } from "../../components/common/Text/Text";
 import { ButtonMediumWhitePurple, BtnSmWhite, ButtonRectangle } from "../../components/common/Button/Button";
 import Checkbox from "../../components/common/Checkbox/Checkbox";
 import { useNavigate } from "react-router-dom";
@@ -48,29 +48,11 @@ const Student = () => {
         <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
           <label style={{ display: "flex", alignItems: "center", gap: 8 }}>
             <Checkbox checked={record.customGroup.cg1} />
-            <span
-              style={{
-                fontFamily: "'Inter', 'Roboto', 'Arial', sans-serif",
-                fontSize: 16,
-                fontWeight: 400,
-                color: "#222",
-              }}
-            >
-              CG 1
-            </span>
+            <span style={textTable}>CG 1</span>
           </label>
           <label style={{ display: "flex", alignItems: "center", gap: 8 }}>
             <Checkbox checked={record.customGroup.cg2} />
-            <span
-              style={{
-                fontFamily: "'Inter', 'Roboto', 'Arial', sans-serif",
-                fontSize: 16,
-                fontWeight: 400,
-                color: "#222",
-              }}
-            >
-              CG 2
-            </span>
+            <span style={textTable}>CG 2</span>
           </label>
         </div>
       ),
@@ -82,35 +64,17 @@ const Student = () => {
         <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
           <label style={{ display: "flex", alignItems: "center", gap: 8 }}>
             <Checkbox checked={record.category.liveQuiz} />
-            <span
-              style={{
-                fontFamily: "'Inter', 'Roboto', 'Arial', sans-serif",
-                fontSize: 16,
-                fontWeight: 400,
-                color: "#222",
-              }}
-            >
-              Live Quiz
-            </span>
+            <span style={textTable}>Live Quiz</span>
           </label>
           <label style={{ display: "flex", alignItems: "center", gap: 8 }}>
             <Checkbox checked={record.category.kosaKata} />
-            <span
-              style={{
-                fontFamily: "'Inter', 'Roboto', 'Arial', sans-serif",
-                fontSize: 16,
-                fontWeight: 400,
-                color: "#222",
-              }}
-            >
-              Kosa Kata Spot+ (full)
-            </span>
+            <span style={textTable}>Kosa Kata Spot+ (full)</span>
           </label>
         </div>
       ),
     },
-    { title: "Classroom", dataIndex: "classroom" },
-    { title: "Group", dataIndex: "group" },
+    { title: "Classroom", dataIndex: "classroom", align: 'center', render: (text: string) => <div style={{ textAlign: 'center' }}>{text}</div> },
+    { title: "Group", dataIndex: "group", align: 'center', render: (text: string) => <div style={{ textAlign: 'center' }}>{text}</div> },
     { title: "Email", dataIndex: "email" },
     {
       title: "Action",

@@ -55,7 +55,7 @@ const QuestionSetModal: React.FC<QuestionSetModalProps> = ({
         padding: 32,
       }}
     >
-      <div>
+    <div>
         {/* Header */}
         <div
           style={{
@@ -171,7 +171,7 @@ const QuestionSetModal: React.FC<QuestionSetModalProps> = ({
             </div>
           </div>
         ))}
-      </div>
+    </div>
     </AntdModal>
   );
 };
