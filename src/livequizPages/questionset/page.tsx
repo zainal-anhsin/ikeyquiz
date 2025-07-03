@@ -20,6 +20,7 @@ import {
   DropdownOption,
   DropdownWhiteGrey,
 } from "../../components/common/Dropdown/Dropdown";
+import QuestionSetModal from './modal';
 
 interface DataType {
   key: React.Key;
@@ -35,6 +36,7 @@ interface DataType {
 const QuestionSet = () => {
   const [selectedRowKeys, setSelectedRowKeys] = useState<React.Key[]>([]);
   const navigate = useNavigate();
+  const [isPreviewModalOpen, setIsPreviewModalOpen] = useState(false);
 
   const onSelectChange = (
     newSelectedRowKeys: React.Key[],
@@ -94,7 +96,7 @@ const QuestionSet = () => {
         <div style={{ display: "flex", gap: 8, justifyContent: "center" }}>
           <BtnSmWhite
             style={{ width: 40 }}
-            onClick={() => navigate("/questionset/edit-question")}
+            onClick={() => setIsPreviewModalOpen(true)}
           >
             Preview
           </BtnSmWhite>
@@ -279,6 +281,7 @@ const QuestionSet = () => {
           rowKey="key"
         />
       </div>
+      <QuestionSetModal open={isPreviewModalOpen} onCancel={() => setIsPreviewModalOpen(false)} />
     </div>
   );
 };
