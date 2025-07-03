@@ -1,22 +1,29 @@
 import React from "react";
-import { Space, Breadcrumb, message, Upload } from "antd";
+import { Space, Breadcrumb, message, Upload, Row, Col } from "antd";
 import {
   SaveOutlined,
   UndoOutlined,
   CloseOutlined,
   InboxOutlined,
 } from "@ant-design/icons";
-import { HeadingLg, SectionTitle, MetaText } from "../../components/common/Text/Text";
-import Divider from "../../components/common/Divider/Divider";
+import {
+  HeadingLg,
+  MetaText,
+  SectionTitle,
+} from "../../../components/common/Text/Text";
 import {
   ButtonMediumWhitePurple,
   ButtonMediumGrey,
   ButtonRectangle,
-} from "../../components/common/Button/Button";
-import Checkbox from '../../components/common/Checkbox/Checkbox';
+} from "../../../components/common/Button/Button";
+import { Form, FormItem, FormInput } from "../../../components/common/Form/Form";
+import {
+  DropdownOption,
+  DropdownWhiteGrey,
+} from "../../../components/common/Dropdown/Dropdown";
 const { Dragger } = Upload;
 
-const uploadStudent = () => {
+const uploadQuestion = () => {
   const uploadProps = {
     name: "file",
     multiple: true,
@@ -48,7 +55,7 @@ const uploadStudent = () => {
           marginBottom: 24,
         }}
       >
-        <SectionTitle style={{ marginRight: 8 }}>Student</SectionTitle>
+        <SectionTitle style={{ marginRight: 8 }}>Question Set</SectionTitle>
         <span style={{ fontWeight: 400, color: "black", fontSize: 14 }}>|</span>
         <Breadcrumb separator=">">
           <Breadcrumb.Item>
@@ -57,13 +64,13 @@ const uploadStudent = () => {
             </a>
           </Breadcrumb.Item>
           <Breadcrumb.Item>
-            <a href="/student" style={{ color: "#8c98a4" }}>
-              Student
+            <a href="/questionset" style={{ color: "#8c98a4" }}>
+              Question Set
             </a>
           </Breadcrumb.Item>
           <Breadcrumb.Item>
             <span style={{ color: "#222", fontWeight: 600 }}>
-              Upload Student Profile
+              Upload Question Set
             </span>
           </Breadcrumb.Item>
         </Breadcrumb>
@@ -112,8 +119,44 @@ const uploadStudent = () => {
           }}
         >
           <HeadingLg style={{ marginBottom: 22, marginTop: 22 }}>
-            Upload Student Profile
+            Create & Upload Question Set
           </HeadingLg>
+          <Form style={{ maxWidth: "800px" }}>
+            <Row gutter={32}>
+              <Col span={12}>
+                <FormItem label="Name" name="name">
+                  <FormInput placeholder="Enter Name" />
+                </FormItem>
+              </Col>
+              <Col span={12}>
+                <FormItem label="Group" name="group">
+                  <DropdownWhiteGrey placeholder="Select">
+                    <DropdownOption value="A">Group A</DropdownOption>
+                    <DropdownOption value="B">Group B</DropdownOption>
+                    <DropdownOption value="C">Group C</DropdownOption>
+                  </DropdownWhiteGrey>
+                </FormItem>
+              </Col>
+            </Row>
+            <Row gutter={32}>
+              <Col span={12}>
+                <FormItem label="Remarks" name="remarks">
+                  <FormInput.TextArea placeholder="" style={{height: '100px', resize: 'vertical'}} />
+                </FormItem>
+              </Col>
+              <Col span={12}>
+                <FormItem label="Subject" name="subject">
+                  <DropdownWhiteGrey placeholder="Select">
+                    <DropdownOption value="A">Subject A</DropdownOption>
+                    <DropdownOption value="B">Subject B</DropdownOption>
+                    <DropdownOption value="C">Subject C</DropdownOption>
+                  </DropdownWhiteGrey>
+                </FormItem>
+              </Col>
+            </Row>
+          </Form>
+
+          <div style={{ marginTop: 32 }}>
           <MetaText>
             <span style={{ color: "#6666FF", cursor: "pointer" }}>
               Download & use the provided spreadsheet template file
@@ -121,10 +164,17 @@ const uploadStudent = () => {
             for upload purpose.
             <br />
             <span>
-              Using other files with different column name or format will cause
-              errors during data validation.
+              Using other files with different column name or format may cause
+              errors on data verification on
+              <br />
+              the questions, or may further create unforseen bugs that may
+              greatly affecting the usability or
+              <br />
+              accessability of the quiz system on your account.
             </span>
           </MetaText>
+          </div>
+          
         </div>
         {/* Dragger upload section */}
         <div
@@ -132,52 +182,25 @@ const uploadStudent = () => {
         >
           <Dragger {...uploadProps} style={{ padding: 32 }}>
             <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-              <p className="ant-upload-drag-icon">
-                <InboxOutlined
-                  style={{ color: "#6666FF" }}
-                  onPointerOverCapture={undefined}
-                  onPointerLeave={undefined}
-                />
-              </p>
-              <SectionTitle style={{ color: '#6666FF', marginBottom: 16 }}>
-                Drop files to upload or
-              </SectionTitle>
+            <p className="ant-upload-drag-icon">
+              <InboxOutlined
+                style={{ color: "#6666FF" }}
+                onPointerOverCapture={undefined}
+                onPointerLeave={undefined}
+              />
+            </p>
+            <SectionTitle style={{ color: '#6666FF', marginBottom: 16 }}>
+              Drop files to upload or
+            </SectionTitle>
               <ButtonRectangle>
                 Browse
               </ButtonRectangle>
             </div>
           </Dragger>
         </div>
-        {/* Checkbox section */}
-        <div
-          style={{
-            width: "100%",
-            maxWidth: 800,
-            margin: "32px auto 0 auto",
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "flex-start",
-            gap: 16,
-          }}
-        >
-          <label style={{ display: "flex", alignItems: "center", gap: 8 }}>
-            <Checkbox />
-            <SectionTitle style={{ fontWeight: 400 }}>
-              Send email after upload
-            </SectionTitle>
-          </label>
-          <label style={{ display: "flex", alignItems: "center", gap: 8 }}>
-            <Checkbox defaultChecked />
-            <SectionTitle style={{ fontWeight: 400 }}>
-              Reset Password after upload
-            </SectionTitle>
-          </label>
-        </div>
-        {/* Divider section */}
-        <Divider />
       </div>
     </div>
   );
 };
 
-export default uploadStudent;
+export default uploadQuestion;

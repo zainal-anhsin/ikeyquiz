@@ -8,18 +8,18 @@ import {
   FileAddOutlined,
   DeleteOutlined,
 } from "@ant-design/icons";
-import { SectionTitle, MetaText } from "../components/common/Text/Text";
+import { SectionTitle, MetaText } from "../../components/common/Text/Text";
 import {
   ButtonMediumWhitePurple,
   BtnSmWhite,
   ButtonRectangle,
-} from "../components/common/Button/Button";
+} from "../../components/common/Button/Button";
 import { useNavigate } from "react-router-dom";
-import Table from "../components/common/Table/Table";
+import Table from "../../components/common/Table/Table";
 import {
   DropdownOption,
   DropdownWhiteGrey,
-} from "../components/common/Dropdown/Dropdown";
+} from "../../components/common/Dropdown/Dropdown";
 
 interface DataType {
   key: React.Key;

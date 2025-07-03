@@ -1,11 +1,11 @@
 import React from "react";
 import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
-import { HeadingLg, SectionTitle } from "../../../../components/common/Text/Text";
-import { Form } from "../../../../components/common/Form/Form";
-import { ButtonMediumWhitePurple } from "../../../../components/common/Button/Button";
+import { HeadingLg, SectionTitle } from "../../../../../components/common/Text/Text";
+import { Form } from "../../../../../components/common/Form/Form";
+import { ButtonMediumWhitePurple } from "../../../../../components/common/Button/Button";
 import { DeleteOutlined } from "@ant-design/icons";
-import { FormInput } from "../../../../components/common/Form/Form";
+import { FormInput } from "../../../../../components/common/Form/Form";
 
 interface ContentProps {
   value: string;

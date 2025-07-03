@@ -2,12 +2,12 @@ import React from "react";
 import { Row, Col } from "antd";
 import {
   HeadingLg,
-} from "../../../components/common/Text/Text";
-import { Form, FormItem, FormInput } from "../../../components/common/Form/Form";
+} from "../../../../components/common/Text/Text";
+import { Form, FormItem, FormInput } from "../../../../components/common/Form/Form";
 import {
   DropdownWhiteGrey,
   DropdownOption,
-} from "../../../components/common/Dropdown/Dropdown";
+} from "../../../../components/common/Dropdown/Dropdown";
 
 const SettingQuestion = () => {
   return (

@@ -1,18 +1,18 @@
 import React from "react";
 import { Row, Col, Space, Breadcrumb } from "antd";
 import { SaveOutlined, UndoOutlined, CloseOutlined } from "@ant-design/icons";
-import { Form, FormItem, FormInput } from "../../components/common/Form/Form";
-import { HeadingLg, SectionTitle } from "../../components/common/Text/Text";
-import Divider from "../../components/common/Divider/Divider";
+import { Form, FormItem, FormInput } from "../../../components/common/Form/Form";
+import { HeadingLg, SectionTitle } from "../../../components/common/Text/Text";
+import Divider from "../../../components/common/Divider/Divider";
 import {
   DropdownGrey,
   DropdownOption,
-} from "../../components/common/Dropdown/Dropdown";
+} from "../../../components/common/Dropdown/Dropdown";
 import {
   ButtonMediumWhitePurple,
   ButtonMediumGrey,
   ButtonRectangle,
-} from "../../components/common/Button/Button";
+} from "../../../components/common/Button/Button";
 
 const addStudent = () => {
   return (

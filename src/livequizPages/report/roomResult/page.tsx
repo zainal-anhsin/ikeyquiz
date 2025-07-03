@@ -2,20 +2,25 @@ import React, { useState } from "react";
 import { Space, Breadcrumb, Select } from "antd";
 import type { TableColumnsType } from "antd";
 import {
-  EditOutlined,
-  SearchOutlined,
-  UploadOutlined,
   FileAddOutlined,
+  DownloadOutlined,
+  DeleteOutlined,
 } from "@ant-design/icons";
-import { SectionTitle } from "../components/common/Text/Text";
-import { ButtonMediumWhitePurple, BtnSmWhite, ButtonRectangle } from "../components/common/Button/Button";
-import Checkbox from "../components/common/Checkbox/Checkbox";
+import { SectionTitle } from "../../../components/common/Text/Text";
+import { ButtonMediumWhitePurple, BtnSmWhite } from "../../../components/common/Button/Button";
 import { useNavigate } from "react-router-dom";
-import Table from "../components/common/Table/Table";
-import { tableData, DataType } from "./dataStudent";
-import { DropdownWhiteGrey, DropdownOption } from "../components/common/Dropdown/Dropdown";
+import Table from "../../../components/common/Table/Table";
+import { DropdownWhiteGrey, DropdownOption } from "../../../components/common/Dropdown/Dropdown";
+import { MetaText } from "../../../components/common/Text/Text";
 
-const Student = () => {
+interface DataType {
+  key: React.Key;
+  createdDate: string;
+  info: string;
+  action: string;
+}
+
+const RoomResult = () => {
   const [selectedRowKeys, setSelectedRowKeys] = useState<React.Key[]>([]);
   const navigate = useNavigate();
 
@@ -40,90 +45,43 @@ const Student = () => {
       render: (_: any, __: DataType, index: number) => index + 1,
       width: 60,
     },
-    { title: "Name", dataIndex: "name" },
     {
-      title: "Custom Group",
-      dataIndex: "customGroup",
-      render: (_: any, record: DataType) => (
-        <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
-          <label style={{ display: "flex", alignItems: "center", gap: 8 }}>
-            <Checkbox checked={record.customGroup.cg1} />
-            <span
-              style={{
-                fontFamily: "'Inter', 'Roboto', 'Arial', sans-serif",
-                fontSize: 16,
-                fontWeight: 400,
-                color: "#222",
-              }}
-            >
-              CG 1
-            </span>
-          </label>
-          <label style={{ display: "flex", alignItems: "center", gap: 8 }}>
-            <Checkbox checked={record.customGroup.cg2} />
-            <span
-              style={{
-                fontFamily: "'Inter', 'Roboto', 'Arial', sans-serif",
-                fontSize: 16,
-                fontWeight: 400,
-                color: "#222",
-              }}
-            >
-              CG 2
-            </span>
-          </label>
+      title: "Created Date",
+      dataIndex: "createdDate",
+      render: (value: string) => (
+        <div style={{ textAlign: 'left' }}>
+          <div>{value}</div>
+          <MetaText style={{ fontSize: 12, marginTop: '2px' }}>
+            4:29:37 AM
+          </MetaText>
         </div>
       ),
     },
     {
-      title: "Category",
-      dataIndex: "category",
-      render: (_: any, record: DataType) => (
-        <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
-          <label style={{ display: "flex", alignItems: "center", gap: 8 }}>
-            <Checkbox checked={record.category.liveQuiz} />
-            <span
-              style={{
-                fontFamily: "'Inter', 'Roboto', 'Arial', sans-serif",
-                fontSize: 16,
-                fontWeight: 400,
-                color: "#222",
-              }}
-            >
-              Live Quiz
-            </span>
-          </label>
-          <label style={{ display: "flex", alignItems: "center", gap: 8 }}>
-            <Checkbox checked={record.category.kosaKata} />
-            <span
-              style={{
-                fontFamily: "'Inter', 'Roboto', 'Arial', sans-serif",
-                fontSize: 16,
-                fontWeight: 400,
-                color: "#222",
-              }}
-            >
-              Kosa Kata Spot+ (full)
-            </span>
-          </label>
-        </div>
-      ),
+      title: "Info",
+      dataIndex: "info",
     },
-    { title: "Classroom", dataIndex: "classroom" },
-    { title: "Group", dataIndex: "group" },
-    { title: "Email", dataIndex: "email" },
     {
-      title: "Action",
+      title: (
+        <div style={{ textAlign: 'center' }}>Action</div>
+      ),
       dataIndex: "action",
       render: () => (
-        <BtnSmWhite
-          onClick={() => navigate("/student/edit-student")}
-        >
-          Edit
-        </BtnSmWhite>
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 22 }}>
+          <DownloadOutlined style={{ color: '#6666FF', fontSize: 18, cursor: 'pointer' }} onPointerOverCapture={undefined} onPointerLeave={undefined} />
+          <DeleteOutlined style={{ color: '#6666FF', fontSize: 18, cursor: 'pointer' }} onPointerOverCapture={undefined} onPointerLeave={undefined} />
+          <BtnSmWhite>View</BtnSmWhite>
+        </div>
       ),
     },
   ];
+
+  const tableData: DataType[] = Array.from({ length: 15 }).map((_, i) => ({
+    key: `room-result-${i}`,
+    createdDate: "May 29, 2025",
+    info: "Sample File Name: RoomsResultReport_(Demo-School)_(2025-03-08_09-59-38)",
+    action: "edit",
+  }));
 
   return (
     <div>
@@ -136,7 +94,7 @@ const Student = () => {
           marginBottom: 24,
         }}
       >
-        <SectionTitle style={{ marginRight: 8 }}>Student</SectionTitle>
+        <SectionTitle style={{ marginRight: 8 }}>Report</SectionTitle>
         <span style={{ fontWeight: 400, color: "black", fontSize: 14 }}>|</span>
         <Breadcrumb separator=">">
           <Breadcrumb.Item>
@@ -145,8 +103,13 @@ const Student = () => {
             </a>
           </Breadcrumb.Item>
           <Breadcrumb.Item>
-            <a href="/student" style={{ color: "#222", fontWeight: 600 }}>
-              Student
+            <a href="/" style={{ color: "#8c98a4" }}>
+              Report
+            </a>
+          </Breadcrumb.Item>
+          <Breadcrumb.Item>
+            <a href="/report/roomResult" style={{ color: "#222", fontWeight: 600 }}>
+              Room Result
             </a>
           </Breadcrumb.Item>
         </Breadcrumb>
@@ -158,52 +121,19 @@ const Student = () => {
             display: "flex",
             alignItems: "center",
             gap: 20,
-            justifyContent: "space-between",
+            justifyContent: "flex-end",
           }}
         >
-          {/* Left side: Remove, Profile, Switch */}
-          <Space>
-            <ButtonRectangle>
-              <EditOutlined
-                onPointerOverCapture={undefined}
-                onPointerLeave={undefined}
-              />
-              Bulk Edit
-            </ButtonRectangle>
-            <ButtonMediumWhitePurple>
-              <EditOutlined
-                onPointerOverCapture={undefined}
-                onPointerLeave={undefined}
-              />
-              Custom Group
-            </ButtonMediumWhitePurple>
-          </Space>
           {/* Right side: Cancel, Reset, Save */}
           <Space>
-            <ButtonMediumWhitePurple>
-              <SearchOutlined
-                onPointerOverCapture={undefined}
-                onPointerLeave={undefined}
-              />
-              Search Student
-            </ButtonMediumWhitePurple>
             <ButtonMediumWhitePurple
-              onClick={() => navigate("/student/upload-student")}
-            >
-              <UploadOutlined
-                onPointerOverCapture={undefined}
-                onPointerLeave={undefined}
-              />
-              Upload Student
-            </ButtonMediumWhitePurple>
-            <ButtonMediumWhitePurple
-              onClick={() => navigate("/student/add-student")}
+              onClick={() => navigate("")}
             >
               <FileAddOutlined
                 onPointerOverCapture={undefined}
                 onPointerLeave={undefined}
               />
-              Add Student
+              Generate Report
             </ButtonMediumWhitePurple>
           </Space>
         </div>
@@ -265,4 +195,4 @@ const Student = () => {
   );
 };
 
-export default Student;
+export default RoomResult;

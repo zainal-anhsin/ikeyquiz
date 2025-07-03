@@ -6,12 +6,12 @@ import {
   FileAddOutlined,
   DeleteOutlined,
 } from "@ant-design/icons";
-import { SectionTitle } from "../../components/common/Text/Text";
-import { ButtonMediumWhitePurple, BtnSmWhite, ButtonRectangle } from "../../components/common/Button/Button";
+import { SectionTitle } from "../../../components/common/Text/Text";
+import { ButtonMediumWhitePurple, BtnSmWhite, ButtonRectangle } from "../../../components/common/Button/Button";
 import { useNavigate } from "react-router-dom";
-import Table from "../../components/common/Table/Table";
-import { DropdownGrey, DropdownOption } from "../../components/common/Dropdown/Dropdown";
-import CustomSwitch from "../../components/common/Switch/Switch";
+import Table from "../../../components/common/Table/Table";
+import { DropdownGrey, DropdownOption } from "../../../components/common/Dropdown/Dropdown";
+import CustomSwitch from "../../../components/common/Switch/Switch";
 
 interface DataType {
   key: React.Key;
@@ -62,7 +62,7 @@ const ManageGroup = () => {
       dataIndex: "active",
       align: 'center',
       render: (_: boolean, record: DataType, index: number) => (
-        <CustomSwitch style={{width: 60}}
+        <CustomSwitch
           checked={switchStates[index].active}
           onChange={checked => {
             const newStates = [...switchStates];
@@ -87,7 +87,7 @@ const ManageGroup = () => {
       dataIndex: "display",
       align: 'center',
       render: (_: boolean, record: DataType, index: number) => (
-        <CustomSwitch style={{width: 60}}
+        <CustomSwitch
           checked={switchStates[index].display}
           onChange={checked => {
             const newStates = [...switchStates];

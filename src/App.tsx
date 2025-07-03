@@ -4,24 +4,24 @@ import MainLayout from './components/layout/MainLayout';
 import 'antd/dist/antd.min.css'; // Import antd styles
 
 // Import your page components
-import Home from './pages/index/page';
-import Quiz from './pages/quiz/page';
-import Homework from './pages/homework/page';
-import Exam from './pages/exam/page';
-import LiveQuiz from './pages/live-quiz/page';
-import Dashboard from './dashboard/page';
-import ThemePage from './pages/themepage/page';
-import Student from './student/page';
-import QuestionSet from './questionset/page';
-import AddStudent from './student/addStudent/page';
-import EditStudent from './student/editStudent/page';
-import UploadStudent from './student/uploadStudent/page';
-import SettingQuestion from './questionset/editQuestion/components/settingQuestion';
-import UploadQuestion from './questionset/uploadQuestion/page';
-import EditQuestion from './questionset/editQuestion/page';
-import ManageGroup from './setting/manageGroup/page';
-import BulkEdit from './setting/manageGroup/bulkEdit/page';
-import RoomResult from './report/roomResult/page';
+import Home from './schoolPages/index/page';
+import Quiz from './schoolPages/quiz/page';
+import Homework from './schoolPages/homework/page';
+import Exam from './schoolPages/exam/page';
+import LiveQuiz from './schoolPages/live-quiz/page';
+import Dashboard from './livequizPages/dashboard/page';
+import ThemePage from './schoolPages/themepage/page';
+import Student from './livequizPages/student/page';
+import QuestionSet from './livequizPages/questionset/page';
+import AddStudent from './livequizPages/student/addStudent/page';
+import EditStudent from './livequizPages/student/editStudent/page';
+import UploadStudent from './livequizPages/student/uploadStudent/page';
+import SettingQuestion from './livequizPages/questionset/editQuestion/components/settingQuestion';
+import UploadQuestion from './livequizPages/questionset/uploadQuestion/page';
+import EditQuestion from './livequizPages/questionset/editQuestion/page';
+import ManageGroup from './livequizPages/setting/manageGroup/page';
+import BulkEdit from './livequizPages/setting/manageGroup/bulkEdit/page';
+import RoomResult from './livequizPages/report/roomResult/page';
 const App = () => {
   return (
     <BrowserRouter>

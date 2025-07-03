@@ -1,5 +1,5 @@
 import React from 'react'
-import { HeadingLg, SectionTitle } from '../../../../components/common/Text/Text'
+import { HeadingLg, SectionTitle } from '../../../../../components/common/Text/Text'
 
 interface Option {
   value: string;

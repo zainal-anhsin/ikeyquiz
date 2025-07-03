@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import { HeadingLg } from "../../../../components/common/Text/Text";
+import { HeadingLg } from "../../../../../components/common/Text/Text";
 import {
   ButtonMediumWhitePurple,
   ButtonRectangle,
-} from "../../../../components/common/Button/Button";
+} from "../../../../../components/common/Button/Button";
 
 const TOTAL_QUESTIONS = 30;
 

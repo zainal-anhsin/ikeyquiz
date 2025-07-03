@@ -1,11 +1,11 @@
 import React from "react";
 import {Space} from "antd";
 import { DownloadOutlined, UndoOutlined } from "@ant-design/icons";
-import { ButtonRectangle, ButtonMediumGrey } from "../components/common/Button/Button";
+import { ButtonRectangle, ButtonMediumGrey } from "../../components/common/Button/Button";
 import {
   DropdownPurple,
   DropdownOption,
-} from "../components/common/Dropdown/Dropdown";
+} from "../../components/common/Dropdown/Dropdown";
 import Chart1 from './charts/chart1';
 import Chart2 from './charts/chart2';
 import Chart3 from './charts/chart3';

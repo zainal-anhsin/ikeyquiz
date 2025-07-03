@@ -5,16 +5,16 @@ import {
   Form,
   FormItem,
   FormInput,
-} from "../../../components/common/Form/Form";
-import { HeadingLg, SectionTitle } from "../../../components/common/Text/Text";
-import Divider from "../../../components/common/Divider/Divider";
+} from "../../../../components/common/Form/Form";
+import { HeadingLg, SectionTitle } from "../../../../components/common/Text/Text";
+import Divider from "../../../../components/common/Divider/Divider";
 import {
   ButtonMediumWhitePurple,
   ButtonMediumGrey,
   ButtonRectangle,
-} from "../../../components/common/Button/Button";
-import Checkbox from "../../../components/common/Checkbox/Checkbox";
-import CustomDatePicker from "../../../components/common/DatePicker/datePicker";
+} from "../../../../components/common/Button/Button";
+import Checkbox from "../../../../components/common/Checkbox/Checkbox";
+import CustomDatePicker from "../../../../components/common/DatePicker/datePicker";
 
 const bulkEdit = () => {
   return (

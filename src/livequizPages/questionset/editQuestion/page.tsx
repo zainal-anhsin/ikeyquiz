@@ -8,12 +8,12 @@ import {
 } from "@ant-design/icons";
 import {
   SectionTitle,
-} from "../../components/common/Text/Text";
+} from "../../../components/common/Text/Text";
 import {
   ButtonMediumWhitePurple,
   ButtonMediumGrey,
   ButtonRectangle,
-} from "../../components/common/Button/Button";
+} from "../../../components/common/Button/Button";
 import ListQuestion from "./components/listQuestion";
 
 const EditQuestion = () => {

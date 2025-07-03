@@ -8,21 +8,21 @@ import {
   UserOutlined,
   MailOutlined,
 } from "@ant-design/icons";
-import { Form, FormItem, FormInput } from "../../components/common/Form/Form";
-import { HeadingLg, SectionTitle } from "../../components/common/Text/Text";
-import { PasswordRevealInput } from "../../components/common/Form/Form";
+import { Form, FormItem, FormInput } from "../../../components/common/Form/Form";
+import { HeadingLg, SectionTitle } from "../../../components/common/Text/Text";
+import { PasswordRevealInput } from "../../../components/common/Form/Form";
 import {
   DropdownWhiteGrey,
   DropdownOption,
-} from "../../components/common/Dropdown/Dropdown";
+} from "../../../components/common/Dropdown/Dropdown";
 import {
   ButtonMediumWhitePurple,
   ButtonMediumGrey,
   ButtonRectangle,
-} from "../../components/common/Button/Button";
-import Switch from "../../components/common/Switch/Switch";
-import Checkbox from "../../components/common/Checkbox/Checkbox";
-import Divider from "../../components/common/Divider/Divider";
+} from "../../../components/common/Button/Button";
+import Switch from "../../../components/common/Switch/Switch";
+import Checkbox from "../../../components/common/Checkbox/Checkbox";
+import Divider from "../../../components/common/Divider/Divider";
 
 const EditStudent = () => {
   const [isActive, setIsActive] = useState(true);
