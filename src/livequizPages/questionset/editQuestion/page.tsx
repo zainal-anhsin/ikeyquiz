@@ -14,7 +14,9 @@ import {
   ButtonMediumGrey,
   ButtonRectangle,
 } from "../../../components/common/Button/Button";
+import { CustomTabs, TabPane } from "../../../components/common/Tabs/tabs";
 import ListQuestion from "./components/listQuestion";
+import SettingQuestion from "./components/settingQuestion";
 
 const EditQuestion = () => {
   return (
@@ -94,8 +96,17 @@ const EditQuestion = () => {
           </Space>
         </div>
       </div>
-      {/* Main Content Section */}
-      <ListQuestion />
+      {/* Main Content Section with Tabs */}
+      <div style={{ padding: "0 32px" }}>
+        <CustomTabs defaultActiveKey="setting">
+          <TabPane tab="Setting Question" key="setting">
+            <SettingQuestion />
+          </TabPane>
+          <TabPane tab="List Question" key="list">
+            <ListQuestion />
+          </TabPane>
+        </CustomTabs>
+      </div>
     </div>
   );
 };

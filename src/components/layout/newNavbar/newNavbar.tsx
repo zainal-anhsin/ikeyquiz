@@ -19,40 +19,32 @@ const NewNavbar = () => {
   return (
     <NavbarContainer>
       <LeftSection>
-        <SchoolIcon src="/sidebar-image/school.png" alt="School" />
-        <SchoolInfo>
-          <SectionTitle>Convent Datuk. K</SectionTitle>
-          <SubLabel>School</SubLabel>
-        </SchoolInfo>
+        <IconCircle style={{marginRight: 24}}>
+          <img src="/sidebar-image/menu.png" alt="Menu" style={{ width: 34, height: 34 }} />
+        </IconCircle>
+        <IconCircle style={{marginRight: 24}}>
+          <img src="/sidebar-image/lang.png" alt="Language" style={{ width: 48, height: 48 }} />
+        </IconCircle>
+        <IconCircle>
+          <img src="/sidebar-image/noti.png" alt="Notification" style={{ width: 48, height: 48 }} />
+        </IconCircle>
       </LeftSection>
       <RightSection>
-        <IconCircle>
-          <img
-            src="/sidebar-image/lang.png"
-            alt="Language"
-            style={{ width: 52, height: 52 }}
-          />
-        </IconCircle>
-        <IconCircle>
-          <img
-            src="/sidebar-image/noti.png"
-            alt="Notification"
-            style={{ width: 52, height: 52 }}
-          />
-        </IconCircle>
+        <SchoolIcon src="/sidebar-image/school.png" alt="School" />
+        <SchoolInfo>
+          <SectionTitle>Rivendell School</SectionTitle>
+          <SubLabel>School</SubLabel>
+        </SchoolInfo>
         <UserInfo>
           <UserAvatar>
-            {/* Placeholder for user icon, you can replace with an actual image if available */}
-            <span role="img" aria-label="user" style={{ fontSize: 32 }}>
-              😇
-            </span>
+            <img src="/sidebar-image/profile2.png" alt="User" style={{ width: 48, height: 48, objectFit: 'cover' }} />
           </UserAvatar>
           <div>
             <div>
-              <SectionTitle>Jasper Lim</SectionTitle>
+              <SectionTitle>Gandalf. LTR</SectionTitle>
             </div>
             <div>
-              <MetaText>Student</MetaText>
+              <MetaText>Wizard</MetaText>
             </div>
           </div>
         </UserInfo>

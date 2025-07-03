@@ -15,7 +15,7 @@ const ListQuestion = () => {
   const [options, setOptions] = useState(defaultOptions);
 
   return (
-    <div style={{ display: 'flex', gap: 32 }}>
+    <div style={{ display: 'flex', gap: 32, marginBottom: 32 }}>
       {/* Left side: Question Set + Content Editor */}
       <div style={{ flex: 1, display: 'flex', flexDirection: 'column', gap: 32 }}>
     <QuestionSet />

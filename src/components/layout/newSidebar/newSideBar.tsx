@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import React from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
 import {
   SidebarContainer,
   LogoWrapper,
@@ -19,11 +19,10 @@ const menuItems = [
 ];
 
 const NewSidebar = () => {
-  const [selected, setSelected] = useState(0);
+  const location = useLocation();
   const navigate = useNavigate();
 
-  const handleItemClick = (idx: number, path: string) => {
-    setSelected(idx);
+  const handleItemClick = (path: string) => {
     navigate(path);
   };
 
@@ -36,8 +35,8 @@ const NewSidebar = () => {
         {menuItems.map((item, idx) => (
           <SidebarItem
             key={idx}
-            selected={selected === idx}
-            onClick={() => handleItemClick(idx, item.path)}
+            selected={location.pathname === item.path}
+            onClick={() => handleItemClick(item.path)}
           >
             <SidebarIcon src={item.icon} alt={item.label} />
             <SidebarLabel>{item.label}</SidebarLabel>
