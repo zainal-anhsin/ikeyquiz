@@ -6,7 +6,7 @@ import {
   FileAddOutlined,
   DeleteOutlined,
 } from "@ant-design/icons";
-import { SectionTitle } from "../../../components/common/Text/Text";
+import { HeadingMd } from "../../../components/common/Text/Text";
 import { BtnMdWhite, BtnSmWhite, BtnLgPurple } from "../../../components/common/Button/Button";
 import { useNavigate } from "react-router-dom";
 import Table from "../../../components/common/Table/Table";
@@ -135,7 +135,7 @@ const ManageGroup = () => {
           marginBottom: 24,
         }}
       >
-        <SectionTitle style={{ marginRight: 8 }}>Setting</SectionTitle>
+        <HeadingMd style={{ marginRight: 8 }}>Setting</HeadingMd>
         <span style={{ fontWeight: 400, color: "black", fontSize: 14 }}>|</span>
         <Breadcrumb separator=">">
           <Breadcrumb.Item>
@@ -202,7 +202,7 @@ const ManageGroup = () => {
       <div style={{ marginTop: 34 }}>
         <div style={{ marginBottom: 18, display: 'flex', alignItems: 'center', gap: 16, justifyContent: 'flex-end' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-            <SectionTitle style={{ marginRight: 8 }}>Sort By:</SectionTitle>
+            <HeadingMd style={{ marginRight: 8 }}>Sort By:</HeadingMd>
             <DropdownWhite placeholder="Select" size="large" style={{ width: 115 }} onChange={value => console.log('sort', value)}>
               <DropdownOption value="name-asc">A - Z</DropdownOption>
               <DropdownOption value="name-desc">Z - A</DropdownOption>

@@ -7,7 +7,7 @@ import {
   DeleteOutlined,
 } from "@ant-design/icons";
 import {
-  SectionTitle,
+  HeadingMd,
 } from "../../../components/common/Text/Text";
 import {
   BtnMdWhite,
@@ -30,7 +30,7 @@ const EditQuestion = () => {
           marginBottom: 24,
         }}
       >
-        <SectionTitle style={{ marginRight: 8 }}>Question Set</SectionTitle>
+        <HeadingMd style={{ marginRight: 8 }}>Question Set</HeadingMd>
         <span style={{ fontWeight: 400, color: "black", fontSize: 14 }}>|</span>
         <Breadcrumb separator=">">
           <Breadcrumb.Item>

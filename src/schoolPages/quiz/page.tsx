@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import {
   HeadingLg,
-  SectionTitle,
+  HeadingMd,
   TimeText,
   TabText,
 } from "../../components/common/Text/Text";
@@ -103,9 +103,9 @@ const Quiz = () => {
           ))}
         </TabBar>
         <FilterBar>
-          <SectionTitle>By Newest</SectionTitle>
-          <SectionTitle>|</SectionTitle>
-          <SectionTitle>English</SectionTitle>
+          <HeadingMd>By Newest</HeadingMd>
+          <HeadingMd>|</HeadingMd>
+          <HeadingMd>English</HeadingMd>
           <Popover
             content={<FilterPanel onReset={() => setFilterVisible(false)} />}
             trigger="click"
@@ -147,18 +147,18 @@ const Quiz = () => {
                 </QuizInfo>
                 <Divider />
                 <QuizAvailability>
-                  <SectionTitle>Quiz Ended</SectionTitle>
+                  <HeadingMd>Quiz Ended</HeadingMd>
                   <MetaText>3 Mar 2025 1:59:07 PM</MetaText>
                 </QuizAvailability>
                 <Divider />
                 <QuizStatsRow>
                   <QuizIcon src="/quizPaper.png" alt="quiz" />
                   <StatsCol>
-                    <SectionTitle>Duration 1 hr</SectionTitle>
+                    <HeadingMd>Duration 1 hr</HeadingMd>
                     <TimeText>START : 12.30AM</TimeText>
                   </StatsCol>
                   <StatsCol>
-                    <SectionTitle>40 Questions</SectionTitle>
+                    <HeadingMd>40 Questions</HeadingMd>
                     <TimeText>END : 1.30AM</TimeText>
                   </StatsCol>
                 </QuizStatsRow>
@@ -301,7 +301,7 @@ const Quiz = () => {
               <Divider />
 
               <QuizAvailability>
-                <SectionTitle>Quiz Availability</SectionTitle>
+                <HeadingMd>Quiz Availability</HeadingMd>
                 <MetaText>( Mar 3 - May 31 ) 2025</MetaText>
               </QuizAvailability>
 
@@ -310,11 +310,11 @@ const Quiz = () => {
               <QuizStatsRow>
                 <QuizIcon src="/quizPaper.png" alt="quiz" />
                 <StatsCol>
-                  <SectionTitle>Duration 1 hr</SectionTitle>
+                  <HeadingMd>Duration 1 hr</HeadingMd>
                   <TimeText>START : 12.30AM</TimeText>
                 </StatsCol>
                 <StatsCol>
-                  <SectionTitle>40 Questions</SectionTitle>
+                  <HeadingMd>40 Questions</HeadingMd>
                   <TimeText>END : 1.30AM</TimeText>
                 </StatsCol>
               </QuizStatsRow>

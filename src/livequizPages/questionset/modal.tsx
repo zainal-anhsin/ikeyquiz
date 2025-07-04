@@ -3,7 +3,7 @@ import { Modal as AntdModal } from "antd";
 import { DownloadOutlined, EyeOutlined } from "@ant-design/icons";
 import {
   HeadingLg,
-  SectionTitle,
+  HeadingMd,
   MetaText,
 } from "../../components/common/Text/Text";
 import {
@@ -137,11 +137,11 @@ const QuestionSetModal: React.FC<QuestionSetModalProps> = ({
                 {revealed[idx] ? 'Hide Answer' : 'Show Answer'}
               </BtnLgPurple>
             </div>
-            <SectionTitle style={{ fontWeight: "bold", fontSize: 18 }}>
+            <HeadingMd style={{ fontWeight: "bold", fontSize: 18 }}>
               Question #{idx + 1}
-            </SectionTitle>
+            </HeadingMd>
             <div style={{ height: 8 }} />
-            <SectionTitle>{question.question}</SectionTitle>
+            <HeadingMd>{question.question}</HeadingMd>
             <div style={{ height: 16 }} />
             <div style={{ fontSize: 18, color: "#222", marginBottom: 16 }}>
               {question.translation}

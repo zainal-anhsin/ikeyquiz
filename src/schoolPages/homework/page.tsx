@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import {
   HeadingLg,
-  SectionTitle,
+  HeadingMd,
   TimeText,
   TabText
 } from '../../components/common/Text/Text';
@@ -54,9 +54,9 @@ const HomeworkPage = () => {
           ))}
         </TabBar>
         <FilterBar>
-          <SectionTitle>By Year 2025</SectionTitle>
-          <SectionTitle>|</SectionTitle>
-          <SectionTitle>All Sub</SectionTitle>
+          <HeadingMd>By Year 2025</HeadingMd>
+          <HeadingMd>|</HeadingMd>
+          <HeadingMd>All Sub</HeadingMd>
           <Popover
             content={<FilterPanel onReset={() => setFilterVisible(false)} />}
             trigger="click"
@@ -92,7 +92,7 @@ const HomeworkPage = () => {
               <Divider />
 
               <QuizAvailability>
-                <SectionTitle>Deadline</SectionTitle>
+                <HeadingMd>Deadline</HeadingMd>
                 <MetaText>May 28 2025</MetaText>
               </QuizAvailability>
 
@@ -101,11 +101,11 @@ const HomeworkPage = () => {
               <QuizStatsRow>
                 <QuizIcon src="/sidebar-image/homework.png" alt="homework" />
                 <StatsCol>
-                  <SectionTitle>Duration 1 hr</SectionTitle>
+                  <HeadingMd>Duration 1 hr</HeadingMd>
                   <TimeText>START : 12.30AM</TimeText>
                 </StatsCol>
                 <StatsCol>
-                  <SectionTitle>40 Questions</SectionTitle>
+                  <HeadingMd>40 Questions</HeadingMd>
                   <TimeText>END : 1.30AM</TimeText>
                 </StatsCol>
               </QuizStatsRow>

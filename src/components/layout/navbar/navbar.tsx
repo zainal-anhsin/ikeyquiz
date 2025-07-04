@@ -10,7 +10,7 @@ import {
   UserAvatar,
 } from "./navbar.styles";
 import {
-  SectionTitle,
+  HeadingMd,
   MetaText,
   SubLabel,
 } from "../../common/Text/Text";
@@ -21,7 +21,7 @@ const Navbar = () => {
       <LeftSection>
         <SchoolIcon src="/sidebar-image/school.png" alt="School" />
         <SchoolInfo>
-          <SectionTitle>Convent Datuk. K</SectionTitle>
+          <HeadingMd>Convent Datuk. K</HeadingMd>
           <SubLabel>School</SubLabel>
         </SchoolInfo>
       </LeftSection>
@@ -49,7 +49,7 @@ const Navbar = () => {
           </UserAvatar>
           <div>
             <div>
-              <SectionTitle>Jasper Lim</SectionTitle>
+              <HeadingMd>Jasper Lim</HeadingMd>
             </div>
             <div>
               <MetaText>Student</MetaText>

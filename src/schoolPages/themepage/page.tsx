@@ -12,7 +12,7 @@ import {
 import {
   HeadingLg,
   SubLabel,
-  SectionTitle,
+  HeadingMd,
   TimeText,
   TabText,
   SidebarLabel,
@@ -38,7 +38,7 @@ const ThemePage = () => {
       <Card title="Buttons" style={{ marginBottom: "24px" }}>
         <Row gutter={[16, 16]}>
           <Col span={24}>
-            <SectionTitle>Button Variants</SectionTitle>
+            <HeadingMd>Button Variants</HeadingMd>
             <Divider />
             <Space wrap>
               <BtnPrimary>Primary Button</BtnPrimary>
@@ -52,7 +52,7 @@ const ThemePage = () => {
           </Col>
 
           <Col span={24}>
-            <SectionTitle>Button States</SectionTitle>
+            <HeadingMd>Button States</HeadingMd>
             <Divider />
             <Space wrap>
               <BtnPrimary disabled>Disabled Primary</BtnPrimary>
@@ -95,14 +95,14 @@ const ThemePage = () => {
       >
         <Row gutter={[16, 40]}>
           <Col span={12}>
-            <SectionTitle>Custom Checkbox</SectionTitle>
+            <HeadingMd>Custom Checkbox</HeadingMd>
             <Divider />
             <div style={{ display: "flex", flexDirection: "column", gap: 24 }}>
               <Checkbox>Live Quiz</Checkbox>
             </div>
           </Col>
           <Col span={12}>
-            <SectionTitle>Custom Switch</SectionTitle>
+            <HeadingMd>Custom Switch</HeadingMd>
             <Divider />
             <div style={{ display: "flex", flexDirection: "column", gap: 24 }}>
               <CustomSwitch checked />
@@ -115,7 +115,7 @@ const ThemePage = () => {
       <Card title="Text Components" style={{ marginBottom: "24px" }}>
         <Row gutter={[16, 16]}>
           <Col span={24}>
-            <SectionTitle>Text Variants</SectionTitle>
+            <HeadingMd>Text Variants</HeadingMd>
             <Divider />
             <Space direction="vertical" size="large" style={{ width: "100%" }}>
               <div>
@@ -124,8 +124,8 @@ const ThemePage = () => {
               </div>
 
               <div>
-                <SectionTitle>Section Title - For Section Headers</SectionTitle>
-                <MetaText>This is how SectionTitle looks</MetaText>
+                <HeadingMd>Section Title - For Section Headers</HeadingMd>
+                <MetaText>This is how HeadingMd looks</MetaText>
               </div>
 
               <div>
@@ -165,7 +165,7 @@ const ThemePage = () => {
       <Card title="Form Components" style={{ marginBottom: "24px" }}>
         <Row gutter={[16, 16]}>
           <Col span={24}>
-            <SectionTitle>Form Inputs</SectionTitle>
+            <HeadingMd>Form Inputs</HeadingMd>
             <Divider />
             <Form layout="vertical" style={{ maxWidth: "400px" }}>
               <FormItem label="Regular Input" name="regular">
@@ -192,7 +192,7 @@ const ThemePage = () => {
       <Card title="Dropdown Components" style={{ marginBottom: "24px" }}>
         <Row gutter={[16, 40]}>
           <Col span={12}>
-            <SectionTitle>Purple Dropdown</SectionTitle>
+            <HeadingMd>Purple Dropdown</HeadingMd>
             <Divider />
             <DropdownPurple placeholder="Year">
               <DropdownOption value="2024">2024</DropdownOption>
@@ -201,7 +201,7 @@ const ThemePage = () => {
             </DropdownPurple>
           </Col>
           <Col span={12}>
-            <SectionTitle>Grey Dropdown</SectionTitle>
+            <HeadingMd>Grey Dropdown</HeadingMd>
             <Divider />
             <DropdownGrey placeholder="Select">
               <DropdownOption value="option1">Option 1</DropdownOption>
@@ -216,7 +216,7 @@ const ThemePage = () => {
       <Card title="Color Palette" style={{ marginBottom: "24px" }}>
         <Row gutter={[16, 16]}>
           <Col span={24}>
-            <SectionTitle>Primary Colors</SectionTitle>
+            <HeadingMd>Primary Colors</HeadingMd>
             <Divider />
             <Space wrap>
               <div style={{ textAlign: "center" }}>
@@ -264,7 +264,7 @@ const ThemePage = () => {
           </Col>
 
           <Col span={24}>
-            <SectionTitle>Text Colors</SectionTitle>
+            <HeadingMd>Text Colors</HeadingMd>
             <Divider />
             <Space direction="vertical" size="small">
               <div style={{ color: "#222" }}>Primary Text (#222)</div>
@@ -275,7 +275,7 @@ const ThemePage = () => {
           </Col>
 
           <Col span={24}>
-            <SectionTitle>Background Colors</SectionTitle>
+            <HeadingMd>Background Colors</HeadingMd>
             <Divider />
             <Space wrap>
               <div style={{ textAlign: "center" }}>
@@ -316,7 +316,7 @@ const ThemePage = () => {
       <Card title="Usage Examples" style={{ marginBottom: "24px" }}>
         <Row gutter={[16, 16]}>
           <Col span={12}>
-            <SectionTitle>Card Example</SectionTitle>
+            <HeadingMd>Card Example</HeadingMd>
             <Divider />
             <div
               style={{
@@ -339,7 +339,7 @@ const ThemePage = () => {
           </Col>
 
           <Col span={12}>
-            <SectionTitle>Form Example</SectionTitle>
+            <HeadingMd>Form Example</HeadingMd>
             <Divider />
             <Form layout="vertical">
               <FormItem label="Username" name="username">

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Button, Divider} from 'antd';
-import { SectionTitle, MetaText } from '../../components/common/Text/Text';
+import { HeadingMd, MetaText } from '../../components/common/Text/Text';
 import { ReloadOutlined } from '@ant-design/icons';
 
 const sortOptions = [
@@ -98,7 +98,7 @@ const FilterPanel = ({ onReset }: FilterPanelProps) => {
       maxWidth: 360,
     }}>
       <div style={{ marginBottom: 18 }}>
-        <SectionTitle>Sort by</SectionTitle>
+        <HeadingMd>Sort by</HeadingMd>
         <div style={{ display: 'flex', gap: 8, marginTop: 10 }}>
           {sortOptions.map(opt => (
             <Button 
@@ -121,7 +121,7 @@ const FilterPanel = ({ onReset }: FilterPanelProps) => {
         </div>
       </div>
       <div style={{ marginBottom: 18 }}>
-        <SectionTitle>Subject</SectionTitle>
+        <HeadingMd>Subject</HeadingMd>
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8, marginTop: 10 }}>
           {subjects.map((subj) => (
             <Button 
@@ -145,7 +145,7 @@ const FilterPanel = ({ onReset }: FilterPanelProps) => {
       </div>
       <div style={{ display: 'flex', gap: 16, marginBottom: 18 }}>
         <div style={{ flex: 1 }}>
-          <SectionTitle>Year</SectionTitle>
+          <HeadingMd>Year</HeadingMd>
           <select
             value={selectedYear}
             onChange={(e) => handleYearChange(e.target.value)}
@@ -175,7 +175,7 @@ const FilterPanel = ({ onReset }: FilterPanelProps) => {
           </select>
         </div>
         <div style={{ flex: 1 }}>
-          <SectionTitle>Month</SectionTitle>
+          <HeadingMd>Month</HeadingMd>
           <select
             value={selectedMonth}
             onChange={(e) => handleMonthChange(e.target.value)}

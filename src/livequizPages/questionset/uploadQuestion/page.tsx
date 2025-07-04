@@ -9,7 +9,7 @@ import {
 import {
   HeadingLg,
   MetaText,
-  SectionTitle,
+  HeadingMd,
 } from "../../../components/common/Text/Text";
 import {
   BtnMdWhite,
@@ -55,7 +55,7 @@ const uploadQuestion = () => {
           marginBottom: 24,
         }}
       >
-        <SectionTitle style={{ marginRight: 8 }}>Question Set</SectionTitle>
+        <HeadingMd style={{ marginRight: 8 }}>Question Set</HeadingMd>
         <span style={{ fontWeight: 400, color: "black", fontSize: 14 }}>|</span>
         <Breadcrumb separator=">">
           <Breadcrumb.Item>
@@ -189,9 +189,9 @@ const uploadQuestion = () => {
                 onPointerLeave={undefined}
               />
             </p>
-            <SectionTitle style={{ color: '#6666FF', marginBottom: 16 }}>
+            <HeadingMd style={{ color: '#6666FF', marginBottom: 16 }}>
               Drop files to upload or
-            </SectionTitle>
+            </HeadingMd>
               <BtnLgPurple>
                 Browse
               </BtnLgPurple>

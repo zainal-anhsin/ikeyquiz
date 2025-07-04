@@ -9,7 +9,7 @@ import {
   MailOutlined,
 } from "@ant-design/icons";
 import { Form, FormItem, FormInput } from "../../../components/common/Form/Form";
-import { HeadingLg, SectionTitle } from "../../../components/common/Text/Text";
+import { HeadingLg, HeadingMd } from "../../../components/common/Text/Text";
 import { PasswordRevealInput } from "../../../components/common/Form/Form";
 import {
   DropdownWhite,
@@ -37,7 +37,7 @@ const EditStudent = () => {
           marginBottom: 24,
         }}
       >
-        <SectionTitle style={{ marginRight: 8 }}>Student</SectionTitle>
+        <HeadingMd style={{ marginRight: 8 }}>Student</HeadingMd>
         <span style={{ fontWeight: 400, color: "black", fontSize: 14 }}>|</span>
         <Breadcrumb separator=">">
           <Breadcrumb.Item>
@@ -183,12 +183,12 @@ const EditStudent = () => {
             <HeadingLg style={{ marginBottom: 16 }}>Custom Group</HeadingLg>
             <div>
               <Checkbox style={{ marginBottom: 20 }} defaultChecked={false}>
-                <SectionTitle>CG1</SectionTitle>
+                <HeadingMd>CG1</HeadingMd>
               </Checkbox>
             </div>
             <div>
               <Checkbox style={{ marginBottom: 20 }} defaultChecked={true}>
-                <SectionTitle>CG2</SectionTitle>
+                <HeadingMd>CG2</HeadingMd>
               </Checkbox>
             </div>
           </div>
@@ -197,32 +197,32 @@ const EditStudent = () => {
             <HeadingLg style={{ marginBottom: 16 }}>Category</HeadingLg>
             <div>
               <Checkbox style={{ marginBottom: 20 }} defaultChecked={false}>
-                <SectionTitle>Live Quiz</SectionTitle>
+                <HeadingMd>Live Quiz</HeadingMd>
               </Checkbox>
             </div>
             <div>
               <Checkbox style={{ marginBottom: 20 }} defaultChecked={true}>
-                <SectionTitle>Live QuizKosa Kata Spot+ (full)</SectionTitle>
+                <HeadingMd>Live QuizKosa Kata Spot+ (full)</HeadingMd>
               </Checkbox>
             </div>
             <div>
               <Checkbox style={{ marginBottom: 20 }} defaultChecked={false}>
-                <SectionTitle>English Quiz 2025</SectionTitle>
+                <HeadingMd>English Quiz 2025</HeadingMd>
               </Checkbox>
             </div>
             <div>
               <Checkbox style={{ marginBottom: 20 }} defaultChecked={true}>
-                <SectionTitle>Science Quiz March</SectionTitle>
+                <HeadingMd>Science Quiz March</HeadingMd>
               </Checkbox>
             </div>
             <div>
               <Checkbox style={{ marginBottom: 20 }} defaultChecked={false}>
-                <SectionTitle>Mathematic Quiz</SectionTitle>
+                <HeadingMd>Mathematic Quiz</HeadingMd>
               </Checkbox>
             </div>
             <div>
               <Checkbox style={{ marginBottom: 20 }} defaultChecked={true}>
-                <SectionTitle>Active Sport 008</SectionTitle>
+                <HeadingMd>Active Sport 008</HeadingMd>
               </Checkbox>
             </div>
           </div>

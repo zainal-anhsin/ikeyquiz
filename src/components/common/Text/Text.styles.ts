@@ -9,13 +9,13 @@ export const HeadingLg = styled.h2`
 `;
 
 // Medium, Black Text, Bold
-export const SectionTitle = styled.span`
+export const HeadingMd = styled.span`
   font-size: 1rem;
   font-weight: 600;
   color: #333;
 `;
 
-// Large, Grey Text, No bold
+// Large, Grey Text, Bold
 export const SubLabel = styled.span`
   font-size: 1rem;
   color: #666;

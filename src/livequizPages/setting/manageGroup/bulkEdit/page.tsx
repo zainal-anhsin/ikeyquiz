@@ -6,7 +6,7 @@ import {
   FormItem,
   FormInput,
 } from "../../../../components/common/Form/Form";
-import { HeadingLg, SectionTitle } from "../../../../components/common/Text/Text";
+import { HeadingLg, HeadingMd } from "../../../../components/common/Text/Text";
 import Divider from "../../../../components/common/Divider/Divider";
 import {
   BtnMdWhite,
@@ -28,7 +28,7 @@ const bulkEdit = () => {
           marginBottom: 24,
         }}
       >
-        <SectionTitle style={{ marginRight: 8 }}>Setting</SectionTitle>
+        <HeadingMd style={{ marginRight: 8 }}>Setting</HeadingMd>
         <span style={{ fontWeight: 400, color: "black", fontSize: 14 }}>|</span>
         <Breadcrumb separator=">">
           <Breadcrumb.Item>
@@ -126,9 +126,9 @@ const bulkEdit = () => {
           <Row gutter={32}>
             <Col span={24} style={{ marginTop: "24px" }}>
               <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
-                <SectionTitle style={{ margin: 0, minWidth: 120 }}>
+                <HeadingMd style={{ margin: 0, minWidth: 120 }}>
                   Display Order
-                </SectionTitle>
+                </HeadingMd>
                 <div style={{ display: "flex", alignItems: "center", gap: 32 }}>
                   <FormInput
                     style={{ width: 160 }}

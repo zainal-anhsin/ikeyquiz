@@ -2,7 +2,7 @@ import React from "react";
 import { Row, Col, Space, Breadcrumb } from "antd";
 import { SaveOutlined, UndoOutlined, CloseOutlined } from "@ant-design/icons";
 import { Form, FormItem, FormInput } from "../../../components/common/Form/Form";
-import { HeadingLg, SectionTitle } from "../../../components/common/Text/Text";
+import { HeadingLg, HeadingMd } from "../../../components/common/Text/Text";
 import Divider from "../../../components/common/Divider/Divider";
 import {
   DropdownGrey,
@@ -26,7 +26,7 @@ const addStudent = () => {
           marginBottom: 24,
         }}
       >
-        <SectionTitle style={{ marginRight: 8 }}>Student</SectionTitle>
+        <HeadingMd style={{ marginRight: 8 }}>Student</HeadingMd>
         <span style={{ fontWeight: 400, color: "black", fontSize: 14 }}>
           |
         </span>

@@ -6,7 +6,7 @@ import {
   DownloadOutlined,
   DeleteOutlined,
 } from "@ant-design/icons";
-import { SectionTitle } from "../../../components/common/Text/Text";
+import { HeadingMd } from "../../../components/common/Text/Text";
 import { BtnMdWhite, BtnSmWhite } from "../../../components/common/Button/Button";
 import { useNavigate } from "react-router-dom";
 import Table from "../../../components/common/Table/Table";
@@ -94,7 +94,7 @@ const RoomResult = () => {
           marginBottom: 24,
         }}
       >
-        <SectionTitle style={{ marginRight: 8 }}>Report</SectionTitle>
+        <HeadingMd style={{ marginRight: 8 }}>Report</HeadingMd>
         <span style={{ fontWeight: 400, color: "black", fontSize: 14 }}>|</span>
         <Breadcrumb separator=">">
           <Breadcrumb.Item>
@@ -143,7 +143,7 @@ const RoomResult = () => {
       <div style={{ marginTop: 34 }}>
         <div style={{ marginBottom: 18, display: 'flex', alignItems: 'center', gap: 16, justifyContent: 'space-between' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
-            <SectionTitle style={{ marginRight: 8 }}>Filter</SectionTitle>
+            <HeadingMd style={{ marginRight: 8 }}>Filter</HeadingMd>
             <Select
               mode="tags"
               size="large"
@@ -177,7 +177,7 @@ const RoomResult = () => {
             </DropdownWhite>
           </div>
           <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-            <SectionTitle style={{ marginRight: 8 }}>Sort By:</SectionTitle>
+            <HeadingMd style={{ marginRight: 8 }}>Sort By:</HeadingMd>
             <DropdownWhite placeholder="Select" size="large" style={{ width: 115 }} onChange={value => console.log('sort', value)}>
               <DropdownOption value="name-asc">A - Z</DropdownOption>
               <DropdownOption value="name-desc">Z - A</DropdownOption>

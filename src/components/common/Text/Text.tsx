@@ -1,7 +1,7 @@
 export {
   HeadingLg,
   SubLabel,
-  SectionTitle,
+  HeadingMd,
   TimeText,
   TabText,
   SidebarLabel,

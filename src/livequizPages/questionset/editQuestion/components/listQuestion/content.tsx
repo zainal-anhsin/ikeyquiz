@@ -1,7 +1,7 @@
 import React from "react";
 import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
-import { HeadingLg, SectionTitle } from "../../../../../components/common/Text/Text";
+import { HeadingLg, HeadingMd } from "../../../../../components/common/Text/Text";
 import { Form } from "../../../../../components/common/Form/Form";
 import { BtnMdWhite } from "../../../../../components/common/Button/Button";
 import { DeleteOutlined } from "@ant-design/icons";
@@ -69,7 +69,7 @@ const Content: React.FC<ContentProps> = ({ value, onChange, options, setOptions 
         <Form>
           {options.map((opt, idx) => (
             <div key={idx} style={{ display: 'flex', alignItems: 'center', gap: 16, marginTop: 24 }}>
-              <SectionTitle>{alphabet[idx]}</SectionTitle> 
+              <HeadingMd>{alphabet[idx]}</HeadingMd> 
               <FormInput
                 value={opt.value}
                 onChange={e => handleOptionChange(idx, e.target.value)}

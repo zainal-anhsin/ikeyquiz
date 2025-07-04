@@ -8,7 +8,7 @@ import {
   FileAddOutlined,
   DeleteOutlined,
 } from "@ant-design/icons";
-import { SectionTitle, MetaText } from "../../components/common/Text/Text";
+import { HeadingMd, MetaText } from "../../components/common/Text/Text";
 import {
   BtnMdWhite,
   BtnSmWhite,
@@ -133,7 +133,7 @@ const QuestionSet = () => {
           marginBottom: 24,
         }}
       >
-        <SectionTitle style={{ marginRight: 8 }}>Question Set</SectionTitle>
+        <HeadingMd style={{ marginRight: 8 }}>Question Set</HeadingMd>
         <span style={{ fontWeight: 400, color: "black", fontSize: 14 }}>|</span>
         <Breadcrumb separator=">">
           <Breadcrumb.Item>
@@ -218,7 +218,7 @@ const QuestionSet = () => {
           }}
         >
           <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
-            <SectionTitle style={{ marginRight: 8 }}>Filter</SectionTitle>
+            <HeadingMd style={{ marginRight: 8 }}>Filter</HeadingMd>
             <Select
               mode="tags"
               size="large"
@@ -262,7 +262,7 @@ const QuestionSet = () => {
             </DropdownWhite>
           </div>
           <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-            <SectionTitle style={{ marginRight: 8 }}>Sort By:</SectionTitle>
+            <HeadingMd style={{ marginRight: 8 }}>Sort By:</HeadingMd>
             <DropdownWhite
               placeholder="Select"
               size="large"

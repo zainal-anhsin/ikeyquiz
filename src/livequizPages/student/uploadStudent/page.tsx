@@ -6,7 +6,7 @@ import {
   CloseOutlined,
   InboxOutlined,
 } from "@ant-design/icons";
-import { HeadingLg, SectionTitle, MetaText } from "../../../components/common/Text/Text";
+import { HeadingLg, HeadingMd, MetaText } from "../../../components/common/Text/Text";
 import Divider from "../../../components/common/Divider/Divider";
 import {
   BtnMdWhite,
@@ -48,7 +48,7 @@ const uploadStudent = () => {
           marginBottom: 24,
         }}
       >
-        <SectionTitle style={{ marginRight: 8 }}>Student</SectionTitle>
+        <HeadingMd style={{ marginRight: 8 }}>Student</HeadingMd>
         <span style={{ fontWeight: 400, color: "black", fontSize: 14 }}>|</span>
         <Breadcrumb separator=">">
           <Breadcrumb.Item>
@@ -139,9 +139,9 @@ const uploadStudent = () => {
                   onPointerLeave={undefined}
                 />
               </p>
-              <SectionTitle style={{ color: '#6666FF', marginBottom: 16 }}>
+              <HeadingMd style={{ color: '#6666FF', marginBottom: 16 }}>
                 Drop files to upload or
-              </SectionTitle>
+              </HeadingMd>
               <BtnLgPurple>
                 Browse
               </BtnLgPurple>
@@ -162,15 +162,15 @@ const uploadStudent = () => {
         >
           <label style={{ display: "flex", alignItems: "center", gap: 8 }}>
             <Checkbox />
-            <SectionTitle style={{ fontWeight: 400 }}>
+            <HeadingMd style={{ fontWeight: 400 }}>
               Send email after upload
-            </SectionTitle>
+            </HeadingMd>
           </label>
           <label style={{ display: "flex", alignItems: "center", gap: 8 }}>
             <Checkbox defaultChecked />
-            <SectionTitle style={{ fontWeight: 400 }}>
+            <HeadingMd style={{ fontWeight: 400 }}>
               Reset Password after upload
-            </SectionTitle>
+            </HeadingMd>
           </label>
         </div>
         {/* Divider section */}

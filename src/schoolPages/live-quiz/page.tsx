@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import {
   SubLabel,
-  SectionTitle,
+  HeadingMd,
   HeadingLg,
 } from "../../components/common/Text/Text";
 import {
@@ -42,10 +42,10 @@ const LiveQuizPage = () => {
             <SubLabel>Question {current + 1}</SubLabel>
           </div>
           <div style={{ marginBottom: 8 }}>
-            <SectionTitle>Choose the correct answer.</SectionTitle>
+            <HeadingMd>Choose the correct answer.</HeadingMd>
           </div>
           <div style={{ marginBottom: 24 }}>
-            <SectionTitle>{questions[current].question}</SectionTitle>
+            <HeadingMd>{questions[current].question}</HeadingMd>
           </div>
           <div>
             {questions[current].answers.map((text, idx) => (

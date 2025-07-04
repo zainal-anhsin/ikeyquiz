@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { FormProps } from 'antd/lib/form';
 import { StyledForm, StyledInput, StyledPasswordInput } from './Form.styles';
 import { Form as AntForm, Input } from 'antd';
-import { SectionTitle } from '../Text/Text';
+import { HeadingMd } from '../Text/Text';
 
 interface CustomFormProps extends FormProps {
   children: React.ReactNode;
@@ -21,7 +21,7 @@ export const Form: React.FC<CustomFormProps> = ({ children, layout = 'vertical',
 export const FormItem: typeof AntForm.Item = ({ label, ...props }: any) => {
   let customLabel = label;
   if (typeof label === 'string') {
-    customLabel = <SectionTitle>{label}</SectionTitle>;
+    customLabel = <HeadingMd>{label}</HeadingMd>;
   }
   return <AntForm.Item label={customLabel} {...props} />;
 };

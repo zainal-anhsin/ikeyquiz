@@ -10,7 +10,7 @@ import {
   UserAvatar,
 } from "./newNavbar.styles";
 import {
-  SectionTitle,
+  HeadingMd,
   MetaText,
   SubLabel,
 } from "../../common/Text/Text";
@@ -32,7 +32,7 @@ const NewNavbar = () => {
       <RightSection>
         <SchoolIcon src="/sidebar-image/school.png" alt="School" />
         <SchoolInfo>
-          <SectionTitle>Rivendell School</SectionTitle>
+          <HeadingMd>Rivendell School</HeadingMd>
           <SubLabel>School</SubLabel>
         </SchoolInfo>
         <UserInfo>
@@ -41,7 +41,7 @@ const NewNavbar = () => {
           </UserAvatar>
           <div>
             <div>
-              <SectionTitle>Gandalf. LTR</SectionTitle>
+              <HeadingMd>Gandalf. LTR</HeadingMd>
             </div>
             <div>
               <MetaText>Wizard</MetaText>

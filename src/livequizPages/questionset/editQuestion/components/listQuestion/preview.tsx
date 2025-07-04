@@ -1,5 +1,5 @@
 import React from 'react'
-import { HeadingLg, SectionTitle } from '../../../../../components/common/Text/Text'
+import { HeadingLg, HeadingMd } from '../../../../../components/common/Text/Text'
 
 interface Option {
   value: string;
@@ -59,10 +59,10 @@ const Preview: React.FC<PreviewProps> = ({ value, options }) => {
               position: 'relative',
             }}
           >
-            <SectionTitle style={{ marginRight: 12 }}>{alphabet[idx]}</SectionTitle>
-            <SectionTitle style={{ flex: 1 }}>{opt.value}</SectionTitle>
+            <HeadingMd style={{ marginRight: 12 }}>{alphabet[idx]}</HeadingMd>
+            <HeadingMd style={{ flex: 1 }}>{opt.value}</HeadingMd>
             {opt.correct && (
-              <SectionTitle style={{ color: '#22c55e', marginLeft: 12 }}>✔</SectionTitle>
+              <HeadingMd style={{ color: '#22c55e', marginLeft: 12 }}>✔</HeadingMd>
             )}
           </div>
         ))}
