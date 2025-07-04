@@ -5,7 +5,7 @@ import {
   TimeText,
   TabText
 } from '../../components/common/Text/Text';
-import { ButtonPrimary } from '../../components/common/Button/Button';
+import { BtnPrimary } from '../../components/common/Button/Button';
 import { MenuUnfoldOutlined } from '@ant-design/icons';
 import { Progress, Popover } from 'antd';
 import {
@@ -120,7 +120,7 @@ const HomeworkPage = () => {
                     format={p => `${p}%`}
                   />
                 ) : (
-                  <ButtonPrimary>Start Now</ButtonPrimary>
+                  <BtnPrimary>Start Now</BtnPrimary>
                 )}
               </TakeQuizSection>
             </QuizCard>

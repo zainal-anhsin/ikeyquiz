@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { HeadingLg } from "../../../../../components/common/Text/Text";
 import {
-  ButtonMediumWhitePurple,
-  ButtonRectangle,
+  BtnMdWhite,
+  BtnLgPurple,
 } from "../../../../../components/common/Button/Button";
 
 const TOTAL_QUESTIONS = 30;
@@ -27,7 +27,7 @@ const QuestionSet = () => {
         {Array.from({ length: TOTAL_QUESTIONS }, (_, i) => {
           const num = i + 1;
           return (
-            <ButtonMediumWhitePurple
+            <BtnMdWhite
               key={num}
               style={{
                 width: 40,
@@ -39,13 +39,13 @@ const QuestionSet = () => {
               onClick={() => setSelected(num)}
             >
               {num}
-            </ButtonMediumWhitePurple>
+            </BtnMdWhite>
           );
         })}
       </div>
       <div style={{ display: "flex", justifyContent: "center", gap: 16 }}>
-        <ButtonRectangle>+ Add Question</ButtonRectangle>
-        <ButtonMediumWhitePurple>— Remove</ButtonMediumWhitePurple>
+        <BtnLgPurple>+ Add Question</BtnLgPurple>
+        <BtnMdWhite>— Remove</BtnMdWhite>
       </div>
     </div>
   );

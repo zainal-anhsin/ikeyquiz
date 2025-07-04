@@ -9,9 +9,9 @@ import {
 import { HeadingLg, SectionTitle, MetaText } from "../../../components/common/Text/Text";
 import Divider from "../../../components/common/Divider/Divider";
 import {
-  ButtonMediumWhitePurple,
-  ButtonMediumGrey,
-  ButtonRectangle,
+  BtnMdWhite,
+  BtnMdGrey,
+  BtnLgPurple,
 } from "../../../components/common/Button/Button";
 import Checkbox from '../../../components/common/Checkbox/Checkbox';
 const { Dragger } = Upload;
@@ -79,27 +79,27 @@ const uploadStudent = () => {
           }}
         >
           <Space>
-            <ButtonMediumGrey>
+            <BtnMdGrey>
               <CloseOutlined
                 onPointerOverCapture={undefined}
                 onPointerLeave={undefined}
               />
               Cancel
-            </ButtonMediumGrey>
-            <ButtonMediumWhitePurple>
+            </BtnMdGrey>
+            <BtnMdWhite>
               <UndoOutlined
                 onPointerOverCapture={undefined}
                 onPointerLeave={undefined}
               />
               Reset
-            </ButtonMediumWhitePurple>
-            <ButtonRectangle>
+            </BtnMdWhite>
+            <BtnLgPurple>
               <SaveOutlined
                 onPointerOverCapture={undefined}
                 onPointerLeave={undefined}
               />
               Save
-            </ButtonRectangle>
+            </BtnLgPurple>
           </Space>
         </div>
       </div>
@@ -142,9 +142,9 @@ const uploadStudent = () => {
               <SectionTitle style={{ color: '#6666FF', marginBottom: 16 }}>
                 Drop files to upload or
               </SectionTitle>
-              <ButtonRectangle>
+              <BtnLgPurple>
                 Browse
-              </ButtonRectangle>
+              </BtnLgPurple>
             </div>
           </Dragger>
         </div>

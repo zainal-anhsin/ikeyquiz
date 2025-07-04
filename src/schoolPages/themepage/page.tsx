@@ -1,12 +1,12 @@
 import React from "react";
 import { Card, Divider, Space, Row, Col } from "antd";
 import {
-  ButtonPrimary,
-  ButtonRectangle,
-  ButtonJoin,
-  ButtonGrey,
-  ButtonMediumGrey,
-  ButtonMediumWhitePurple,
+  BtnPrimary,
+  BtnLgPurple,
+  BtnSmPurple,
+  BtnSmGrey,
+  BtnMdGrey,
+  BtnMdWhite,
   BtnSmWhite,
 } from "../../components/common/Button/Button";
 import {
@@ -41,13 +41,13 @@ const ThemePage = () => {
             <SectionTitle>Button Variants</SectionTitle>
             <Divider />
             <Space wrap>
-              <ButtonPrimary>Primary Button</ButtonPrimary>
-              <ButtonRectangle>Rectangle Button</ButtonRectangle>
-              <ButtonMediumGrey>Medium Grey</ButtonMediumGrey>
-              <ButtonMediumWhitePurple>Medium White Purple</ButtonMediumWhitePurple>
+              <BtnPrimary>Primary Button</BtnPrimary>
+              <BtnLgPurple>Rectangle Button</BtnLgPurple>
+              <BtnMdGrey>Medium Grey</BtnMdGrey>
+              <BtnMdWhite>Medium White Purple</BtnMdWhite>
               <BtnSmWhite>Small White Purple</BtnSmWhite>
-              <ButtonJoin>Join Button</ButtonJoin>
-              <ButtonGrey>Grey Button</ButtonGrey>
+              <BtnSmPurple>Join Button</BtnSmPurple>
+              <BtnSmGrey>Grey Button</BtnSmGrey>
             </Space>
           </Col>
 
@@ -55,10 +55,10 @@ const ThemePage = () => {
             <SectionTitle>Button States</SectionTitle>
             <Divider />
             <Space wrap>
-              <ButtonPrimary disabled>Disabled Primary</ButtonPrimary>
-              <ButtonRectangle disabled>Disabled Rectangle</ButtonRectangle>
-              <ButtonJoin disabled>Disabled Join</ButtonJoin>
-              <ButtonGrey disabled>Disabled Grey</ButtonGrey>
+              <BtnPrimary disabled>Disabled Primary</BtnPrimary>
+              <BtnLgPurple disabled>Disabled Rectangle</BtnLgPurple>
+              <BtnSmPurple disabled>Disabled Join</BtnSmPurple>
+              <BtnSmGrey disabled>Disabled Grey</BtnSmGrey>
             </Space>
           </Col>
         </Row>
@@ -332,8 +332,8 @@ const ThemePage = () => {
                 layout.
               </MetaText>
               <Space>
-                <ButtonJoin>Action</ButtonJoin>
-                <ButtonGrey>Cancel</ButtonGrey>
+                <BtnSmPurple>Action</BtnSmPurple>
+                <BtnSmGrey>Cancel</BtnSmGrey>
               </Space>
             </div>
           </Col>
@@ -348,7 +348,7 @@ const ThemePage = () => {
               <FormItem label="Password" name="password">
                 <FormInput.Password placeholder="Enter password" />
               </FormItem>
-              <ButtonPrimary style={{ width: "100%" }}>Submit</ButtonPrimary>
+              <BtnPrimary style={{ width: "100%" }}>Submit</BtnPrimary>
             </Form>
           </Col>
         </Row>

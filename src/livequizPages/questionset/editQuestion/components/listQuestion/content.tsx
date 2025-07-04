@@ -3,7 +3,7 @@ import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
 import { HeadingLg, SectionTitle } from "../../../../../components/common/Text/Text";
 import { Form } from "../../../../../components/common/Form/Form";
-import { ButtonMediumWhitePurple } from "../../../../../components/common/Button/Button";
+import { BtnMdWhite } from "../../../../../components/common/Button/Button";
 import { DeleteOutlined } from "@ant-design/icons";
 import { FormInput } from "../../../../../components/common/Form/Form";
 
@@ -76,7 +76,7 @@ const Content: React.FC<ContentProps> = ({ value, onChange, options, setOptions 
                 placeholder={`Option ${alphabet[idx]}`}
                 style={{ width: 850 }}
               />
-              <ButtonMediumWhitePurple
+              <BtnMdWhite
                 style={{
                   background: opt.correct ? '#6666FF' : '#fff',
                   color: opt.correct ? '#fff' : '#6666FF',
@@ -86,7 +86,7 @@ const Content: React.FC<ContentProps> = ({ value, onChange, options, setOptions 
                 onClick={() => handleSetCorrect(idx)}
               >
                 {opt.correct ? <span style={{fontWeight:700}}>&#10003; Correct</span> : "Set as Correct"}
-              </ButtonMediumWhitePurple>
+              </BtnMdWhite>
               <DeleteOutlined
                 style={{ color: '#6666FF', fontSize: 22, cursor: 'pointer' }}
                 onClick={() => handleRemove(idx)}
@@ -94,9 +94,9 @@ const Content: React.FC<ContentProps> = ({ value, onChange, options, setOptions 
             </div>
           ))}
         </Form>
-        <ButtonMediumWhitePurple onClick={handleAdd} style={{ marginTop: 24 }}>
+        <BtnMdWhite onClick={handleAdd} style={{ marginTop: 24 }}>
           + Add Answer
-        </ButtonMediumWhitePurple>
+        </BtnMdWhite>
       </div>
     </div>
   );

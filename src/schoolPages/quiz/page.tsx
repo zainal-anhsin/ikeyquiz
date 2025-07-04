@@ -5,7 +5,7 @@ import {
   TimeText,
   TabText,
 } from "../../components/common/Text/Text";
-import { ButtonPrimary } from "../../components/common/Button/Button";
+import { BtnPrimary } from "../../components/common/Button/Button";
 import { MenuUnfoldOutlined } from "@ant-design/icons";
 import { Progress, Popover } from "antd";
 import {
@@ -329,9 +329,9 @@ const Quiz = () => {
                     format={(p) => `${p}%`}
                   />
                 ) : (
-                  <ButtonPrimary onClick={() => navigate("/live-quiz")}>
+                  <BtnPrimary onClick={() => navigate("/live-quiz")}>
                     Take Quiz
-                  </ButtonPrimary>
+                  </BtnPrimary>
                 )}
               </TakeQuizSection>
             </QuizCard>

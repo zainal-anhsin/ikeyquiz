@@ -7,8 +7,8 @@ import {
   MetaText,
 } from "../../components/common/Text/Text";
 import {
-  ButtonMediumWhitePurple,
-  ButtonRectangle,
+  BtnMdWhite,
+  BtnLgPurple,
 } from "../../components/common/Button/Button";
 import questionData from './questionData';
 
@@ -68,14 +68,14 @@ const QuestionSetModal: React.FC<QuestionSetModalProps> = ({
         >
           <HeadingLg>Question Set Preview</HeadingLg>
           <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginRight: 16 }}>
-            <ButtonMediumWhitePurple onClick={revealAll}>
+            <BtnMdWhite onClick={revealAll}>
               <DownloadOutlined style={{ marginRight: 8 }} />
               Download
-            </ButtonMediumWhitePurple>
-            <ButtonMediumWhitePurple onClick={revealAll}>
+            </BtnMdWhite>
+            <BtnMdWhite onClick={revealAll}>
               <EyeOutlined style={{ marginRight: 8 }} />
               {allRevealed ? 'Hide all Answer' : 'Show all Answer'}
-            </ButtonMediumWhitePurple>
+            </BtnMdWhite>
             <button
               onClick={onCancel}
               style={{
@@ -130,12 +130,12 @@ const QuestionSetModal: React.FC<QuestionSetModalProps> = ({
                 marginBottom: 8,
               }}
             >
-              <ButtonRectangle
+              <BtnLgPurple
                 style={{ minWidth: 160, fontWeight: 600, fontSize: 16 }}
                 onClick={() => revealAnswer(idx)}
               >
                 {revealed[idx] ? 'Hide Answer' : 'Show Answer'}
-              </ButtonRectangle>
+              </BtnLgPurple>
             </div>
             <SectionTitle style={{ fontWeight: "bold", fontSize: 18 }}>
               Question #{idx + 1}

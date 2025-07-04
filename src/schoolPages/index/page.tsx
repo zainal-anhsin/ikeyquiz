@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { HeadingLg, MetaText } from "../../components/common/Text/Text";
-import { ButtonJoin, ButtonGrey } from "../../components/common/Button/Button";
+import { BtnSmPurple, BtnSmGrey } from "../../components/common/Button/Button";
 import {
   RectangleCard,
   RectangleCardHeader,
@@ -97,8 +97,8 @@ const Index = () => {
             </RectangleCardHeader>
             <RectangleCardBody>
               <CardActionRow style={{ width: "100%" }}>
-                <ButtonGrey disabled>Decline</ButtonGrey>
-                <ButtonJoin onClick={showModal}>Join</ButtonJoin>
+                <BtnSmGrey disabled>Decline</BtnSmGrey>
+                <BtnSmPurple onClick={showModal}>Join</BtnSmPurple>
               </CardActionRow>
             </RectangleCardBody>
           </RectangleCard>

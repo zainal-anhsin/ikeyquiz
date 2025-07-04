@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { Button as AntButton } from 'antd';
 
 // Fully rounded, purple button for primary actions
-export const StyledButtonPrimary = styled(AntButton)`
+export const StyledBtnPrimary = styled(AntButton)`
   height: 40px;
   border-radius: 999px;
   font-weight: 600;
@@ -26,11 +26,11 @@ export const StyledButtonPrimary = styled(AntButton)`
 `;
 
 // Rectangle button, less rounded than primary
-export const StyledButtonRectangle = styled(StyledButtonPrimary)`
+export const StyledBtnLgPurple = styled(StyledBtnPrimary)`
   border-radius: 8px;
 `;
 
-export const StyledButtonJoin = styled(AntButton)`
+export const StyledBtnSmPurple = styled(AntButton)`
   height: 28px;
   border-radius: 999px;
   font-weight: 600;
@@ -53,7 +53,7 @@ export const StyledButtonJoin = styled(AntButton)`
   }
 `;
 
-export const StyledButtonGrey = styled(AntButton)`
+export const StyledBtnSmGrey = styled(AntButton)`
   height: 28px;
   border-radius: 999px;
   font-weight: 600;
@@ -83,7 +83,7 @@ export const ButtonText = styled.span`
 `;
 
 // Medium grey button with black border and white text
-export const StyledButtonMediumGrey = styled(StyledButtonRectangle)`
+export const StyledBtnMdGrey = styled(StyledBtnLgPurple)`
   background: #9ba7cc;
   color: #fff;
   border: 1px solid #222;
@@ -96,7 +96,7 @@ export const StyledButtonMediumGrey = styled(StyledButtonRectangle)`
 `;
 
 // Medium white button with purple border and purple text
-export const StyledButtonMediumWhitePurple = styled(StyledButtonRectangle)`
+export const StyledBtnMdWhite = styled(StyledBtnLgPurple)`
   background: #fff;
   color: #6666FF;
   border: 1px solid #6666FF;
@@ -108,7 +108,7 @@ export const StyledButtonMediumWhitePurple = styled(StyledButtonRectangle)`
   }
 `;
 
-// Small white button with purple border and purple text (same size as ButtonJoin)
+// Small white button with purple border and purple text (same size as BtnSmPurple)
 export const StyledBtnSmWhite = styled(AntButton)`
   height: 31px;
   border-radius: 8px;

@@ -8,12 +8,12 @@ import {
   FileAddOutlined,
 } from "@ant-design/icons";
 import { SectionTitle, textTable } from "../../components/common/Text/Text";
-import { ButtonMediumWhitePurple, BtnSmWhite, ButtonRectangle } from "../../components/common/Button/Button";
+import { BtnMdWhite, BtnSmWhite, BtnLgPurple } from "../../components/common/Button/Button";
 import Checkbox from "../../components/common/Checkbox/Checkbox";
 import { useNavigate } from "react-router-dom";
 import Table from "../../components/common/Table/Table";
 import { tableData, DataType } from "./dataStudent";
-import { DropdownWhiteGrey, DropdownOption } from "../../components/common/Dropdown/Dropdown";
+import { DropdownWhite, DropdownOption } from "../../components/common/Dropdown/Dropdown";
 
 const Student = () => {
   const [selectedRowKeys, setSelectedRowKeys] = useState<React.Key[]>([]);
@@ -127,31 +127,31 @@ const Student = () => {
         >
           {/* Left side: Remove, Profile, Switch */}
           <Space>
-            <ButtonRectangle>
+            <BtnLgPurple>
               <EditOutlined
                 onPointerOverCapture={undefined}
                 onPointerLeave={undefined}
               />
               Bulk Edit
-            </ButtonRectangle>
-            <ButtonMediumWhitePurple>
+            </BtnLgPurple>
+            <BtnMdWhite>
               <EditOutlined
                 onPointerOverCapture={undefined}
                 onPointerLeave={undefined}
               />
               Custom Group
-            </ButtonMediumWhitePurple>
+            </BtnMdWhite>
           </Space>
           {/* Right side: Cancel, Reset, Save */}
           <Space>
-            <ButtonMediumWhitePurple>
+            <BtnMdWhite>
               <SearchOutlined
                 onPointerOverCapture={undefined}
                 onPointerLeave={undefined}
               />
               Search Student
-            </ButtonMediumWhitePurple>
-            <ButtonMediumWhitePurple
+            </BtnMdWhite>
+            <BtnMdWhite
               onClick={() => navigate("/student/upload-student")}
             >
               <UploadOutlined
@@ -159,8 +159,8 @@ const Student = () => {
                 onPointerLeave={undefined}
               />
               Upload Student
-            </ButtonMediumWhitePurple>
-            <ButtonMediumWhitePurple
+            </BtnMdWhite>
+            <BtnMdWhite
               onClick={() => navigate("/student/add-student")}
             >
               <FileAddOutlined
@@ -168,7 +168,7 @@ const Student = () => {
                 onPointerLeave={undefined}
               />
               Add Student
-            </ButtonMediumWhitePurple>
+            </BtnMdWhite>
           </Space>
         </div>
       </div>
@@ -200,22 +200,22 @@ const Student = () => {
               ]}
               onChange={(value) => console.log('selected', value)}
             />
-            <DropdownWhiteGrey placeholder="Classroom" size="large" style={{ width: 140 }} onChange={value => console.log('classroom', value)}>
+            <DropdownWhite placeholder="Classroom" size="large" style={{ width: 140 }} onChange={value => console.log('classroom', value)}>
               <DropdownOption value="SSR">SSR</DropdownOption>
               <DropdownOption value="SER">SER</DropdownOption>
-            </DropdownWhiteGrey>
-            <DropdownWhiteGrey placeholder="Group" size="large" style={{ width: 130 }} onChange={value => console.log('group', value)}>
+            </DropdownWhite>
+            <DropdownWhite placeholder="Group" size="large" style={{ width: 130 }} onChange={value => console.log('group', value)}>
               <DropdownOption value="Standard 1">Standard 1</DropdownOption>
               <DropdownOption value="Standard 2">Standard 2</DropdownOption>
               <DropdownOption value="Standard 3">Standard 3</DropdownOption>
-            </DropdownWhiteGrey>
+            </DropdownWhite>
           </div>
           <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
             <SectionTitle style={{ marginRight: 8 }}>Sort By:</SectionTitle>
-            <DropdownWhiteGrey placeholder="Select" size="large" style={{ width: 115 }} onChange={value => console.log('sort', value)}>
+            <DropdownWhite placeholder="Select" size="large" style={{ width: 115 }} onChange={value => console.log('sort', value)}>
               <DropdownOption value="name-asc">A - Z</DropdownOption>
               <DropdownOption value="name-desc">Z - A</DropdownOption>
-            </DropdownWhiteGrey>
+            </DropdownWhite>
           </div>
         </div>
         <Table<DataType>

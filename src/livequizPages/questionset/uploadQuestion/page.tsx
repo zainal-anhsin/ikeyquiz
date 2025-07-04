@@ -12,14 +12,14 @@ import {
   SectionTitle,
 } from "../../../components/common/Text/Text";
 import {
-  ButtonMediumWhitePurple,
-  ButtonMediumGrey,
-  ButtonRectangle,
+  BtnMdWhite,
+  BtnMdGrey,
+  BtnLgPurple,
 } from "../../../components/common/Button/Button";
 import { Form, FormItem, FormInput } from "../../../components/common/Form/Form";
 import {
   DropdownOption,
-  DropdownWhiteGrey,
+  DropdownWhite,
 } from "../../../components/common/Dropdown/Dropdown";
 const { Dragger } = Upload;
 
@@ -86,27 +86,27 @@ const uploadQuestion = () => {
           }}
         >
           <Space>
-            <ButtonMediumGrey>
+            <BtnMdGrey>
               <CloseOutlined
                 onPointerOverCapture={undefined}
                 onPointerLeave={undefined}
               />
               Cancel
-            </ButtonMediumGrey>
-            <ButtonMediumWhitePurple>
+            </BtnMdGrey>
+            <BtnMdWhite>
               <UndoOutlined
                 onPointerOverCapture={undefined}
                 onPointerLeave={undefined}
               />
               Reset
-            </ButtonMediumWhitePurple>
-            <ButtonRectangle>
+            </BtnMdWhite>
+            <BtnLgPurple>
               <SaveOutlined
                 onPointerOverCapture={undefined}
                 onPointerLeave={undefined}
               />
               Save
-            </ButtonRectangle>
+            </BtnLgPurple>
           </Space>
         </div>
       </div>
@@ -130,11 +130,11 @@ const uploadQuestion = () => {
               </Col>
               <Col span={12}>
                 <FormItem label="Group" name="group">
-                  <DropdownWhiteGrey placeholder="Select">
+                  <DropdownWhite placeholder="Select">
                     <DropdownOption value="A">Group A</DropdownOption>
                     <DropdownOption value="B">Group B</DropdownOption>
                     <DropdownOption value="C">Group C</DropdownOption>
-                  </DropdownWhiteGrey>
+                  </DropdownWhite>
                 </FormItem>
               </Col>
             </Row>
@@ -146,11 +146,11 @@ const uploadQuestion = () => {
               </Col>
               <Col span={12}>
                 <FormItem label="Subject" name="subject">
-                  <DropdownWhiteGrey placeholder="Select">
+                  <DropdownWhite placeholder="Select">
                     <DropdownOption value="A">Subject A</DropdownOption>
                     <DropdownOption value="B">Subject B</DropdownOption>
                     <DropdownOption value="C">Subject C</DropdownOption>
-                  </DropdownWhiteGrey>
+                  </DropdownWhite>
                 </FormItem>
               </Col>
             </Row>
@@ -192,9 +192,9 @@ const uploadQuestion = () => {
             <SectionTitle style={{ color: '#6666FF', marginBottom: 16 }}>
               Drop files to upload or
             </SectionTitle>
-              <ButtonRectangle>
+              <BtnLgPurple>
                 Browse
-              </ButtonRectangle>
+              </BtnLgPurple>
             </div>
           </Dragger>
         </div>

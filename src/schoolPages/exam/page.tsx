@@ -5,7 +5,7 @@ import {
   TimeText,
   TabText
 } from '../../components/common/Text/Text';
-import { ButtonPrimary } from '../../components/common/Button/Button';
+import { BtnPrimary } from '../../components/common/Button/Button';
 import { Popover } from 'antd';
 import { Progress } from 'antd';
 import FilterPanel from '../homework/FilterPanel';
@@ -122,7 +122,7 @@ const ExamPage = () => {
                     format={p => `${p}%`}
                   />
                 ) : (
-                  <ButtonPrimary>Take Test</ButtonPrimary>
+                  <BtnPrimary>Take Test</BtnPrimary>
                 )}
               </TakeQuizSection>
             </QuizCard>

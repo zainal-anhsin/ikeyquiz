@@ -12,13 +12,13 @@ import { Form, FormItem, FormInput } from "../../../components/common/Form/Form"
 import { HeadingLg, SectionTitle } from "../../../components/common/Text/Text";
 import { PasswordRevealInput } from "../../../components/common/Form/Form";
 import {
-  DropdownWhiteGrey,
+  DropdownWhite,
   DropdownOption,
 } from "../../../components/common/Dropdown/Dropdown";
 import {
-  ButtonMediumWhitePurple,
-  ButtonMediumGrey,
-  ButtonRectangle,
+  BtnMdWhite,
+  BtnMdGrey,
+  BtnLgPurple,
 } from "../../../components/common/Button/Button";
 import Switch from "../../../components/common/Switch/Switch";
 import Checkbox from "../../../components/common/Checkbox/Checkbox";
@@ -67,13 +67,13 @@ const EditStudent = () => {
         >
           {/* Left side: Remove, Profile, Switch */}
           <Space>
-            <ButtonMediumWhitePurple>
+            <BtnMdWhite>
               <DeleteOutlined
                 onPointerOverCapture={undefined}
                 onPointerLeave={undefined}
               />
               Delete
-            </ButtonMediumWhitePurple>
+            </BtnMdWhite>
             <UserOutlined
               style={{ fontSize: 28, color: "#1a327f" }}
               onPointerOverCapture={undefined}
@@ -90,27 +90,27 @@ const EditStudent = () => {
           </Space>
           {/* Right side: Cancel, Reset, Save */}
           <Space>
-            <ButtonMediumGrey>
+            <BtnMdGrey>
               <CloseOutlined
                 onPointerOverCapture={undefined}
                 onPointerLeave={undefined}
               />
               Cancel
-            </ButtonMediumGrey>
-            <ButtonMediumWhitePurple>
+            </BtnMdGrey>
+            <BtnMdWhite>
               <UndoOutlined
                 onPointerOverCapture={undefined}
                 onPointerLeave={undefined}
               />
               Reset
-            </ButtonMediumWhitePurple>
-            <ButtonRectangle>
+            </BtnMdWhite>
+            <BtnLgPurple>
               <SaveOutlined
                 onPointerOverCapture={undefined}
                 onPointerLeave={undefined}
               />
               Save
-            </ButtonRectangle>
+            </BtnLgPurple>
           </Space>
         </div>
       </div>
@@ -147,7 +147,7 @@ const EditStudent = () => {
               </FormItem>
             </Col>
             <Col span={12}>
-              <ButtonRectangle
+              <BtnLgPurple
                 style={{
                   width: "50%",
                   marginTop: 50,
@@ -159,7 +159,7 @@ const EditStudent = () => {
                   style={{ marginRight: 6, marginLeft: 6 }}
                 />
                 Email Password
-              </ButtonRectangle>
+              </BtnLgPurple>
             </Col>
           </Row>
         </Form>
@@ -235,11 +235,11 @@ const EditStudent = () => {
           <Row gutter={32}>
             <Col span={12}>
               <FormItem label="Group" name="group">
-                <DropdownWhiteGrey placeholder="Select">
+                <DropdownWhite placeholder="Select">
                   <DropdownOption value="A">Group A</DropdownOption>
                   <DropdownOption value="B">Group B</DropdownOption>
                   <DropdownOption value="C">Group C</DropdownOption>
-                </DropdownWhiteGrey>
+                </DropdownWhite>
               </FormItem>
             </Col>
             <Col span={12}>

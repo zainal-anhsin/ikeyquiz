@@ -10,9 +10,9 @@ import {
   SectionTitle,
 } from "../../../components/common/Text/Text";
 import {
-  ButtonMediumWhitePurple,
-  ButtonMediumGrey,
-  ButtonRectangle,
+  BtnMdWhite,
+  BtnMdGrey,
+  BtnLgPurple,
 } from "../../../components/common/Button/Button";
 import { CustomTabs, TabPane } from "../../../components/common/Tabs/tabs";
 import ListQuestion from "./components/listQuestion";
@@ -62,37 +62,37 @@ const EditQuestion = () => {
         >
           {/* Left side: Remove, Profile, Switch */}
           <Space>
-            <ButtonMediumWhitePurple>
+            <BtnMdWhite>
               <DeleteOutlined
                 onPointerOverCapture={undefined}
                 onPointerLeave={undefined}
               />
               Delete
-            </ButtonMediumWhitePurple>
+            </BtnMdWhite>
           </Space>
           {/* Right side: Cancel, Reset, Save */}
           <Space>
-            <ButtonMediumGrey>
+            <BtnMdGrey>
               <CloseOutlined
                 onPointerOverCapture={undefined}
                 onPointerLeave={undefined}
               />
               Cancel
-            </ButtonMediumGrey>
-            <ButtonMediumWhitePurple>
+            </BtnMdGrey>
+            <BtnMdWhite>
               <UndoOutlined
                 onPointerOverCapture={undefined}
                 onPointerLeave={undefined}
               />
               Reset
-            </ButtonMediumWhitePurple>
-            <ButtonRectangle>
+            </BtnMdWhite>
+            <BtnLgPurple>
               <SaveOutlined
                 onPointerOverCapture={undefined}
                 onPointerLeave={undefined}
               />
               Save
-            </ButtonRectangle>
+            </BtnLgPurple>
           </Space>
         </div>
       </div>

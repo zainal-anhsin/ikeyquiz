@@ -1,66 +1,68 @@
 import React from 'react';
 import { ButtonProps } from 'antd/lib/button';
-import { StyledButtonPrimary, StyledButtonRectangle, StyledButtonJoin, StyledButtonGrey, StyledButtonMediumGrey, StyledButtonMediumWhitePurple, StyledBtnSmWhite } from './Button.styles';
+import { StyledBtnPrimary, StyledBtnLgPurple, StyledBtnSmPurple, StyledBtnSmGrey, StyledBtnMdGrey, StyledBtnMdWhite, StyledBtnSmWhite } from './Button.styles';
 
 interface CustomButtonProps extends ButtonProps {
   children: React.ReactNode;
 }
 
-// ButtonPrimary for main actions like 'Take Quiz' and 'Login'
-export const ButtonPrimary: React.FC<CustomButtonProps> = ({ children, ...props }) => {
+// BtnPrimary for main actions like 'Take Quiz' and 'Login'
+export const BtnPrimary: React.FC<CustomButtonProps> = ({ children, ...props }) => {
   return (
-    <StyledButtonPrimary type="primary" {...props}>
+    <StyledBtnPrimary type="primary" {...props}>
       {children}
-    </StyledButtonPrimary>
+    </StyledBtnPrimary>
   );
 };
 
-// ButtonRectangle for rectangular primary actions
-export const ButtonRectangle: React.FC<CustomButtonProps> = ({ children, ...props }) => {
+// BtnLgPurple for rectangular primary actions
+export const BtnLgPurple: React.FC<CustomButtonProps> = ({ children, ...props }) => {
   return (
-    <StyledButtonRectangle type="primary" {...props}>
+    <StyledBtnLgPurple type="primary" {...props}>
       {children}
-    </StyledButtonRectangle>
+    </StyledBtnLgPurple>
   );
 };
 
-// ButtonJoin for small purple join button
-export const ButtonJoin: React.FC<CustomButtonProps> = ({ children, ...props }) => {
+// BtnMdGrey for medium grey button with black border and white text
+export const BtnMdGrey: React.FC<CustomButtonProps> = ({ children, ...props }) => {
   return (
-    <StyledButtonJoin type="primary" {...props}>
+    <StyledBtnMdGrey {...props}>
       {children}
-    </StyledButtonJoin>
+    </StyledBtnMdGrey>
   );
 };
 
-// ButtonGrey for small grey decline button
-export const ButtonGrey: React.FC<CustomButtonProps> = ({ children, ...props }) => {
+// BtnMdWhite for medium white button with purple border and purple text
+export const BtnMdWhite: React.FC<CustomButtonProps> = ({ children, ...props }) => {
   return (
-    <StyledButtonGrey {...props}>
+    <StyledBtnMdWhite {...props}>
       {children}
-    </StyledButtonGrey>
+    </StyledBtnMdWhite>
   );
 };
 
-// ButtonMediumGrey for medium grey button with black border and white text
-export const ButtonMediumGrey: React.FC<CustomButtonProps> = ({ children, ...props }) => {
+// BtnSmPurple for small purple join button
+export const BtnSmPurple: React.FC<CustomButtonProps> = ({ children, ...props }) => {
   return (
-    <StyledButtonMediumGrey {...props}>
+    <StyledBtnSmPurple type="primary" {...props}>
       {children}
-    </StyledButtonMediumGrey>
+    </StyledBtnSmPurple>
   );
 };
 
-// ButtonMediumWhitePurple for medium white button with purple border and purple text
-export const ButtonMediumWhitePurple: React.FC<CustomButtonProps> = ({ children, ...props }) => {
+// BtnSmGrey for small grey decline button
+export const BtnSmGrey: React.FC<CustomButtonProps> = ({ children, ...props }) => {
   return (
-    <StyledButtonMediumWhitePurple {...props}>
+    <StyledBtnSmGrey {...props}>
       {children}
-    </StyledButtonMediumWhitePurple>
+    </StyledBtnSmGrey>
   );
 };
 
-// BtnSmWhite for small white button with purple border and purple text (same size as ButtonJoin)
+
+
+// BtnSmWhite for small white button with purple border and purple text (same size as BtnSmPurple)
 export const BtnSmWhite: React.FC<CustomButtonProps> = ({ children, ...props }) => {
   return (
     <StyledBtnSmWhite {...props}>

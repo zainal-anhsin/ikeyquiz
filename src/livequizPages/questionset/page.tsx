@@ -10,15 +10,15 @@ import {
 } from "@ant-design/icons";
 import { SectionTitle, MetaText } from "../../components/common/Text/Text";
 import {
-  ButtonMediumWhitePurple,
+  BtnMdWhite,
   BtnSmWhite,
-  ButtonRectangle,
+  BtnLgPurple,
 } from "../../components/common/Button/Button";
 import { useNavigate } from "react-router-dom";
 import Table from "../../components/common/Table/Table";
 import {
   DropdownOption,
-  DropdownWhiteGrey,
+  DropdownWhite,
 } from "../../components/common/Dropdown/Dropdown";
 import QuestionSetModal from './modal';
 
@@ -160,31 +160,31 @@ const QuestionSet = () => {
         >
           {/* Left side: Remove, Profile, Switch */}
           <Space>
-            <ButtonRectangle>
+            <BtnLgPurple>
               <EditOutlined
                 onPointerOverCapture={undefined}
                 onPointerLeave={undefined}
               />
               Bulk Edit
-            </ButtonRectangle>
-            <ButtonMediumWhitePurple>
+            </BtnLgPurple>
+            <BtnMdWhite>
               <DeleteOutlined
                 onPointerOverCapture={undefined}
                 onPointerLeave={undefined}
               />
               Bulk Remove
-            </ButtonMediumWhitePurple>
+            </BtnMdWhite>
           </Space>
           {/* Right side: Cancel, Reset, Save */}
           <Space>
-            <ButtonMediumWhitePurple>
+            <BtnMdWhite>
               <SearchOutlined
                 onPointerOverCapture={undefined}
                 onPointerLeave={undefined}
               />
               Search Question Set
-            </ButtonMediumWhitePurple>
-            <ButtonMediumWhitePurple
+            </BtnMdWhite>
+            <BtnMdWhite
               onClick={() => navigate("/questionset/upload-question")}
             >
               <UploadOutlined
@@ -192,8 +192,8 @@ const QuestionSet = () => {
                 onPointerLeave={undefined}
               />
               Upload Question Set
-            </ButtonMediumWhitePurple>
-            <ButtonMediumWhitePurple
+            </BtnMdWhite>
+            <BtnMdWhite
               onClick={() => navigate("")}
             >
               <FileAddOutlined
@@ -201,7 +201,7 @@ const QuestionSet = () => {
                 onPointerLeave={undefined}
               />
               Create
-            </ButtonMediumWhitePurple>
+            </BtnMdWhite>
           </Space>
         </div>
       </div>
@@ -241,7 +241,7 @@ const QuestionSet = () => {
               ]}
               onChange={(value) => console.log("selected", value)}
             />
-            <DropdownWhiteGrey
+            <DropdownWhite
               placeholder="Classroom"
               size="large"
               style={{ width: 140 }}
@@ -249,8 +249,8 @@ const QuestionSet = () => {
             >
               <DropdownOption value="SSR">SSR</DropdownOption>
               <DropdownOption value="SER">SER</DropdownOption>
-            </DropdownWhiteGrey>
-            <DropdownWhiteGrey
+            </DropdownWhite>
+            <DropdownWhite
               placeholder="Group"
               size="large"
               style={{ width: 130 }}
@@ -259,11 +259,11 @@ const QuestionSet = () => {
               <DropdownOption value="Standard 1">Standard 1</DropdownOption>
               <DropdownOption value="Standard 2">Standard 2</DropdownOption>
               <DropdownOption value="Standard 3">Standard 3</DropdownOption>
-            </DropdownWhiteGrey>
+            </DropdownWhite>
           </div>
           <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
             <SectionTitle style={{ marginRight: 8 }}>Sort By:</SectionTitle>
-            <DropdownWhiteGrey
+            <DropdownWhite
               placeholder="Select"
               size="large"
               style={{ width: 115 }}
@@ -271,7 +271,7 @@ const QuestionSet = () => {
             >
               <DropdownOption value="name-asc">A - Z</DropdownOption>
               <DropdownOption value="name-desc">Z - A</DropdownOption>
-            </DropdownWhiteGrey>
+            </DropdownWhite>
           </div>
         </div>
         <Table<DataType>

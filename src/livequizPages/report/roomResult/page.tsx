@@ -7,10 +7,10 @@ import {
   DeleteOutlined,
 } from "@ant-design/icons";
 import { SectionTitle } from "../../../components/common/Text/Text";
-import { ButtonMediumWhitePurple, BtnSmWhite } from "../../../components/common/Button/Button";
+import { BtnMdWhite, BtnSmWhite } from "../../../components/common/Button/Button";
 import { useNavigate } from "react-router-dom";
 import Table from "../../../components/common/Table/Table";
-import { DropdownWhiteGrey, DropdownOption } from "../../../components/common/Dropdown/Dropdown";
+import { DropdownWhite, DropdownOption } from "../../../components/common/Dropdown/Dropdown";
 import { MetaText } from "../../../components/common/Text/Text";
 
 interface DataType {
@@ -126,7 +126,7 @@ const RoomResult = () => {
         >
           {/* Right side: Cancel, Reset, Save */}
           <Space>
-            <ButtonMediumWhitePurple
+            <BtnMdWhite
               onClick={() => navigate("")}
             >
               <FileAddOutlined
@@ -134,7 +134,7 @@ const RoomResult = () => {
                 onPointerLeave={undefined}
               />
               Generate Report
-            </ButtonMediumWhitePurple>
+            </BtnMdWhite>
           </Space>
         </div>
       </div>
@@ -166,22 +166,22 @@ const RoomResult = () => {
               ]}
               onChange={(value) => console.log('selected', value)}
             />
-            <DropdownWhiteGrey placeholder="Classroom" size="large" style={{ width: 140 }} onChange={value => console.log('classroom', value)}>
+            <DropdownWhite placeholder="Classroom" size="large" style={{ width: 140 }} onChange={value => console.log('classroom', value)}>
               <DropdownOption value="SSR">SSR</DropdownOption>
               <DropdownOption value="SER">SER</DropdownOption>
-            </DropdownWhiteGrey>
-            <DropdownWhiteGrey placeholder="Group" size="large" style={{ width: 130 }} onChange={value => console.log('group', value)}>
+            </DropdownWhite>
+            <DropdownWhite placeholder="Group" size="large" style={{ width: 130 }} onChange={value => console.log('group', value)}>
               <DropdownOption value="Standard 1">Standard 1</DropdownOption>
               <DropdownOption value="Standard 2">Standard 2</DropdownOption>
               <DropdownOption value="Standard 3">Standard 3</DropdownOption>
-            </DropdownWhiteGrey>
+            </DropdownWhite>
           </div>
           <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
             <SectionTitle style={{ marginRight: 8 }}>Sort By:</SectionTitle>
-            <DropdownWhiteGrey placeholder="Select" size="large" style={{ width: 115 }} onChange={value => console.log('sort', value)}>
+            <DropdownWhite placeholder="Select" size="large" style={{ width: 115 }} onChange={value => console.log('sort', value)}>
               <DropdownOption value="name-asc">A - Z</DropdownOption>
               <DropdownOption value="name-desc">Z - A</DropdownOption>
-            </DropdownWhiteGrey>
+            </DropdownWhite>
           </div>
         </div>
         <Table<DataType>

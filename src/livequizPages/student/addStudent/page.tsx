@@ -9,9 +9,9 @@ import {
   DropdownOption,
 } from "../../../components/common/Dropdown/Dropdown";
 import {
-  ButtonMediumWhitePurple,
-  ButtonMediumGrey,
-  ButtonRectangle,
+  BtnMdWhite,
+  BtnMdGrey,
+  BtnLgPurple,
 } from "../../../components/common/Button/Button";
 
 const addStudent = () => {
@@ -57,27 +57,27 @@ const addStudent = () => {
           }}
         >
           <Space>
-            <ButtonMediumGrey>
+            <BtnMdGrey>
               <CloseOutlined
                 onPointerOverCapture={undefined}
                 onPointerLeave={undefined}
               />
               Cancel
-            </ButtonMediumGrey>
-            <ButtonMediumWhitePurple>
+            </BtnMdGrey>
+            <BtnMdWhite>
               <UndoOutlined
                 onPointerOverCapture={undefined}
                 onPointerLeave={undefined}
               />
               Reset
-            </ButtonMediumWhitePurple>
-            <ButtonRectangle>
+            </BtnMdWhite>
+            <BtnLgPurple>
               <SaveOutlined
                 onPointerOverCapture={undefined}
                 onPointerLeave={undefined}
               />
               Save
-            </ButtonRectangle>
+            </BtnLgPurple>
           </Space>
         </div>
       </div>

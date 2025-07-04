@@ -38,4 +38,4 @@ export const DropdownGrey: React.FC<SelectProps> = (props) => {
 
 export { Option as DropdownOption };
 
-export { StyledSelectWhiteGrey as DropdownWhiteGrey }; 
+export { StyledSelectWhiteGrey as DropdownWhite }; 

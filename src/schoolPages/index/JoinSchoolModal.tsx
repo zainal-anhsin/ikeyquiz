@@ -1,7 +1,7 @@
 import React from 'react';
 import { Modal, Input, Button } from 'antd';
 import { HeadingLg, MetaText } from '../../components/common/Text/Text';
-import { ButtonGrey, ButtonJoin } from '../../components/common/Button/Button';
+import { BtnSmGrey, BtnSmPurple } from '../../components/common/Button/Button';
 import styled from 'styled-components';
 
 const UserCard = styled.div`
@@ -97,8 +97,8 @@ const JoinSchoolModal: React.FC<JoinSchoolModalProps> = ({ open, onCancel, onJoi
         </SmallMetaText>
       </div>
       <div style={{ display: 'flex', justifyContent: 'flex-end', gap: 12, marginTop: 24 }}>
-        <ButtonGrey onClick={onCancel}>Cancel</ButtonGrey>
-        <ButtonJoin onClick={onJoin}>Join</ButtonJoin>
+        <BtnSmGrey onClick={onCancel}>Cancel</BtnSmGrey>
+        <BtnSmPurple onClick={onJoin}>Join</BtnSmPurple>
       </div>
     </div>
   </Modal>
