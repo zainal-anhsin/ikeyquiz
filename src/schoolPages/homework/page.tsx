@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import {
   HeadingLg,
   HeadingMd,
-  TimeText,
-  TabText
+  MetaTextPurple,
+  MetaText,
 } from '../../components/common/Text/Text';
 import { BtnPrimary } from '../../components/common/Button/Button';
 import { MenuUnfoldOutlined } from '@ant-design/icons';
@@ -15,7 +15,6 @@ import {
   QuizCard,
   QuizInfo,
   QuizMeta,
-  MetaText,
   Divider,
   QuizAvailability,
   QuizStatsRow,
@@ -42,7 +41,7 @@ const HomeworkPage = () => {
       <HeaderRow>
         <TabBar>
           {['latest', 'completed', 'other'].map(tab => (
-            <TabText
+            <HeadingMd
               key={tab}
               style={activeTab === tab
                 ? { background: '#ede9fe', color: '#7c3aed', borderRadius: 16, padding: '6px 24px' }
@@ -50,7 +49,7 @@ const HomeworkPage = () => {
               onClick={() => setActiveTab(tab)}
             >
               {tab.charAt(0).toUpperCase() + tab.slice(1)}
-            </TabText>
+            </HeadingMd>
           ))}
         </TabBar>
         <FilterBar>
@@ -102,11 +101,11 @@ const HomeworkPage = () => {
                 <QuizIcon src="/sidebar-image/homework.png" alt="homework" />
                 <StatsCol>
                   <HeadingMd>Duration 1 hr</HeadingMd>
-                  <TimeText>START : 12.30AM</TimeText>
+                  <MetaTextPurple>START : 12.30AM</MetaTextPurple>
                 </StatsCol>
                 <StatsCol>
                   <HeadingMd>40 Questions</HeadingMd>
-                  <TimeText>END : 1.30AM</TimeText>
+                  <MetaTextPurple>END : 1.30AM</MetaTextPurple>
                 </StatsCol>
               </QuizStatsRow>
 

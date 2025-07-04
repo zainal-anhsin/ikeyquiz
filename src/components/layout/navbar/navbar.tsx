@@ -12,7 +12,6 @@ import {
 import {
   HeadingMd,
   MetaText,
-  SubLabel,
 } from "../../common/Text/Text";
 
 const Navbar = () => {
@@ -22,7 +21,7 @@ const Navbar = () => {
         <SchoolIcon src="/sidebar-image/school.png" alt="School" />
         <SchoolInfo>
           <HeadingMd>Convent Datuk. K</HeadingMd>
-          <SubLabel>School</SubLabel>
+          <MetaText>School</MetaText>
         </SchoolInfo>
       </LeftSection>
       <RightSection>

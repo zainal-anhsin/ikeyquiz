@@ -7,7 +7,7 @@ import {
   UploadOutlined,
   FileAddOutlined,
 } from "@ant-design/icons";
-import { HeadingMd, textTable } from "../../components/common/Text/Text";
+import { HeadingMd, TextTable } from "../../components/common/Text/Text";
 import { BtnMdWhite, BtnSmWhite, BtnLgPurple } from "../../components/common/Button/Button";
 import Checkbox from "../../components/common/Checkbox/Checkbox";
 import { useNavigate } from "react-router-dom";
@@ -48,11 +48,11 @@ const Student = () => {
         <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
           <label style={{ display: "flex", alignItems: "center", gap: 8 }}>
             <Checkbox checked={record.customGroup.cg1} />
-            <span style={textTable}>CG 1</span>
+            <span style={TextTable}>CG 1</span>
           </label>
           <label style={{ display: "flex", alignItems: "center", gap: 8 }}>
             <Checkbox checked={record.customGroup.cg2} />
-            <span style={textTable}>CG 2</span>
+            <span style={TextTable}>CG 2</span>
           </label>
         </div>
       ),
@@ -64,11 +64,11 @@ const Student = () => {
         <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
           <label style={{ display: "flex", alignItems: "center", gap: 8 }}>
             <Checkbox checked={record.category.liveQuiz} />
-            <span style={textTable}>Live Quiz</span>
+            <span style={TextTable}>Live Quiz</span>
           </label>
           <label style={{ display: "flex", alignItems: "center", gap: 8 }}>
             <Checkbox checked={record.category.kosaKata} />
-            <span style={textTable}>Kosa Kata Spot+ (full)</span>
+            <span style={TextTable}>Kosa Kata Spot+ (full)</span>
           </label>
         </div>
       ),

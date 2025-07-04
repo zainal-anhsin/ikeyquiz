@@ -1,6 +1,6 @@
 import React from 'react';
 import { Radio } from 'antd';
-import {SubLabel } from '../../components/common/Text/Text';
+import {MetaText } from '../../components/common/Text/Text';
 import styled from 'styled-components';
 
 const QuestionBox = styled.div`
@@ -63,7 +63,7 @@ const DisplayQuestion: React.FC<DisplayQuestionProps> = ({
   return (
     <QuestionBox>
       <TopRow>
-        <SubLabel style={{ marginBottom: 0 }}>Question {questionNumber}</SubLabel>
+        <MetaText style={{ marginBottom: 0 }}>Question {questionNumber}</MetaText>
         <IconCircle>
           <img
             src={isNotAnswered

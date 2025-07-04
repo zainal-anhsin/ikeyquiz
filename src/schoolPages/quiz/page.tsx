@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import {
   HeadingLg,
   HeadingMd,
-  TimeText,
-  TabText,
+  MetaTextPurple,
 } from "../../components/common/Text/Text";
 import { BtnPrimary } from "../../components/common/Button/Button";
 import { MenuUnfoldOutlined } from "@ant-design/icons";
@@ -84,7 +83,7 @@ const Quiz = () => {
       <HeaderRow>
         <TabBar>
           {TAB_NAMES.map((tab) => (
-            <TabText
+            <HeadingMd
               key={tab}
               style={
                 activeTab === tab
@@ -99,7 +98,7 @@ const Quiz = () => {
               onClick={() => setActiveTab(tab)}
             >
               {tab.charAt(0).toUpperCase() + tab.slice(1)}
-            </TabText>
+            </HeadingMd>
           ))}
         </TabBar>
         <FilterBar>
@@ -155,11 +154,11 @@ const Quiz = () => {
                   <QuizIcon src="/quizPaper.png" alt="quiz" />
                   <StatsCol>
                     <HeadingMd>Duration 1 hr</HeadingMd>
-                    <TimeText>START : 12.30AM</TimeText>
+                    <MetaTextPurple>START : 12.30AM</MetaTextPurple>
                   </StatsCol>
                   <StatsCol>
                     <HeadingMd>40 Questions</HeadingMd>
-                    <TimeText>END : 1.30AM</TimeText>
+                    <MetaTextPurple>END : 1.30AM</MetaTextPurple>
                   </StatsCol>
                 </QuizStatsRow>
                 <StatsContainer>
@@ -311,11 +310,11 @@ const Quiz = () => {
                 <QuizIcon src="/quizPaper.png" alt="quiz" />
                 <StatsCol>
                   <HeadingMd>Duration 1 hr</HeadingMd>
-                  <TimeText>START : 12.30AM</TimeText>
+                  <MetaTextPurple>START : 12.30AM</MetaTextPurple>
                 </StatsCol>
                 <StatsCol>
                   <HeadingMd>40 Questions</HeadingMd>
-                  <TimeText>END : 1.30AM</TimeText>
+                  <MetaTextPurple>END : 1.30AM</MetaTextPurple>
                 </StatsCol>
               </QuizStatsRow>
 

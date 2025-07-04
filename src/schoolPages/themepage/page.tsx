@@ -11,12 +11,10 @@ import {
 } from "../../components/common/Button/Button";
 import {
   HeadingLg,
-  SubLabel,
-  HeadingMd,
-  TimeText,
-  TabText,
-  SidebarLabel,
   MetaText,
+  HeadingMd,
+  MetaTextPurple,
+  SidebarLabel,
 } from "../../components/common/Text/Text";
 import { Form, FormItem, FormInput, PasswordRevealInput } from "../../components/common/Form/Form";
 import {
@@ -129,8 +127,8 @@ const ThemePage = () => {
               </div>
 
               <div>
-                <SubLabel>Sub Label - For Secondary Information</SubLabel>
-                <MetaText>This is how SubLabel looks</MetaText>
+                <MetaText>Sub Label - For Secondary Information</MetaText>
+                <MetaText>This is how MetaText looks</MetaText>
               </div>
 
               <div>
@@ -139,13 +137,13 @@ const ThemePage = () => {
               </div>
 
               <div>
-                <TimeText>Time Text - For time-related information</TimeText>
-                <MetaText>This is how TimeText looks (purple color)</MetaText>
+                <MetaTextPurple>Time Text - For time-related information</MetaTextPurple>
+                <MetaText>This is how MetaTextPurple looks (purple color)</MetaText>
               </div>
 
               <div>
-                <TabText>Tab Text - For tab navigation</TabText>
-                <MetaText>This is how TabText looks (purple color)</MetaText>
+                <HeadingMd>Tab Text - For tab navigation</HeadingMd>
+                <MetaText>This is how HeadingMd looks (purple color)</MetaText>
               </div>
 
               <div>

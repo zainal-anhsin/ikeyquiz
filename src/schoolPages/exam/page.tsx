@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import {
   HeadingLg,
-  HeadingMd,
-  TimeText,
-  TabText
+  MetaTextPurple,
+  HeadingMd
 } from '../../components/common/Text/Text';
 import { BtnPrimary } from '../../components/common/Button/Button';
 import { Popover } from 'antd';
@@ -44,7 +43,7 @@ const ExamPage = () => {
       <HeaderRow>
         <TabBar>
           {['latest', 'completed', 'other'].map(tab => (
-            <TabText
+            <HeadingMd
               key={tab}
               style={activeTab === tab
                 ? { background: '#ede9fe', color: '#7c3aed', borderRadius: 16, padding: '6px 24px' }
@@ -52,7 +51,7 @@ const ExamPage = () => {
               onClick={() => setActiveTab(tab)}
             >
               {tab.charAt(0).toUpperCase() + tab.slice(1)}
-            </TabText>
+            </HeadingMd>
           ))}
         </TabBar>
         <FilterBar>
@@ -104,11 +103,11 @@ const ExamPage = () => {
                 <QuizIcon src="/sidebar-image/examCard.png" alt="quiz" />
                 <StatsCol>
                   <HeadingMd>Duration 1 hr</HeadingMd>
-                  <TimeText>START : 12.30AM</TimeText>
+                  <MetaTextPurple>START : 12.30AM</MetaTextPurple>
                 </StatsCol>
                 <StatsCol>
                   <HeadingMd>40 Questions</HeadingMd>
-                  <TimeText>END : 1.30AM</TimeText>
+                  <MetaTextPurple>END : 1.30AM</MetaTextPurple>
                 </StatsCol>
               </QuizStatsRow>
 

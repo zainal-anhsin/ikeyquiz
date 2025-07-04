@@ -1,10 +1,8 @@
 export {
   HeadingLg,
-  SubLabel,
   HeadingMd,
-  TimeText,
-  TabText,
+  MetaTextPurple,
   SidebarLabel,
   MetaText,
-  textTable,
+  TextTable,
 } from './Text.styles'; 

@@ -15,13 +15,6 @@ export const HeadingMd = styled.span`
   color: #333;
 `;
 
-// Large, Grey Text, Bold
-export const SubLabel = styled.span`
-  font-size: 1rem;
-  color: #666;
-  font-weight: 500;
-`;
-
 // Medium, Grey Text, No bold
 export const MetaText = styled.p`
   font-size: 16px;
@@ -30,28 +23,21 @@ export const MetaText = styled.p`
 `;
 
 // Medium, Purple Text, Bold
-export const TimeText = styled.span`
+export const MetaTextPurple = styled.span`
   font-size: 0.95rem;
   color: #7c3aed;
   font-weight: 500;
 `;
 
-// Tab text, e.g. "Latest"
-export const TabText = styled.span`
-  font-size: 1rem;
-  font-weight: 600;
-  color: #1E3477A;
-`;
-
 // Sidebar label, e.g. "Quiz", "Homework"
 export const SidebarLabel = styled.span`
   font-size: 1rem;
-  color: #7c64e2;
+  color: #1E347A;
   font-weight: 600;
 `;
 
-// Reusable style for centered table text
-export const textTable = {
+// Style for table text
+export const TextTable = {
   fontFamily: "'Inter', 'Roboto', 'Arial', sans-serif",
   fontSize: 14,
   fontWeight: 400,

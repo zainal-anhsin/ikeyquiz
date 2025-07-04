@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import {
-  SubLabel,
   HeadingMd,
   HeadingLg,
 } from "../../components/common/Text/Text";
@@ -39,7 +38,7 @@ const LiveQuizPage = () => {
       <QuizContainer>
         <QuestionBox>
           <div style={{ marginBottom: 16 }}>
-            <SubLabel>Question {current + 1}</SubLabel>
+            <MetaText>Question {current + 1}</MetaText>
           </div>
           <div style={{ marginBottom: 8 }}>
             <HeadingMd>Choose the correct answer.</HeadingMd>
