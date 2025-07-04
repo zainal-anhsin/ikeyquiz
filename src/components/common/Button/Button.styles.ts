@@ -110,12 +110,12 @@ export const StyledButtonMediumWhitePurple = styled(StyledButtonRectangle)`
 
 // Small white button with purple border and purple text (same size as ButtonJoin)
 export const StyledBtnSmWhite = styled(AntButton)`
-  height: 28px;
+  height: 31px;
   border-radius: 8px;
   font-weight: 600;
   min-width: 64px;
   padding: 0 10px;
-  font-size: 11px;
+  font-size: 12px;
   background: #fff;
   color: #6666FF;
   border: 1px solid #6666FF;
