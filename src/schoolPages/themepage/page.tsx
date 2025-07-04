@@ -20,6 +20,7 @@ import { Form, FormItem, FormInput, PasswordRevealInput } from "../../components
 import {
   DropdownPurple,
   DropdownGrey,
+  DropdownWhite,
   DropdownOption,
 } from "../../components/common/Dropdown/Dropdown";
 import Checkbox from "../../components/common/Checkbox/Checkbox";
@@ -39,24 +40,56 @@ const ThemePage = () => {
             <HeadingMd>Button Variants</HeadingMd>
             <Divider />
             <Space wrap>
-              <BtnPrimary>Primary Button</BtnPrimary>
-              <BtnLgPurple>Rectangle Button</BtnLgPurple>
-              <BtnMdGrey>Medium Grey</BtnMdGrey>
-              <BtnMdWhite>Medium White Purple</BtnMdWhite>
-              <BtnSmWhite>Small White Purple</BtnSmWhite>
-              <BtnSmPurple>Join Button</BtnSmPurple>
-              <BtnSmGrey>Grey Button</BtnSmGrey>
+              <BtnPrimary>BtnPrimary</BtnPrimary>
+              <BtnLgPurple>BtnLgPurple</BtnLgPurple>
+              <BtnMdGrey>BtnMdGrey</BtnMdGrey>
+              <BtnMdWhite>BtnMdWhite</BtnMdWhite>
+              <BtnSmWhite>BtnSmWhite</BtnSmWhite>
+              <BtnSmPurple>BtnSmPurple</BtnSmPurple>
+              <BtnSmGrey>BtnSmGrey</BtnSmGrey>
             </Space>
           </Col>
 
+
+        </Row>
+      </Card>
+
+      {/* Text Components Section */}
+      <Card title="Text Components" style={{ marginBottom: "24px" }}>
+        <Row gutter={[16, 16]}>
           <Col span={24}>
-            <HeadingMd>Button States</HeadingMd>
+            <HeadingMd>Text Variants</HeadingMd>
             <Divider />
-            <Space wrap>
-              <BtnPrimary disabled>Disabled Primary</BtnPrimary>
-              <BtnLgPurple disabled>Disabled Rectangle</BtnLgPurple>
-              <BtnSmPurple disabled>Disabled Join</BtnSmPurple>
-              <BtnSmGrey disabled>Disabled Grey</BtnSmGrey>
+            <Space direction="vertical" size="large" style={{ width: "100%" }}>
+              <div>
+                <HeadingLg>HeadingLg - Main Page Titles</HeadingLg>
+                <MetaText>This is how HeadingLg looks</MetaText>
+              </div>
+
+              <div>
+                <HeadingMd>HeadingMd - Section Headers</HeadingMd>
+                <MetaText>This is how HeadingMd looks</MetaText>
+              </div>
+
+              <div>
+                <MetaText>MetaText - For general paragraph content</MetaText>
+                <MetaText>This is how MetaText looks</MetaText>
+              </div>
+
+              <div>
+                <MetaTextPurple>MetaTextPurple - Purple colored text</MetaTextPurple>
+                <MetaText>This is how MetaTextPurple looks (purple color)</MetaText>
+              </div>
+
+              <div>
+                <SidebarLabel>SidebarLabel - For sidebar navigation</SidebarLabel>
+                <MetaText>This is how SidebarLabel looks (blue color)</MetaText>
+              </div>
+
+              <div>
+                <MetaText>TextTable - Table text styling</MetaText>
+                <MetaText>This is how TextTable looks (object with font properties)</MetaText>
+              </div>
             </Space>
           </Col>
         </Row>
@@ -109,55 +142,6 @@ const ThemePage = () => {
           </Col>
         </Row>
       </Card>
-      {/* Text Components Section */}
-      <Card title="Text Components" style={{ marginBottom: "24px" }}>
-        <Row gutter={[16, 16]}>
-          <Col span={24}>
-            <HeadingMd>Text Variants</HeadingMd>
-            <Divider />
-            <Space direction="vertical" size="large" style={{ width: "100%" }}>
-              <div>
-                <HeadingLg>Heading Large - Main Page Titles</HeadingLg>
-                <MetaText>This is how HeadingLg looks</MetaText>
-              </div>
-
-              <div>
-                <HeadingMd>Section Title - For Section Headers</HeadingMd>
-                <MetaText>This is how HeadingMd looks</MetaText>
-              </div>
-
-              <div>
-                <MetaText>Sub Label - For Secondary Information</MetaText>
-                <MetaText>This is how MetaText looks</MetaText>
-              </div>
-
-              <div>
-                <MetaText>Meta Text - For general paragraph content</MetaText>
-                <MetaText>This is how MetaText looks</MetaText>
-              </div>
-
-              <div>
-                <MetaTextPurple>Time Text - For time-related information</MetaTextPurple>
-                <MetaText>This is how MetaTextPurple looks (purple color)</MetaText>
-              </div>
-
-              <div>
-                <HeadingMd>Tab Text - For tab navigation</HeadingMd>
-                <MetaText>This is how HeadingMd looks (purple color)</MetaText>
-              </div>
-
-              <div>
-                <SidebarLabel>
-                  Sidebar Label - For sidebar navigation
-                </SidebarLabel>
-                <MetaText>
-                  This is how SidebarLabel looks (purple color)
-                </MetaText>
-              </div>
-            </Space>
-          </Col>
-        </Row>
-      </Card>
 
       {/* Form Components Section */}
       <Card title="Form Components" style={{ marginBottom: "24px" }}>
@@ -187,9 +171,9 @@ const ThemePage = () => {
       </Card>
 
       {/* Dropdown Components Section */}
-      <Card title="Dropdown Components" style={{ marginBottom: "24px" }}>
+      <Card title="Dropdown Components" style={{ marginBottom: "40px" }}>
         <Row gutter={[16, 40]}>
-          <Col span={12}>
+          <Col span={8}>
             <HeadingMd>Purple Dropdown</HeadingMd>
             <Divider />
             <DropdownPurple placeholder="Year">
@@ -198,159 +182,28 @@ const ThemePage = () => {
               <DropdownOption value="2022">2022</DropdownOption>
             </DropdownPurple>
           </Col>
-          <Col span={12}>
+          <Col span={8}>
             <HeadingMd>Grey Dropdown</HeadingMd>
             <Divider />
-            <DropdownGrey placeholder="Select">
+            <DropdownGrey placeholder="Select option">
               <DropdownOption value="option1">Option 1</DropdownOption>
               <DropdownOption value="option2">Option 2</DropdownOption>
               <DropdownOption value="option3">Option 3</DropdownOption>
             </DropdownGrey>
           </Col>
-        </Row>
-      </Card>
-
-      {/* Color Palette Section */}
-      <Card title="Color Palette" style={{ marginBottom: "24px" }}>
-        <Row gutter={[16, 16]}>
-          <Col span={24}>
-            <HeadingMd>Primary Colors</HeadingMd>
+          <Col span={8}>
+            <HeadingMd>White Dropdown</HeadingMd>
             <Divider />
-            <Space wrap>
-              <div style={{ textAlign: "center" }}>
-                <div
-                  style={{
-                    width: "60px",
-                    height: "60px",
-                    backgroundColor: "#7c3aed",
-                    borderRadius: "8px",
-                    marginBottom: "8px",
-                  }}
-                ></div>
-                <MetaText>Primary Purple</MetaText>
-                <MetaText>#7c3aed</MetaText>
-              </div>
-
-              <div style={{ textAlign: "center" }}>
-                <div
-                  style={{
-                    width: "60px",
-                    height: "60px",
-                    backgroundColor: "#7c64e2",
-                    borderRadius: "8px",
-                    marginBottom: "8px",
-                  }}
-                ></div>
-                <MetaText>Sidebar Purple</MetaText>
-                <MetaText>#7c64e2</MetaText>
-              </div>
-
-              <div style={{ textAlign: "center" }}>
-                <div
-                  style={{
-                    width: "60px",
-                    height: "60px",
-                    backgroundColor: "#a78bfa",
-                    borderRadius: "8px",
-                    marginBottom: "8px",
-                  }}
-                ></div>
-                <MetaText>Light Purple</MetaText>
-                <MetaText>#a78bfa</MetaText>
-              </div>
-            </Space>
-          </Col>
-
-          <Col span={24}>
-            <HeadingMd>Text Colors</HeadingMd>
-            <Divider />
-            <Space direction="vertical" size="small">
-              <div style={{ color: "#222" }}>Primary Text (#222)</div>
-              <div style={{ color: "#333" }}>Section Title (#333)</div>
-              <div style={{ color: "#555" }}>Meta Text (#555)</div>
-              <div style={{ color: "#666" }}>Sub Label (#666)</div>
-            </Space>
-          </Col>
-
-          <Col span={24}>
-            <HeadingMd>Background Colors</HeadingMd>
-            <Divider />
-            <Space wrap>
-              <div style={{ textAlign: "center" }}>
-                <div
-                  style={{
-                    width: "60px",
-                    height: "60px",
-                    backgroundColor: "#f8f8fa",
-                    borderRadius: "8px",
-                    marginBottom: "8px",
-                    border: "1px solid #e5e7eb",
-                  }}
-                ></div>
-                <MetaText>Light Grey</MetaText>
-                <MetaText>#f8f8fa</MetaText>
-              </div>
-
-              <div style={{ textAlign: "center" }}>
-                <div
-                  style={{
-                    width: "60px",
-                    height: "60px",
-                    backgroundColor: "#f5f6fa",
-                    borderRadius: "8px",
-                    marginBottom: "8px",
-                    border: "1px solid #e5e7eb",
-                  }}
-                ></div>
-                <MetaText>Grey Background</MetaText>
-                <MetaText>#f5f6fa</MetaText>
-              </div>
-            </Space>
+            <DropdownWhite placeholder="Choose option">
+              <DropdownOption value="choice1">Choice 1</DropdownOption>
+              <DropdownOption value="choice2">Choice 2</DropdownOption>
+              <DropdownOption value="choice3">Choice 3</DropdownOption>
+            </DropdownWhite>
           </Col>
         </Row>
       </Card>
 
-      {/* Usage Examples Section */}
-      <Card title="Usage Examples" style={{ marginBottom: "24px" }}>
-        <Row gutter={[16, 16]}>
-          <Col span={12}>
-            <HeadingMd>Card Example</HeadingMd>
-            <Divider />
-            <div
-              style={{
-                background: "#f8f8fa",
-                borderRadius: "12px",
-                padding: "20px",
-                border: "1px solid #e5e7eb",
-              }}
-            >
-              <HeadingLg style={{ marginBottom: "8px" }}>Card Title</HeadingLg>
-              <MetaText style={{ marginBottom: "16px" }}>
-                This is an example of how components work together in a card
-                layout.
-              </MetaText>
-              <Space>
-                <BtnSmPurple>Action</BtnSmPurple>
-                <BtnSmGrey>Cancel</BtnSmGrey>
-              </Space>
-            </div>
-          </Col>
 
-          <Col span={12}>
-            <HeadingMd>Form Example</HeadingMd>
-            <Divider />
-            <Form layout="vertical">
-              <FormItem label="Username" name="username">
-                <FormInput placeholder="Enter username" />
-              </FormItem>
-              <FormItem label="Password" name="password">
-                <FormInput.Password placeholder="Enter password" />
-              </FormItem>
-              <BtnPrimary style={{ width: "100%" }}>Submit</BtnPrimary>
-            </Form>
-          </Col>
-        </Row>
-      </Card>
     </div>
   );
 };
