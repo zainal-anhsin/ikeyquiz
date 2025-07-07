@@ -6,22 +6,21 @@ import {
   SidebarMenu,
   SidebarItem,
   SidebarIcon
-} from './sidebar.styles';
+} from './SideBar.styles';
 import { SidebarLabel } from '../../common/Text/Text';
 
 const menuItems = [
-  { label: 'School', icon: '/sidebar-image/school.png', path: '/' },
-  { label: 'Quiz', icon: '/sidebar-image/quiz.png', path: '/quiz' },
-  { label: 'Homework', icon: '/sidebar-image/homework.png', path: '/homework' },
-  { label: 'Exam', icon: '/sidebar-image/Exam.png', path: '/exam' },
-  { label: 'School', icon: '/sidebar-image/school.png', path: '/' },
-  { label: 'School', icon: '/sidebar-image/school.png', path: '/' },
-  { label: 'School', icon: '/sidebar-image/school.png', path: '/' },
+  { label: 'Dashboard', icon: '/sidebar-image/dashboard.png', path: '/dashboard' },
+  { label: 'Question Set', icon: '/sidebar-image/questionSet.png', path: '/questionset' },
+  { label: 'Student', icon: '/sidebar-image/student.png', path: '/student' },
+  { label: 'Teacher', icon: '/sidebar-image/teacher.png', path: '/themepage' },
+  { label: 'Setting', icon: '/sidebar-image/setting.png', path: '/setting/manage-group' },
+  { label: 'Report', icon: '/sidebar-image/report.png', path: '/report/room-result' },
 ];
 
-const Sidebar = () => {
-  const navigate = useNavigate();
+const NewSidebar = () => {
   const location = useLocation();
+  const navigate = useNavigate();
 
   const handleItemClick = (path: string) => {
     navigate(path);
@@ -48,4 +47,4 @@ const Sidebar = () => {
   );
 };
 
-export default Sidebar;
+export default NewSidebar;
