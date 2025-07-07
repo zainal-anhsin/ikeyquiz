@@ -3,8 +3,8 @@ import { Outlet } from 'react-router-dom';
 //import Navbar from './navbar/navbar';
 //import Sidebar from './sidebar/sidebar';
 
-import NewNavbar from './Navbar/Navbar';
-import NewSidebar from './Sidebar/SideBar';
+import NewNavbar from './Navbar/navbar';
+import NewSidebar from './Sidebar/sidebar';
 
 import styled from 'styled-components';
 
