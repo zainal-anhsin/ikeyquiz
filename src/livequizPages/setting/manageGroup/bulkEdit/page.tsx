@@ -11,7 +11,7 @@ import Divider from "../../../../components/common/Divider/Divider";
 import {
   BtnMdWhite,
   BtnMdGrey,
-  BtnLgPurple,
+  BtnMdPurple,
 } from "../../../../components/common/Button/Button";
 import Checkbox from "../../../../components/common/Checkbox/Checkbox";
 import CustomDatePicker from "../../../../components/common/DatePicker/datePicker";
@@ -76,13 +76,13 @@ const bulkEdit = () => {
               />
               Reset
             </BtnMdWhite>
-            <BtnLgPurple>
+            <BtnMdPurple>
               <SaveOutlined
                 onPointerOverCapture={undefined}
                 onPointerLeave={undefined}
               />
               Save
-            </BtnLgPurple>
+            </BtnMdPurple>
           </Space>
         </div>
       </div>

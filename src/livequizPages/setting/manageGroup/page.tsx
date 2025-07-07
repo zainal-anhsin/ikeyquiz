@@ -7,7 +7,7 @@ import {
   DeleteOutlined,
 } from "@ant-design/icons";
 import { HeadingMd } from "../../../components/common/Text/Text";
-import { BtnMdWhite, BtnSmWhite, BtnLgPurple } from "../../../components/common/Button/Button";
+import { BtnMdWhite, BtnSmWhite, BtnMdPurple } from "../../../components/common/Button/Button";
 import { useNavigate } from "react-router-dom";
 import Table from "../../../components/common/Table/Table";
 import { DropdownWhite, DropdownOption } from "../../../components/common/Dropdown/Dropdown";
@@ -168,13 +168,13 @@ const ManageGroup = () => {
         >
           {/* Left side: Remove, Profile, Switch */}
           <Space>
-            <BtnLgPurple>
+            <BtnMdPurple>
               <EditOutlined
                 onPointerOverCapture={undefined}
                 onPointerLeave={undefined}
               />
               Bulk Edit
-            </BtnLgPurple>
+            </BtnMdPurple>
             <BtnMdWhite>
               <DeleteOutlined
                 onPointerOverCapture={undefined}

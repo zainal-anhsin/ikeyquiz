@@ -2,7 +2,7 @@ import React from "react";
 import { Card, Divider, Space, Row, Col } from "antd";
 import {
   BtnPrimary,
-  BtnLgPurple,
+  BtnMdPurple,
   BtnSmPurple,
   BtnSmGrey,
   BtnMdGrey,
@@ -41,7 +41,7 @@ const ThemePage = () => {
             <Divider />
             <Space wrap>
               <BtnPrimary>BtnPrimary</BtnPrimary>
-              <BtnLgPurple>BtnLgPurple</BtnLgPurple>
+              <BtnMdPurple>BtnMdPurple</BtnMdPurple>
               <BtnMdGrey>BtnMdGrey</BtnMdGrey>
               <BtnMdWhite>BtnMdWhite</BtnMdWhite>
               <BtnSmWhite>BtnSmWhite</BtnSmWhite>

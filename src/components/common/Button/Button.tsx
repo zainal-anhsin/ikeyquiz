@@ -1,6 +1,6 @@
 import React from 'react';
 import { ButtonProps } from 'antd/lib/button';
-import { StyledBtnPrimary, StyledBtnLgPurple, StyledBtnSmPurple, StyledBtnSmGrey, StyledBtnMdGrey, StyledBtnMdWhite, StyledBtnSmWhite } from './Button.styles';
+import { StyledBtnPrimary, StyledBtnMdPurple, StyledBtnSmPurple, StyledBtnSmGrey, StyledBtnMdGrey, StyledBtnMdWhite, StyledBtnSmWhite } from './Button.styles';
 
 interface CustomButtonProps extends ButtonProps {
   children: React.ReactNode;
@@ -15,12 +15,12 @@ export const BtnPrimary: React.FC<CustomButtonProps> = ({ children, ...props }) 
   );
 };
 
-// BtnLgPurple for rectangular primary actions
-export const BtnLgPurple: React.FC<CustomButtonProps> = ({ children, ...props }) => {
+// BtnMdPurple for rectangular primary actions
+export const BtnMdPurple: React.FC<CustomButtonProps> = ({ children, ...props }) => {
   return (
-    <StyledBtnLgPurple type="primary" {...props}>
+    <StyledBtnMdPurple type="primary" {...props}>
       {children}
-    </StyledBtnLgPurple>
+    </StyledBtnMdPurple>
   );
 };
 

@@ -14,7 +14,7 @@ import {
 import {
   BtnMdWhite,
   BtnMdGrey,
-  BtnLgPurple,
+  BtnMdPurple,
 } from "../../../components/common/Button/Button";
 import { Form, FormItem, FormInput } from "../../../components/common/Form/Form";
 import {
@@ -100,13 +100,13 @@ const uploadQuestion = () => {
               />
               Reset
             </BtnMdWhite>
-            <BtnLgPurple>
+            <BtnMdPurple>
               <SaveOutlined
                 onPointerOverCapture={undefined}
                 onPointerLeave={undefined}
               />
               Save
-            </BtnLgPurple>
+            </BtnMdPurple>
           </Space>
         </div>
       </div>
@@ -192,9 +192,9 @@ const uploadQuestion = () => {
             <HeadingMd style={{ color: '#6666FF', marginBottom: 16 }}>
               Drop files to upload or
             </HeadingMd>
-              <BtnLgPurple>
+              <BtnMdPurple>
                 Browse
-              </BtnLgPurple>
+              </BtnMdPurple>
             </div>
           </Dragger>
         </div>

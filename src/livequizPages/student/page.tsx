@@ -8,7 +8,7 @@ import {
   FileAddOutlined,
 } from "@ant-design/icons";
 import { HeadingMd, TextTable } from "../../components/common/Text/Text";
-import { BtnMdWhite, BtnSmWhite, BtnLgPurple } from "../../components/common/Button/Button";
+import { BtnMdWhite, BtnSmWhite, BtnMdPurple } from "../../components/common/Button/Button";
 import Checkbox from "../../components/common/Checkbox/Checkbox";
 import { useNavigate } from "react-router-dom";
 import Table from "../../components/common/Table/Table";
@@ -127,13 +127,13 @@ const Student = () => {
         >
           {/* Left side: Remove, Profile, Switch */}
           <Space>
-            <BtnLgPurple>
+            <BtnMdPurple>
               <EditOutlined
                 onPointerOverCapture={undefined}
                 onPointerLeave={undefined}
               />
               Bulk Edit
-            </BtnLgPurple>
+            </BtnMdPurple>
             <BtnMdWhite>
               <EditOutlined
                 onPointerOverCapture={undefined}

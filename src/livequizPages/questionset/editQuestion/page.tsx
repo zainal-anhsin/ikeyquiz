@@ -12,7 +12,7 @@ import {
 import {
   BtnMdWhite,
   BtnMdGrey,
-  BtnLgPurple,
+  BtnMdPurple,
 } from "../../../components/common/Button/Button";
 import { CustomTabs, TabPane } from "../../../components/common/Tabs/tabs";
 import ListQuestion from "./components/listQuestion";
@@ -86,13 +86,13 @@ const EditQuestion = () => {
               />
               Reset
             </BtnMdWhite>
-            <BtnLgPurple>
+            <BtnMdPurple>
               <SaveOutlined
                 onPointerOverCapture={undefined}
                 onPointerLeave={undefined}
               />
               Save
-            </BtnLgPurple>
+            </BtnMdPurple>
           </Space>
         </div>
       </div>

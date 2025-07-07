@@ -8,7 +8,7 @@ import {
 } from "../../components/common/Text/Text";
 import {
   BtnMdWhite,
-  BtnLgPurple,
+  BtnMdPurple,
 } from "../../components/common/Button/Button";
 import questionData from './questionData';
 
@@ -130,12 +130,12 @@ const QuestionSetModal: React.FC<QuestionSetModalProps> = ({
                 marginBottom: 8,
               }}
             >
-              <BtnLgPurple
+              <BtnMdPurple
                 style={{ minWidth: 160, fontWeight: 600, fontSize: 16 }}
                 onClick={() => revealAnswer(idx)}
               >
                 {revealed[idx] ? 'Hide Answer' : 'Show Answer'}
-              </BtnLgPurple>
+              </BtnMdPurple>
             </div>
             <HeadingMd style={{ fontWeight: "bold", fontSize: 18 }}>
               Question #{idx + 1}

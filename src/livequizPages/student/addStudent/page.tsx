@@ -11,7 +11,7 @@ import {
 import {
   BtnMdWhite,
   BtnMdGrey,
-  BtnLgPurple,
+  BtnMdPurple,
 } from "../../../components/common/Button/Button";
 
 const addStudent = () => {
@@ -71,13 +71,13 @@ const addStudent = () => {
               />
               Reset
             </BtnMdWhite>
-            <BtnLgPurple>
+            <BtnMdPurple>
               <SaveOutlined
                 onPointerOverCapture={undefined}
                 onPointerLeave={undefined}
               />
               Save
-            </BtnLgPurple>
+            </BtnMdPurple>
           </Space>
         </div>
       </div>

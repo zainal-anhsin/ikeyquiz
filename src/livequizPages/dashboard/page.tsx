@@ -1,7 +1,7 @@
 import React from "react";
 import {Space} from "antd";
 import { DownloadOutlined, UndoOutlined } from "@ant-design/icons";
-import { BtnLgPurple, BtnMdGrey } from "../../components/common/Button/Button";
+import { BtnMdPurple, BtnMdGrey } from "../../components/common/Button/Button";
 import {
   DropdownPurple,
   DropdownOption,
@@ -82,14 +82,14 @@ const page = () => {
               />
               Reset
             </BtnMdGrey>
-            <BtnLgPurple>
+            <BtnMdPurple>
               <DownloadOutlined
                 style={{ marginRight: 8, fontSize: 16, fontWeight: 'bold' }}
                 onPointerOverCapture={undefined}
                 onPointerLeave={undefined}
               />
               Download Report
-            </BtnLgPurple>
+            </BtnMdPurple>
           </Space>
         </div>
       </div>

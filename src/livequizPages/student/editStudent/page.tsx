@@ -18,7 +18,7 @@ import {
 import {
   BtnMdWhite,
   BtnMdGrey,
-  BtnLgPurple,
+  BtnMdPurple,
 } from "../../../components/common/Button/Button";
 import Switch from "../../../components/common/Switch/Switch";
 import Checkbox from "../../../components/common/Checkbox/Checkbox";
@@ -104,13 +104,13 @@ const EditStudent = () => {
               />
               Reset
             </BtnMdWhite>
-            <BtnLgPurple>
+            <BtnMdPurple>
               <SaveOutlined
                 onPointerOverCapture={undefined}
                 onPointerLeave={undefined}
               />
               Save
-            </BtnLgPurple>
+            </BtnMdPurple>
           </Space>
         </div>
       </div>
@@ -147,7 +147,7 @@ const EditStudent = () => {
               </FormItem>
             </Col>
             <Col span={12}>
-              <BtnLgPurple
+              <BtnMdPurple
                 style={{
                   width: "50%",
                   marginTop: 50,
@@ -159,7 +159,7 @@ const EditStudent = () => {
                   style={{ marginRight: 6, marginLeft: 6 }}
                 />
                 Email Password
-              </BtnLgPurple>
+              </BtnMdPurple>
             </Col>
           </Row>
         </Form>

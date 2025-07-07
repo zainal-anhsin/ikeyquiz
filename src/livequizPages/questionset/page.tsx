@@ -12,7 +12,7 @@ import { HeadingMd, MetaText } from "../../components/common/Text/Text";
 import {
   BtnMdWhite,
   BtnSmWhite,
-  BtnLgPurple,
+  BtnMdPurple,
 } from "../../components/common/Button/Button";
 import { useNavigate } from "react-router-dom";
 import Table from "../../components/common/Table/Table";
@@ -160,13 +160,13 @@ const QuestionSet = () => {
         >
           {/* Left side: Remove, Profile, Switch */}
           <Space>
-            <BtnLgPurple>
+            <BtnMdPurple>
               <EditOutlined
                 onPointerOverCapture={undefined}
                 onPointerLeave={undefined}
               />
               Bulk Edit
-            </BtnLgPurple>
+            </BtnMdPurple>
             <BtnMdWhite>
               <DeleteOutlined
                 onPointerOverCapture={undefined}

@@ -11,7 +11,7 @@ import Divider from "../../../components/common/Divider/Divider";
 import {
   BtnMdWhite,
   BtnMdGrey,
-  BtnLgPurple,
+  BtnMdPurple,
 } from "../../../components/common/Button/Button";
 import Checkbox from '../../../components/common/Checkbox/Checkbox';
 const { Dragger } = Upload;
@@ -93,13 +93,13 @@ const uploadStudent = () => {
               />
               Reset
             </BtnMdWhite>
-            <BtnLgPurple>
+            <BtnMdPurple>
               <SaveOutlined
                 onPointerOverCapture={undefined}
                 onPointerLeave={undefined}
               />
               Save
-            </BtnLgPurple>
+            </BtnMdPurple>
           </Space>
         </div>
       </div>
@@ -142,9 +142,9 @@ const uploadStudent = () => {
               <HeadingMd style={{ color: '#6666FF', marginBottom: 16 }}>
                 Drop files to upload or
               </HeadingMd>
-              <BtnLgPurple>
+              <BtnMdPurple>
                 Browse
-              </BtnLgPurple>
+              </BtnMdPurple>
             </div>
           </Dragger>
         </div>

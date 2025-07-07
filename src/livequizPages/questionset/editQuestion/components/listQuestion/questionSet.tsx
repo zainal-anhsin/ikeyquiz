@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { HeadingLg } from "../../../../../components/common/Text/Text";
 import {
   BtnMdWhite,
-  BtnLgPurple,
+  BtnMdPurple,
 } from "../../../../../components/common/Button/Button";
 
 const TOTAL_QUESTIONS = 30;
@@ -44,7 +44,7 @@ const QuestionSet = () => {
         })}
       </div>
       <div style={{ display: "flex", justifyContent: "center", gap: 16 }}>
-        <BtnLgPurple>+ Add Question</BtnLgPurple>
+        <BtnMdPurple>+ Add Question</BtnMdPurple>
         <BtnMdWhite>— Remove</BtnMdWhite>
       </div>
     </div>

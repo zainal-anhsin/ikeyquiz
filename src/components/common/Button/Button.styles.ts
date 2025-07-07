@@ -26,8 +26,34 @@ export const StyledBtnPrimary = styled(AntButton)`
 `;
 
 // Rectangle button, less rounded than primary
-export const StyledBtnLgPurple = styled(StyledBtnPrimary)`
+export const StyledBtnMdPurple = styled(StyledBtnPrimary)`
   border-radius: 8px;
+`;
+
+// Medium grey button with black border and white text
+export const StyledBtnMdGrey = styled(StyledBtnMdPurple)`
+  background: #9ba7cc;
+  color: #fff;
+  border: 1px solid #222;
+  font-size: 14px;
+  &:hover, &:focus {
+    background: #8993b3;
+    color: #fff;
+    border-color: #111;
+  }
+`;
+
+// Medium white button with purple border and purple text
+export const StyledBtnMdWhite = styled(StyledBtnMdPurple)`
+  background: #fff;
+  color: #6666FF;
+  border: 1px solid #6666FF;
+  font-size: 14px;
+  &:hover, &:focus {
+    background: #f8f8fa;
+    color: #3333cc;
+    border-color: #3333cc;
+  }
 `;
 
 export const StyledBtnSmPurple = styled(AntButton)`
@@ -76,38 +102,6 @@ export const StyledBtnSmGrey = styled(AntButton)`
   }
 `;
 
-export const ButtonText = styled.span`
-  font-size: 0.9rem;
-  font-weight: bold;
-  color: #fff;
-`;
-
-// Medium grey button with black border and white text
-export const StyledBtnMdGrey = styled(StyledBtnLgPurple)`
-  background: #9ba7cc;
-  color: #fff;
-  border: 1px solid #222;
-  font-size: 14px;
-  &:hover, &:focus {
-    background: #8993b3;
-    color: #fff;
-    border-color: #111;
-  }
-`;
-
-// Medium white button with purple border and purple text
-export const StyledBtnMdWhite = styled(StyledBtnLgPurple)`
-  background: #fff;
-  color: #6666FF;
-  border: 1px solid #6666FF;
-  font-size: 14px;
-  &:hover, &:focus {
-    background: #f8f8fa;
-    color: #3333cc;
-    border-color: #3333cc;
-  }
-`;
-
 // Small white button with purple border and purple text (same size as BtnSmPurple)
 export const StyledBtnSmWhite = styled(AntButton)`
   height: 31px;
@@ -131,3 +125,4 @@ export const StyledBtnSmWhite = styled(AntButton)`
     border-color: #3333cc;
   }
 `; 
+
